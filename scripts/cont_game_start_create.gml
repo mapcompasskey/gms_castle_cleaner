@@ -1,6 +1,7 @@
 /**
- * Game Start Controller: Set Global Variables
+ * Game Start Controller: On Create
  *
+ * Set Global Variables
  * The "cont_game_start" is a persistent object that gets added
  * in the creation code of "rm_initialize" when the game begins.
  */
@@ -11,13 +12,15 @@
     TICK - the amount of time that has passed since the last step
     GRAV - the gravity
     TILE_SIZE - the default tile size
+    GAME_HAS_FOCUS - whether the game window has focus
 */
 
-globalvar RIGHT, LEFT, TICK, GRAV, TILE_SIZE;
+globalvar RIGHT, LEFT, TICK, GRAV, TILE_SIZE, GAME_HAS_FOCUS;
 
 RIGHT = 1;
 LEFT = -1;
 TICK = 1;
-GRAV = 0.5;
-TILE_SIZE = 32;
+GRAV = 0.3;
+TILE_SIZE = 16;
+GAME_HAS_FOCUS = false;
 

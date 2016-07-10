@@ -7,6 +7,9 @@ scr_entity_movement_vars();
 speed_x = 8;
 speed_y = 12;
 
+current_health = 10;
+maximum_health = 10;
+
 walking = false;
 jumping = false;
 falling = false;

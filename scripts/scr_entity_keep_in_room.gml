@@ -1,5 +1,7 @@
+///scr_entity_keep_in_room()
+
 /**
- * Keep the Entity Inside the Room
+ * Keep the Object Inside the Room
  *
  */
 

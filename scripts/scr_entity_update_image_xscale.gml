@@ -1,6 +1,9 @@
+///scr_entity_update_image_xscale();
+
 /**
- * Update the Direction the Entity is Facing
+ * Update the Direction the Object is Facing
  *
+ * Include in the Step Event of an object.
  */
 
 if (facing == RIGHT)

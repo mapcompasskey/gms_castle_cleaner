@@ -39,21 +39,29 @@
         </scripts>
       </scripts>
       <scripts name="Entities">
-        <script>scripts\scr_entity_movement_vars.gml</script>
-        <script>scripts\scr_entity_movement_update.gml</script>
-        <script>scripts\scr_entity_check_wall_collisions.gml</script>
-        <script>scripts\scr_entity_update_image_xscale.gml</script>
-        <script>scripts\scr_entity_keep_in_room.gml</script>
+        <scripts name="Entity">
+          <script>scripts\scr_entity_movement_vars.gml</script>
+          <script>scripts\scr_entity_update_image_xscale.gml</script>
+          <script>scripts\scr_entity_movement_update.gml</script>
+          <script>scripts\scr_entity_check_wall_collisions.gml</script>
+          <script>scripts\scr_entity_check_wall_edges.gml</script>
+          <script>scripts\scr_entity_keep_in_room.gml</script>
+        </scripts>
         <scripts name="Player">
           <script>scripts\scr_player_create.gml</script>
+          <script>scripts\scr_player_room_start.gml</script>
           <script>scripts\scr_player_step.gml</script>
           <script>scripts\scr_player_is_crouching.gml</script>
           <script>scripts\scr_player_is_jumping.gml</script>
           <script>scripts\scr_player_is_attacking.gml</script>
           <script>scripts\scr_player_is_walking.gml</script>
           <script>scripts\scr_player_end_step.gml</script>
+          <script>scripts\scr_player_animation_end.gml</script>
         </scripts>
       </scripts>
+    </scripts>
+    <scripts name="Helpers">
+      <script>scripts\fnt_update_camera.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

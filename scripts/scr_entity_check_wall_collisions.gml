@@ -1,9 +1,11 @@
+///scr_entity_check_wall_collisions()
+
 /**
- * Check Entities for Collisions Against Walls
+ * Check if Colliding with Walls
  *
+ * Include in the End Step Event of an object.
  */
 
-// used by NPCs to turn around
 entity_hit_wall = false;
 
 // check horizontal collision

@@ -27,3 +27,11 @@ y += my;
 
 scr_entity_keep_in_room();
 
+
+/**
+ * Update Camera Position
+ */
+
+// move towards the player
+fnt_update_camera(x, y, true);
+
