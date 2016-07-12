@@ -62,6 +62,7 @@
     </scripts>
     <scripts name="Helpers">
       <script>scripts\fnt_update_camera.gml</script>
+      <script>scripts\fnt_resize_room_view.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

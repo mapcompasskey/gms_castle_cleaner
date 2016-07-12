@@ -24,3 +24,23 @@ GRAV = 0.3;
 TILE_SIZE = 16;
 GAME_HAS_FOCUS = false;
 
+
+/*
+    VIEW_WIDTH  - the width of each Room's View/Port
+    VIEW_HEIGHT - the height of each Room's View/Port
+    BG_COLOR - the background color of each Room
+*/
+
+globalvar VIEW_WIDTH, VIEW_HEIGHT, BG_COLOR;
+
+VIEW_WIDTH = 400;
+VIEW_HEIGHT = 240;
+BG_COLOR = make_color_rgb(25, 25, 25); //c_black;
+
+// resize game window at start
+// *or set the Width/Height of the first room (under the Settings tab)
+//var width = 500;
+//var height = 500;
+//window_set_size(width, height);
+//window_center();
+

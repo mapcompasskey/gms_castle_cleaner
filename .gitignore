@@ -1,4 +1,5 @@
 *.lnk
+*.ods
 .DS_Store
 Thumbs.db
 Desktop.ini

@@ -4,7 +4,7 @@
  */
 
 // draw logo
-draw_sprite_ext(spr_game_logo, 0, logo_x, logo_y, 3, 3, 0, c_white, 1);
+draw_sprite_ext(spr_game_logo, 0, logo_x, logo_y, 1, 1, 0, c_white, 1);
 
 // draw menu options
 draw_set_halign(fa_left);
@@ -66,7 +66,7 @@ for (i = 0; i < array_height_2d(menu_options); i++)
     // draw menu arrow
     if (i == menu_position)
     {
-        draw_sprite_ext(spr_menu_arrow, 0, pos_x - 30, pos_y, 3, 3, 0, c_white, 1);
+        draw_sprite_ext(spr_menu_arrow, 0, pos_x - 30, pos_y, 1, 1, 0, c_white, 1);
     }
 }
 
