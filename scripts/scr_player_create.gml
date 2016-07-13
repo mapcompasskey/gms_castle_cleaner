@@ -6,6 +6,8 @@
 scr_entity_movement_vars();
 speed_x = 8;
 speed_y = 12;
+max_velocity_x = speed_x * 2;
+max_velocity_y = speed_y * 2;
 
 current_health = 10;
 maximum_health = 10;

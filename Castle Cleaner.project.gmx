@@ -59,10 +59,18 @@
           <script>scripts\scr_player_animation_end.gml</script>
         </scripts>
       </scripts>
+      <scripts name="Misc">
+        <scripts name="HUD">
+          <script>scripts\scr_hud_create.gml</script>
+          <script>scripts\scr_hud_step.gml</script>
+          <script>scripts\scr_hud_draw_gui.gml</script>
+        </scripts>
+      </scripts>
     </scripts>
     <scripts name="Helpers">
       <script>scripts\fnt_update_camera.gml</script>
       <script>scripts\fnt_resize_room_view.gml</script>
+      <script>scripts\fnt_room_level_created.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -80,6 +88,7 @@
     </objects>
     <objects name="Misc">
       <object>objects\obj_wall</object>
+      <object>objects\obj_hud</object>
     </objects>
   </objects>
   <rooms name="rooms">
