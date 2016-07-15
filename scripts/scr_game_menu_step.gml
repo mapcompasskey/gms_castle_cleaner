@@ -1,3 +1,5 @@
+///scr_game_menu_step()
+
 /**
  * Game Menu Controller: On Update
  *

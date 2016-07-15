@@ -1,4 +1,4 @@
-///fnt_resize_room_view();
+///scr_room_resize_view();
 
 /**
  * Resize the Room's View and Port

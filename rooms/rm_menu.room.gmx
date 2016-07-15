@@ -12,8 +12,8 @@
   <showcolour>-1</showcolour>
   <code>room_goto_next(); // skip this for now
 
-fnt_resize_room_view();
-instance_create(0, 0, cont_game_menu);</code>
+scr_room_resize_view();
+instance_create(0, 0, obj_game_menu);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

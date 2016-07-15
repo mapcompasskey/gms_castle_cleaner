@@ -23,19 +23,19 @@
     <scripts name="Objects">
       <scripts name="Controllers">
         <scripts name="GameStart">
-          <script>scripts\cont_game_start_create.gml</script>
-          <script>scripts\cont_game_start_step.gml</script>
+          <script>scripts\scr_game_start_create.gml</script>
+          <script>scripts\scr_game_start_step.gml</script>
         </scripts>
         <scripts name="GameMenu">
-          <script>scripts\cont_game_menu_create.gml</script>
-          <script>scripts\cont_game_menu_step.gml</script>
-          <script>scripts\cont_game_menu_draw.gml</script>
+          <script>scripts\scr_game_menu_create.gml</script>
+          <script>scripts\scr_game_menu_step.gml</script>
+          <script>scripts\scr_game_menu_draw.gml</script>
         </scripts>
         <scripts name="PauseScreen">
-          <script>scripts\cont_pause_screen_create.gml</script>
-          <script>scripts\cont_pause_screen_step.gml</script>
-          <script>scripts\cont_pause_screen_draw.gml</script>
-          <script>scripts\cont_pause_screen_draw_gui.gml</script>
+          <script>scripts\scr_pause_screen_create.gml</script>
+          <script>scripts\scr_pause_screen_step.gml</script>
+          <script>scripts\scr_pause_screen_draw.gml</script>
+          <script>scripts\scr_pause_screen_draw_gui.gml</script>
         </scripts>
       </scripts>
       <scripts name="Entities">
@@ -68,9 +68,9 @@
       </scripts>
     </scripts>
     <scripts name="Helpers">
-      <script>scripts\fnt_update_camera.gml</script>
-      <script>scripts\fnt_resize_room_view.gml</script>
-      <script>scripts\fnt_room_level_created.gml</script>
+      <script>scripts\scr_camera_update.gml</script>
+      <script>scripts\scr_room_resize_view.gml</script>
+      <script>scripts\scr_room_level_created.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -79,9 +79,9 @@
   </fonts>
   <objects name="objects">
     <objects name="Controllers">
-      <object>objects\cont_game_start</object>
-      <object>objects\cont_game_menu</object>
-      <object>objects\cont_pause_screen</object>
+      <object>objects\obj_game_start</object>
+      <object>objects\obj_game_menu</object>
+      <object>objects\obj_pause_screen</object>
     </objects>
     <objects name="Entities">
       <object>objects\obj_player</object>

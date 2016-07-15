@@ -1,3 +1,5 @@
+///scr_pause_screen_draw_gui()
+
 /**
  * Pause Screen Controller: On Draw GUI
  *

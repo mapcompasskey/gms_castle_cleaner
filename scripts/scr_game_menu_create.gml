@@ -1,3 +1,5 @@
+///scr_game_menu_create()
+
 /**
  * Game Menu Controller: Initialize Variables
  *

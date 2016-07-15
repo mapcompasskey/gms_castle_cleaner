@@ -33,5 +33,5 @@ scr_entity_keep_in_room();
  */
 
 // move towards the player
-fnt_update_camera(x, y, true);
+scr_camera_update(x, y, true);
 

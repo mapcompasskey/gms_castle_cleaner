@@ -1,4 +1,4 @@
-///fnt_update_camera(target_x, target_y, move_towards_target);
+///scr_camera_update(target_x, target_y, move_towards_target);
 
 if (view_wview[0])
 {

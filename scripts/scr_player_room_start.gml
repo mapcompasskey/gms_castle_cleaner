@@ -22,5 +22,5 @@ with (obj_door)
  */
 
 // start camera on the player
-fnt_update_camera(x, y, false);
+scr_camera_update(x, y, false);
 

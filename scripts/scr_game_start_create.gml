@@ -1,3 +1,5 @@
+///scr_game_start_create()
+
 /**
  * Game Start Controller: On Create
  *

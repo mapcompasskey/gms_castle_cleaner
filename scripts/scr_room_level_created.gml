@@ -1,4 +1,4 @@
-///fnt_room_level_created();
+///scr_room_level_created();
 
 /**
  * When a Room is Created
@@ -6,8 +6,8 @@
  * Add this script to a room's Creation Code.
  */
 
-// resize view to fit window
-fnt_resize_room_view();
+// resize room view to fit window
+scr_room_resize_view();
 
 // add the HUD if it doesn't exist
 if ( ! instance_exists(obj_hud))
