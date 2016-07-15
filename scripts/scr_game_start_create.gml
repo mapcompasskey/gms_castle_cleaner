@@ -4,9 +4,15 @@
  * Game Start Controller: On Create
  *
  * Set Global Variables
- * The "cont_game_start" is a persistent object that gets added
+ * The "obj_game_start" is a persistent object that gets added
  * in the creation code of "rm_initialize" when the game begins.
  */
+
+// object must be persistent
+if ( ! persistent)
+{
+    persistent = true;
+}
 
 /*
     RIGHT - used when calculating the x speed of entities
@@ -25,6 +31,21 @@ TICK = 1;
 GRAV = 0.3;
 TILE_SIZE = 16;
 GAME_HAS_FOCUS = false;
+
+
+/*
+    CURRENT_DOOR_CODE - The code of the door being exited from. Used to place the player during their "Room Start" event.
+    CURRENT_ROOM_ID - The id of the room being exited into. *Not used at the moment since the built in "room" variable returns the current room's id.
+    PREVIOUS_DOOR_CODE - The previous door exited from. *Not used at the moment.
+    PREVIOUS_ROOM_ID - The id of the previous room. Used to determine which destroyed enemies in which rooms to allow a respawn.
+*/
+
+globalvar CURRENT_DOOR_CODE, CURRENT_ROOM_ID, PREVIOUS_DOOR_CODE, PREVIOUS_ROOM_ID;
+
+CURRENT_DOOR_CODE = '';
+CURRENT_ROOM_ID = noone;
+PREVIOUS_DOOR_CODE = '';
+PREVIOUS_ROOM_ID = noone;
 
 
 /*

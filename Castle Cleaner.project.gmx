@@ -15,6 +15,7 @@
     </sprites>
     <sprites name="Misc">
       <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_door</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -71,6 +72,11 @@
           <script>scripts\scr_hud_step.gml</script>
           <script>scripts\scr_hud_draw_gui.gml</script>
         </scripts>
+        <scripts name="Door">
+          <script>scripts\scr_door_create.gml</script>
+          <script>scripts\scr_door_step.gml</script>
+          <script>scripts\scr_door_draw.gml</script>
+        </scripts>
       </scripts>
     </scripts>
     <scripts name="Helpers">
@@ -96,6 +102,7 @@
     <objects name="Misc">
       <object>objects\obj_wall</object>
       <object>objects\obj_hud</object>
+      <object>objects\obj_door</object>
     </objects>
   </objects>
   <rooms name="rooms">

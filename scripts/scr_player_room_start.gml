@@ -3,18 +3,17 @@
  *
  */
 
-/*
 // search for the door the player should exit from
 with (obj_door)
 {
     if (door_code == CURRENT_DOOR_CODE)
     {
         other.x = x;
-        other.y = y + floor((sprite_height - other.sprite_height) / 2);
+        other.y = y - ceil(other.sprite_height / 2);
         can_use_door = false;
+        break;
     }
 }
-*/
 
 
 /**
