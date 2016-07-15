@@ -29,3 +29,12 @@ if (keyboard_check_pressed(vk_escape))
     instance_create(0, 0, obj_pause_screen);
 }
 
+// pause the game if the window loses focus (requires a left mouse click to unpause)
+if ( ! GAME_HAS_FOCUS)
+{
+    if ( ! instance_exists(obj_game_focus))
+    {
+        instance_create(0, 0, obj_game_focus);
+    }
+}
+
