@@ -97,12 +97,22 @@ else
 }
 */
 
-if (falling)
+if (crouching)
+{
+    if (sprite_index != crouching_sprite)
+    {
+        sprite_index = crouching_sprite;
+        image_index = 0;
+        image_speed = crouching_speed;
+    }
+}
+else if (falling)
 {
     if (sprite_index != falling_sprite)
     {
         sprite_index = falling_sprite;
         image_index = 0;
+        image_speed = falling_speed;
     }
 }
 else if (jumping)
@@ -111,6 +121,7 @@ else if (jumping)
     {
         sprite_index = jumping_sprite;
         image_index = 0;
+        image_speed = jumping_speed;
     }
 }
 else

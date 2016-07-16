@@ -12,6 +12,7 @@
     </sprites>
     <sprites name="Entities">
       <sprite>sprites\spr_player_idle</sprite>
+      <sprite>sprites\spr_player_crouching</sprite>
       <sprite>sprites\spr_player_falling</sprite>
       <sprite>sprites\spr_player_jumping</sprite>
     </sprites>

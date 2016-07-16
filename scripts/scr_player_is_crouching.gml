@@ -6,7 +6,8 @@
 if ( ! hurting && ! dying && ! jumping && ! attacking)
 {
     // if grounded and pressing the DOWN button
-    if (grounded && key_down)
+    //if (grounded && key_down)
+    if ((grounded || on_ladder) && key_down)
     {
         crouching = true;
         velocity_x = 0;

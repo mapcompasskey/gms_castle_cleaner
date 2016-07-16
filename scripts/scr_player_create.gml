@@ -46,6 +46,9 @@ key_attack_pressed = false;
 idle_speed = 0;
 idle_sprite = spr_player_idle;
 
+crouching_speed = 0;
+crouching_sprite = spr_player_crouching;
+
 jumping_speed = 0;
 jumping_sprite = spr_player_jumping;
 

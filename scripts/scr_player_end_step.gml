@@ -11,8 +11,8 @@
 scr_entity_movement_update();
 
 
-// if on a ladder and being pushed down
-if (on_ladder && my > 0)
+// if on a ladder, being pushed down and not crouching
+if (on_ladder && my > 0 && ! crouching)
 {
     // reset y step movement and velocity
     my = 0;
