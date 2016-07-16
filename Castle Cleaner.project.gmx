@@ -11,10 +11,13 @@
       <sprite>sprites\spr_menu_arrow</sprite>
     </sprites>
     <sprites name="Entities">
-      <sprite>sprites\spr_player</sprite>
+      <sprite>sprites\spr_player_idle</sprite>
+      <sprite>sprites\spr_player_falling</sprite>
+      <sprite>sprites\spr_player_jumping</sprite>
     </sprites>
     <sprites name="Misc">
       <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_ladder</sprite>
       <sprite>sprites\spr_door</sprite>
     </sprites>
   </sprites>
@@ -103,6 +106,7 @@
       <object>objects\obj_wall</object>
       <object>objects\obj_hud</object>
       <object>objects\obj_door</object>
+      <object>objects\obj_ladder</object>
     </objects>
   </objects>
   <rooms name="rooms">

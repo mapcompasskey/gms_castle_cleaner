@@ -11,6 +11,15 @@
 scr_entity_movement_update();
 
 
+// if on a ladder and being pushed down
+if (on_ladder && my > 0)
+{
+    // reset y step movement and velocity
+    my = 0;
+    velocity_y = 0;
+}
+
+
 /**
  * Is Colliding with Walls
  */
