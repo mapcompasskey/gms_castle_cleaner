@@ -49,15 +49,21 @@ PREVIOUS_ROOM_ID = noone;
 
 
 /*
+    GAME_SCALE - the scale factor to apply to each Room's View/Port
     VIEW_WIDTH  - the width of each Room's View/Port
     VIEW_HEIGHT - the height of each Room's View/Port
     BG_COLOR - the background color of each Room
+    
+    The VIEW_WIDTH and VIEW_HEIGHT are used to determine an aspect ratio to use when scaling the game to the window size.
+    So if the VIEW_WIDTH x VIEW_HEIGHT is 400x240, and the game window is 500x500, and the GAME_SCALE is 2, each Room's View/Port
+    will be resized 250x150. So when scaled up by a factor of 2, the size of the room becomes 500x300 - which is 1:1.6666 (400:240);
 */
 
-globalvar VIEW_WIDTH, VIEW_HEIGHT, BG_COLOR;
+globalvar GAME_SCALE, VIEW_WIDTH, VIEW_HEIGHT, BG_COLOR;
 
 VIEW_WIDTH = 400;
 VIEW_HEIGHT = 240;
+GAME_SCALE = 2;
 BG_COLOR = make_color_rgb(25, 25, 25); //c_black;
 
 // resize game window at start

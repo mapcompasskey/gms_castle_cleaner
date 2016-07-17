@@ -1,5 +1,12 @@
 ///scr_camera_update(target_x, target_y, move_towards_target);
 
+/**
+ * Move the Position of the Camera Towards a Target
+ *
+ * Should mainly be called at the end of the Player Object's End Step event.
+ * Also, can be called if the Player suddenly changes position, ie: like exiting from a door.
+ */
+
 if (view_wview[0])
 {
     var target_x = argument0; // number

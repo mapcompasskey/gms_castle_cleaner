@@ -87,6 +87,7 @@
       <script>scripts\scr_camera_update.gml</script>
       <script>scripts\scr_room_resize_view.gml</script>
       <script>scripts\scr_room_level_created.gml</script>
+      <script>scripts\scr_get_gui_center.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

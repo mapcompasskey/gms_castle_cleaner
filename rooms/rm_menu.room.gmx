@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>room_goto_next(); // skip this for now
+  <code>//room_goto_next(); // skip this for now
 
 scr_room_resize_view();
 instance_create(0, 0, obj_game_menu);</code>
