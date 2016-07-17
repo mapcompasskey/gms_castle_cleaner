@@ -5,8 +5,13 @@
  *
  */
 
-var pos_x = round(view_wview[0] / 2);
-var pos_y = round(view_hview[0] / 2);
+//var pos_x = round(view_wview[0] / 2);
+//var pos_y = round(view_hview[0] / 2);
+
+var width = surface_get_width(application_surface);
+var height = surface_get_height(application_surface);
+var pos_x = width / 2;
+var pos_y = height / 2;
 
 // draw pause screen text
 draw_set_color(c_white);
