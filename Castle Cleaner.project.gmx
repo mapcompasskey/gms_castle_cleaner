@@ -96,6 +96,7 @@
   <fonts name="fonts">
     <font>fonts\fnt_04b03_gui</font>
     <font>fonts\fnt_04b03_menu</font>
+    <font>fonts\fnt_silkscreen_game</font>
   </fonts>
   <objects name="objects">
     <objects name="Controllers">
