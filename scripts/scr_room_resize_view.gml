@@ -5,8 +5,15 @@
  *
  * Add this script to a room's Creation Code.
  * It resizes and scales the Room's View/Port/Surface to fit within the game window.
+ *
  * Make sure that "Interpolate colors between pixels" under "Resources > Global Game Settings" is
  * unchecked to preserve pixel perfect scaling.
+ *
+ * The room must have the following settings checked under the "views" tab:
+ *  "Enable the use of Views"
+ *  "Clear Background with Window Colour"
+ *  "View 0" selected
+ *  "Visible when room starts"
  */
 
 // get the desired game size

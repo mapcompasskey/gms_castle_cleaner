@@ -8,7 +8,6 @@
   <sprites name="sprites">
     <sprites name="GameMenu">
       <sprite>sprites\spr_game_logo</sprite>
-      <sprite>sprites\spr_menu_arrow</sprite>
     </sprites>
     <sprites name="Entities">
       <sprite>sprites\spr_player_idle</sprite>
@@ -84,10 +83,12 @@
       </scripts>
     </scripts>
     <scripts name="Helpers">
-      <script>scripts\scr_camera_update.gml</script>
-      <script>scripts\scr_room_resize_view.gml</script>
+      <script>scripts\scr_room_initialize_created.gml</script>
+      <script>scripts\scr_room_menu_created.gml</script>
       <script>scripts\scr_room_level_created.gml</script>
+      <script>scripts\scr_room_resize_view.gml</script>
       <script>scripts\scr_get_gui_center.gml</script>
+      <script>scripts\scr_camera_update.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
