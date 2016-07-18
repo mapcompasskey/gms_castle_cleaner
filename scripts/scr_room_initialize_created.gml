@@ -3,7 +3,7 @@
 /**
  * When the Initialize Room is Created
  *
- * Add this script to a room's Creation Code.
+ * Added to the initialize room's Creation Code.
  */
 
 // add the Game Start object

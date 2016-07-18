@@ -3,6 +3,7 @@
 /**
  * Game Menu Controller: On Draw
  *
+ * Added to the game menu object's Draw event.
  */
 
 // draw logo

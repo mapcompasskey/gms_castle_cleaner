@@ -3,6 +3,7 @@
 /**
  * Pause Screen Controller: On Update
  *
+ * Added to the pause screen object's Step event.
  */
 
 // if ESC key is pressed

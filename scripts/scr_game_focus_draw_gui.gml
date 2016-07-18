@@ -3,6 +3,7 @@
 /**
  * Game Focus Controller: On Draw GUI
  *
+ * Added to the game focus object's Draw GUI event.
  */
 
 var pos_x = scr_get_gui_center('x');

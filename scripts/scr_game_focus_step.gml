@@ -3,6 +3,7 @@
 /**
  * Game Focus Controller: On Update
  *
+ * Added to the game focus object's Step event.
  * Unpause the game if the window is clicked with the left mouse.
  */
 

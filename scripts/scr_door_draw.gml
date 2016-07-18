@@ -3,6 +3,7 @@
 /**
  * Door: On Draw
  *
+ * Added to the door object's Draw event.
  */
 
 // draw the object's sprite

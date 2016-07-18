@@ -3,6 +3,7 @@
 /**
  * Game Focus Controller: Initialize Variables
  *
+ * Added to the game focus object's Create event.
  * Loaded anytime the window loses focus or the OS is paused.
  */
 

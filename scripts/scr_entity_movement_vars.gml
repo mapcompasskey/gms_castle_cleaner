@@ -3,7 +3,7 @@
 /**
  * Movement Variables used by Entities
  *
- * Include in the Create Event of an object.
+ * Include in an object's Create event.
  */
 
 gravity_factor = 1;

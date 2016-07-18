@@ -3,6 +3,7 @@
 /**
  * Keep the Object Inside the Room
  *
+ * Include in an object's End Step event after the position has been updated.
  */
 
 if (bbox_right < 0)

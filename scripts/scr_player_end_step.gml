@@ -1,6 +1,9 @@
+///scr_player_end_step()
+
 /**
  * Player: On End of Update
  *
+ * Added to the player object's End Step event.
  */
 
 

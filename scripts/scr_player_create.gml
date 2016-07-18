@@ -1,6 +1,9 @@
+///scr_player_create()
+
 /**
  * Player: Initialize Variables
  *
+ * Added to the player object's Create event.
  */
 
 scr_entity_movement_vars();

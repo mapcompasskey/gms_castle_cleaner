@@ -3,7 +3,7 @@
 /**
  * When the Menu Room is Created
  *
- * Add this script to a room's Creation Code.
+ * Added to the menu room's Creation Code.
  */
 
 // skip the menu during testing

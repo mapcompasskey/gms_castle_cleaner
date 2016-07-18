@@ -3,6 +3,8 @@
 /**
  * Game Start Controller: On Create
  *
+ * Added to the game start object's Create event.
+ *
  * Set Global Variables
  * The "obj_game_start" is a persistent object that gets added
  * in the creation code of "rm_initialize" when the game begins.

@@ -3,7 +3,7 @@
 /**
  * Update Entity Movement
  *
- * Include in the End Step Event of an object.
+ * Include in an object's End Step event.
  */
 
 // apply gravity

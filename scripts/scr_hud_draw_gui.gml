@@ -3,6 +3,7 @@
 /**
  * HUD: On Draw GUI
  *
+ * Added to the hud object's Draw GUI event.
  */
 
 

@@ -1,8 +1,9 @@
-///scr_hud_step();
+///scr_hud_step()
 
 /**
  * HUD: On Update
  *
+ * Added to the hud object's Step event.
  */
 
 if (obj_player)

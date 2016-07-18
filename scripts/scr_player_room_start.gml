@@ -1,6 +1,9 @@
+///scr_player_room_start()
+
 /**
  * Player: On Room Start
  *
+ * Added to the player object's Room Start event.
  */
 
 // search for the door the player should exit from

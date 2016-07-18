@@ -3,7 +3,7 @@
 /**
  * Check if Reached the Edge of a Wall
  *
- * Include in the End Step Event of an object.
+ * Include in an object's End Step event.
  */
 
 entity_at_wall_edge = false;

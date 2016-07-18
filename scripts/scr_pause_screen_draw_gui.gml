@@ -3,6 +3,7 @@
 /**
  * Pause Screen Controller: On Draw GUI
  *
+ * Added to the pause screen object's Draw GUI event.
  */
 
 var pos_x = scr_get_gui_center('x');

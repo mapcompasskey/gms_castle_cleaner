@@ -3,6 +3,7 @@
 /**
  * Game Focus Controller: On Draw
  *
+ * Added to the game focus object's Draw event.
  */
 
 // draw a black rectangle over the scene

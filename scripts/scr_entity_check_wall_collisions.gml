@@ -3,7 +3,7 @@
 /**
  * Check if Colliding with Walls
  *
- * Include in the End Step Event of an object.
+ * Include in an object's End Step event.
  */
 
 entity_hit_wall = false;

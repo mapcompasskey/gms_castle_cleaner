@@ -3,6 +3,7 @@
 /**
  * Door: On Update
  *
+ * Added to the door object's Step event.
  */
 
 // reset variable

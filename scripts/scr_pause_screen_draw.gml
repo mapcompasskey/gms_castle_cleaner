@@ -3,6 +3,7 @@
 /**
  * Pause Screen Controller: On Draw
  *
+ * Added to the pause screen object's Draw event.
  */
 
 // draw the snapshot

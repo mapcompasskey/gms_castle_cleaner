@@ -1,14 +1,17 @@
+///scr_player_step()
+
 /**
  * Player: On Update
  *
+ * Added to the player object's Step event.
  */
 
 // get the player's input
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_down = keyboard_check(vk_down);
-key_jump_pressed = keyboard_check_pressed(vk_space);
-key_jump_released = keyboard_check_released(vk_space);
+key_jump_pressed = keyboard_check_pressed(ord("C")); // vk_space
+key_jump_released = keyboard_check_released(ord("C")); // vk_space
 key_attack_pressed = keyboard_check_released(ord("Z"));
 
 // is object standing on a wall

@@ -3,6 +3,7 @@
 /**
  * HUD: Initialize Variables
  *
+ * Added to the hud object's Create event.
  */
 
 player_current_health = 0;

@@ -1,9 +1,9 @@
-///scr_room_level_created();
+///scr_room_level_created()
 
 /**
  * When a Room is Created
  *
- * Add this script to a room's Creation Code.
+ * Added to the level room's Creation Code.
  */
 
 // resize room view to fit window

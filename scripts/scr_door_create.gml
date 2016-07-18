@@ -3,6 +3,7 @@
 /**
  * Door: Initialize Variables
  *
+ * Added to the door object's Create event.
  * 'can_use_door' gets set to false whenever the obj_player exits through it.
  */
 

@@ -3,6 +3,7 @@
 /**
  * Game Menu Controller: Initialize Variables
  *
+ * Added to the game menu object's Create event.
  */
 
 // logo options

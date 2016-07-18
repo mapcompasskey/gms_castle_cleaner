@@ -3,6 +3,7 @@
 /**
  * Game Menu Controller: On Update
  *
+ * Added to the game menu object's Step event.
  */
 
 // on menu move

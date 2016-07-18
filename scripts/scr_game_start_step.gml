@@ -3,6 +3,8 @@
 /**
  * Game Start Controller: On Update
  *
+ * Added to the game start object's Step event.
+ *
  * When the window is moving the game will pause but delta_time will continue to count up.
  * So I've added a limit to how high my delta_time variable is allowed to get. TICK is used
  * with timers and with entity movement. So having TICK suddenly be in the hundreds

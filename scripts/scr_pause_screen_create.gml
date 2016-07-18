@@ -3,6 +3,7 @@
 /**
  * Pause Screen Controller: Initialize Variables
  *
+ * Added to the pause screen object's Create event.
  * Loaded into a room whenever the "ESC" key is pressed.
  */
 
