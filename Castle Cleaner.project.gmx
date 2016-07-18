@@ -14,6 +14,7 @@
       <sprite>sprites\spr_player_crouching</sprite>
       <sprite>sprites\spr_player_falling</sprite>
       <sprite>sprites\spr_player_jumping</sprite>
+      <sprite>sprites\spr_player_cart</sprite>
     </sprites>
     <sprites name="Misc">
       <sprite>sprites\spr_wall</sprite>
@@ -68,6 +69,11 @@
           <script>scripts\scr_player_end_step.gml</script>
           <script>scripts\scr_player_animation_end.gml</script>
         </scripts>
+        <scripts name="PlayerCart">
+          <script>scripts\scr_player_cart_create.gml</script>
+          <script>scripts\scr_player_cart_step.gml</script>
+          <script>scripts\scr_player_cart_draw.gml</script>
+        </scripts>
       </scripts>
       <scripts name="Misc">
         <scripts name="HUD">
@@ -113,6 +119,7 @@
       <object>objects\obj_hud</object>
       <object>objects\obj_door</object>
       <object>objects\obj_ladder</object>
+      <object>objects\obj_player_cart</object>
     </objects>
   </objects>
   <rooms name="rooms">
