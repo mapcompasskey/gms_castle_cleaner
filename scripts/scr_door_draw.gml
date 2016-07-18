@@ -13,7 +13,7 @@ draw_self();
 if (show_text)
 {
     var pos_x = round(x);
-    var pos_y = round(y - sprite_height - 4);
+    var pos_y = round(y - sprite_height);
     
     draw_set_color(c_white);
     draw_set_halign(fa_center);
