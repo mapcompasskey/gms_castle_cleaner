@@ -48,6 +48,11 @@
           <script>scripts\scr_game_focus_draw.gml</script>
           <script>scripts\scr_game_focus_draw_gui.gml</script>
         </scripts>
+        <scripts name="ItemCartMenu">
+          <script>scripts\scr_player_cart_menu_create.gml</script>
+          <script>scripts\scr_player_cart_menu_step.gml</script>
+          <script>scripts\scr_player_cart_menu_draw.gml</script>
+        </scripts>
       </scripts>
       <scripts name="Entities">
         <scripts name="Entity">
@@ -110,6 +115,7 @@
       <object>objects\obj_game_menu</object>
       <object>objects\obj_pause_screen</object>
       <object>objects\obj_game_focus</object>
+      <object>objects\obj_player_cart_menu</object>
     </objects>
     <objects name="Entities">
       <object>objects\obj_player</object>

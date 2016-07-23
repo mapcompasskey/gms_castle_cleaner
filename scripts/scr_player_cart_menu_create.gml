@@ -1,10 +1,10 @@
-///scr_pause_screen_create()
+///scr_player_cart_menu_create()
 
 /**
- * Pause Screen Controller: Initialize Variables
+ * Player Cart Menu Controller: Initialize Variables
  *
- * Added to the pause screen object's Create event.
- * Loaded into a room whenever the "ESC" key is pressed.
+ * Added to the player cart menu object's Create event.
+ * Loaded into a room whenever the player cart object is interacted with.
  */
 
 // create a snapshot of the scene from the current application surface
