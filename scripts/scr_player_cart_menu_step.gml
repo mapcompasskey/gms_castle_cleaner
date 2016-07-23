@@ -24,8 +24,24 @@ if (on_object_navigation != 0)
     }
 }
 
+// on object selected
+var on_object_selected = 0;
+on_object_selected = max(keyboard_check_pressed(vk_enter), keyboard_check_pressed(ord("Z")));
+if (on_object_selected == 1)
+{
+    var object_text = object_array[object_array_position, 0];
+    PLAYER_FOO = object_text;
+    on_exit_menu = true;
+}
+
 // if ESC key is pressed
 if (keyboard_check_pressed(vk_escape))
+{
+    on_exit_menu = true;
+}
+
+// exit menu
+if (on_exit_menu)
 {
     // destory the surface, freeing it from memory
     if (surface_exists(snapshot_surface))

@@ -27,7 +27,7 @@ draw_set_valign(fa_top);
 draw_set_font(fnt_silkscreen_game);
 draw_text(pos_x, pos_y, '"ESC" TO CLOSE');
 
-// draw background container
+// draw menu background container
 var pos_x1 = (view_xview[0] + TILE_SIZE);
 var pos_y1 = (view_yview[0] + TILE_SIZE);
 var pos_x2 = (pos_x1 + view_wview[0] - TILE_SIZE - TILE_SIZE);
@@ -37,11 +37,11 @@ draw_set_alpha(0.1);
 draw_rectangle(pos_x1, pos_y1, pos_x2, pos_y2, false);
 draw_set_alpha(1); // reset alpha
 
-// draw background border
+// draw menu background border
 draw_set_colour(c_blue);
 draw_rectangle(pos_x1, pos_y1, pos_x2, pos_y2, true);
 
-// draw object array
+// draw items in object array
 var object_text = '';
 var pos_x = ((view_xview[0] + TILE_SIZE) + 10);
 var pos_y = ((view_yview[0] + TILE_SIZE) + 10);
@@ -55,10 +55,10 @@ for (i = 0; i < array_height_2d(object_array); i++)
         // if item is selected
         if (i == object_array_position)
         {
-            // get object name
+            // get item name
             object_text = object_array[i, 0];
             
-            // draw border
+            // draw border around sprite
             var pos_x1 = (pos_x - 1);
             var pos_y1 = (pos_y - 1);
             var pos_x2 = (pos_x + sprite_get_width(sprite) + 1);
@@ -72,11 +72,11 @@ for (i = 0; i < array_height_2d(object_array); i++)
         
         // update the x/y positioning
         pos_x += (sprite_get_width(sprite) + 10);
-        poa_y = 0;
+        pos_y = 0;
     }
 }
 
-// draw object item text
+// draw selected item's text
 var pos_x = (view_xview[0] + (view_wview[0] / 2));
 var pos_y = (view_yview[0] + view_hview[0] - TILE_SIZE);
 draw_set_color(c_white);
