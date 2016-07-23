@@ -42,16 +42,46 @@ draw_set_colour(c_blue);
 draw_rectangle(pos_x1, pos_y1, pos_x2, pos_y2, true);
 
 // draw object array
-var i, name, sprite;
-var pos_x = ((view_xview[0] + TILE_SIZE) + 5);
-var pos_y = ((view_yview[0] + TILE_SIZE) + 5);
+var object_text = '';
+var pos_x = ((view_xview[0] + TILE_SIZE) + 10);
+var pos_y = ((view_yview[0] + TILE_SIZE) + 10);
+
+var i, sprite;
 for (i = 0; i < array_height_2d(object_array); i++)
 {
-    name = object_array[i, 0];
     sprite = object_array[i, 1];
-    
-    draw_sprite(sprite, 0, pos_x, pos_y);
-    
-    pos_x += (sprite_get_width(sprite) + 5);
+    if (sprite)
+    {
+        // if item is selected
+        if (i == object_array_position)
+        {
+            // get object name
+            object_text = object_array[i, 0];
+            
+            // draw border
+            var pos_x1 = (pos_x - 1);
+            var pos_y1 = (pos_y - 1);
+            var pos_x2 = (pos_x + sprite_get_width(sprite) + 1);
+            var pos_y2 = (pos_y + sprite_get_height(sprite) + 1);
+            draw_set_colour(c_white);
+            draw_rectangle(pos_x1, pos_y1, pos_x2, pos_y2, true);
+        }
+        
+        // draw the sprite
+        draw_sprite(sprite, 0, pos_x, pos_y);
+        
+        // update the x/y positioning
+        pos_x += (sprite_get_width(sprite) + 10);
+        poa_y = 0;
+    }
 }
+
+// draw object item text
+var pos_x = (view_xview[0] + (view_wview[0] / 2));
+var pos_y = (view_yview[0] + view_hview[0] - TILE_SIZE);
+draw_set_color(c_white);
+draw_set_halign(fa_center);
+draw_set_valign(fa_bottom);
+draw_set_font(fnt_silkscreen_game);
+draw_text(pos_x, pos_y, object_text);
 

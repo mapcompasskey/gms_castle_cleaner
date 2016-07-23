@@ -16,9 +16,9 @@ if (on_menu_move != 0)
     menu_position += on_menu_move;
     if (menu_position < 0)
     {
-        menu_position = array_height_2d(menu_options) - 1;
+        menu_position = (array_height_2d(menu_options) - 1);
     }
-    else if (menu_position > array_height_2d(menu_options) - 1)
+    else if (menu_position > (array_height_2d(menu_options) - 1))
     {
         menu_position = 0;
     }

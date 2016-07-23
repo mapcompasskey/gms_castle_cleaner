@@ -18,6 +18,8 @@ surface_copy(snapshot_surface, 0, 0, application_surface);
 instance_deactivate_all(true);
 
 
+object_array_position = 0;
+
 // object array
 /*
     [i, 0] = Name

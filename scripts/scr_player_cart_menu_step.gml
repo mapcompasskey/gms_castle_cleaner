@@ -6,6 +6,24 @@
  * Added to the player cart menu object's Step event.
  */
 
+// on object selection move
+var on_object_navigation = 0;
+on_object_navigation -= max(keyboard_check_pressed(vk_left), 0);
+on_object_navigation += max(keyboard_check_pressed(vk_right), 0);
+
+if (on_object_navigation != 0)
+{
+    object_array_position += on_object_navigation;
+    if (object_array_position < 0)
+    {
+        object_array_position = (array_height_2d(object_array) - 1);
+    }
+    else if (object_array_position > (array_height_2d(object_array) - 1))
+    {
+        object_array_position = 0;
+    }
+}
+
 // if ESC key is pressed
 if (keyboard_check_pressed(vk_escape))
 {
