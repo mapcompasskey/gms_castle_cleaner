@@ -41,3 +41,17 @@ draw_set_alpha(1); // reset alpha
 draw_set_colour(c_blue);
 draw_rectangle(pos_x1, pos_y1, pos_x2, pos_y2, true);
 
+// draw object array
+var i, name, sprite;
+var pos_x = ((view_xview[0] + TILE_SIZE) + 5);
+var pos_y = ((view_yview[0] + TILE_SIZE) + 5);
+for (i = 0; i < array_height_2d(object_array); i++)
+{
+    name = object_array[i, 0];
+    sprite = object_array[i, 1];
+    
+    draw_sprite(sprite, 0, pos_x, pos_y);
+    
+    pos_x += (sprite_get_width(sprite) + 5);
+}
+

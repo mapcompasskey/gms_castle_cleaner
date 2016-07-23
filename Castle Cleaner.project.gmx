@@ -21,6 +21,11 @@
       <sprite>sprites\spr_ladder</sprite>
       <sprite>sprites\spr_door</sprite>
     </sprites>
+    <sprites name="PlayerCartMenu">
+      <sprite>sprites\spr_player_cart_item1</sprite>
+      <sprite>sprites\spr_player_cart_item2</sprite>
+      <sprite>sprites\spr_player_cart_item3</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -48,7 +53,7 @@
           <script>scripts\scr_game_focus_draw.gml</script>
           <script>scripts\scr_game_focus_draw_gui.gml</script>
         </scripts>
-        <scripts name="ItemCartMenu">
+        <scripts name="PlayerCartMenu">
           <script>scripts\scr_player_cart_menu_create.gml</script>
           <script>scripts\scr_player_cart_menu_step.gml</script>
           <script>scripts\scr_player_cart_menu_draw.gml</script>
