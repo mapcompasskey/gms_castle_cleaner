@@ -75,3 +75,12 @@ BG_COLOR = make_color_rgb(25, 25, 25); //c_black;
 //window_set_size(width, height);
 //window_center();
 
+
+/*
+    PLAYER_FOO - variable to test player cart menu
+*/
+
+globalvar PLAYER_FOO;
+
+PLAYER_FOO = 'bar';
+

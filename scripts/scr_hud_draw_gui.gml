@@ -56,3 +56,12 @@ draw_set_valign(fa_top);
 draw_set_font(fnt_04b03_gui);
 draw_text(0, 0, txt);
 
+// player test variable
+var pos_x = display_get_gui_width();
+var pos_y = 0;
+draw_set_color(c_white);
+draw_set_halign(fa_right);
+draw_set_valign(fa_top);
+draw_set_font(fnt_04b03_gui);
+draw_text(pos_x, pos_y, PLAYER_FOO);
+
