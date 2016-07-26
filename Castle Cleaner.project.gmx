@@ -15,6 +15,7 @@
       <sprite>sprites\spr_player_falling</sprite>
       <sprite>sprites\spr_player_jumping</sprite>
       <sprite>sprites\spr_player_cart</sprite>
+      <sprite>sprites\spr_crate</sprite>
     </sprites>
     <sprites name="Misc">
       <sprite>sprites\spr_wall</sprite>
@@ -84,6 +85,11 @@
           <script>scripts\scr_player_cart_step.gml</script>
           <script>scripts\scr_player_cart_draw.gml</script>
         </scripts>
+        <scripts name="Crate">
+          <script>scripts\scr_crate_create.gml</script>
+          <script>scripts\scr_crate_step.gml</script>
+          <script>scripts\scr_crate_end_step.gml</script>
+        </scripts>
       </scripts>
       <scripts name="Misc">
         <scripts name="HUD">
@@ -124,6 +130,7 @@
     </objects>
     <objects name="Entities">
       <object>objects\obj_player</object>
+      <object>objects\obj_crate</object>
     </objects>
     <objects name="Misc">
       <object>objects\obj_wall</object>
