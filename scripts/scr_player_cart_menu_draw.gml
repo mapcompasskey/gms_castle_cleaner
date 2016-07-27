@@ -50,7 +50,7 @@ var i, sprite;
 for (i = 0; i < array_height_2d(object_array); i++)
 {
     sprite = object_array[i, 1];
-    if (sprite)
+    if (sprite != noone)
     {
         // if item is selected
         if (i == object_array_position)
@@ -72,7 +72,7 @@ for (i = 0; i < array_height_2d(object_array); i++)
         
         // update the x/y positioning
         pos_x += (sprite_get_width(sprite) + 10);
-        pos_y = 0;
+        pos_y += 0;
     }
 }
 
