@@ -16,6 +16,7 @@
       <sprite>sprites\spr_player_jumping</sprite>
       <sprite>sprites\spr_player_cart</sprite>
       <sprite>sprites\spr_crate</sprite>
+      <sprite>sprites\spr_crate_falling</sprite>
     </sprites>
     <sprites name="Misc">
       <sprite>sprites\spr_wall</sprite>

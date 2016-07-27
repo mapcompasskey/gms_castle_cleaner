@@ -25,3 +25,14 @@ if (falling_counter > 0)
     falling_counter--;
 }
 
+
+// update the sprite
+if (falling_counter > 0)
+{
+    sprite_index = spr_crate_falling;
+}
+else
+{
+    sprite_index = spr_crate;
+}
+
