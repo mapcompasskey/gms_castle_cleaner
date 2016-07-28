@@ -18,6 +18,7 @@
       <sprite>sprites\spr_player_attack_box</sprite>
       <sprite>sprites\spr_player_cart</sprite>
       <sprite>sprites\spr_crate</sprite>
+      <sprite>sprites\spr_crate_dying</sprite>
       <sprite>sprites\spr_crate_falling</sprite>
     </sprites>
     <sprites name="Misc">
@@ -98,7 +99,9 @@
           <script>scripts\scr_crate_create.gml</script>
           <script>scripts\scr_crate_step.gml</script>
           <script>scripts\scr_crate_is_hurting.gml</script>
+          <script>scripts\scr_crate_is_falling.gml</script>
           <script>scripts\scr_crate_end_step.gml</script>
+          <script>scripts\scr_crate_dying_animation_end.gml</script>
         </scripts>
       </scripts>
       <scripts name="Misc">
@@ -142,6 +145,7 @@
       <object>objects\obj_player</object>
       <object>objects\obj_player_attack</object>
       <object>objects\obj_crate</object>
+      <object>objects\obj_crate_dying</object>
     </objects>
     <objects name="Misc">
       <object>objects\obj_wall</object>

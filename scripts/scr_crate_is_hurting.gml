@@ -34,6 +34,7 @@ if ( ! dying && ! hurting && ! recovering)
                 }
                 
                 //current_health = maximum_health;
+                instance_create(x, y, obj_crate_dying);
                 instance_destroy();
                 
             }
