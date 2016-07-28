@@ -29,8 +29,15 @@ speed_y = 4;
 max_velocity_x = 0;
 max_velocity_y = speed_y * 2;
 
-current_health = 1;
+current_health = 5;
 maximum_health = 5;
+
+hurting = false;
+recovering = false;
+dying = false;
+
+recovering_cooldown_time = 30; // 0.5 second
+recovering_cooldown_timer = 0;
 
 // number of steps this object is effected by gravity after hitting the ground
 falling_count = 3;

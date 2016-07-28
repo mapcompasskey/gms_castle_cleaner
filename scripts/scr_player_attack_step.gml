@@ -19,3 +19,15 @@ if (colliding_with != noone)
 }
 */
 
+// if colliding with crates
+if (place_meeting(x, y, obj_crate))
+{
+    with (obj_crate)
+    {
+        if (place_meeting(x, y, other.id))
+        {
+            is_colliding_with = other.id;
+        }
+    }
+}
+

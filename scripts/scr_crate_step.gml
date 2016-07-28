@@ -26,6 +26,17 @@ if (falling_counter > 0)
 }
 
 
+/**
+ * Check Object State
+ */
+
+scr_crate_is_hurting();
+
+
+/**
+ * Update Object Sprite
+ */
+
 // update the sprite
 if (falling_counter > 0)
 {

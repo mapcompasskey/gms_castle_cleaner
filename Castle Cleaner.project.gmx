@@ -97,6 +97,7 @@
         <scripts name="Crate">
           <script>scripts\scr_crate_create.gml</script>
           <script>scripts\scr_crate_step.gml</script>
+          <script>scripts\scr_crate_is_hurting.gml</script>
           <script>scripts\scr_crate_end_step.gml</script>
         </scripts>
       </scripts>
