@@ -109,6 +109,15 @@ if (crouching)
         image_speed = crouching_speed;
     }
 }
+else if (attacking)
+{
+    if (sprite_index != attacking_sprite)
+    {
+        sprite_index = attacking_sprite;
+        image_index = 0;
+        image_speed = attacking_speed;
+    }
+}
 else if (falling)
 {
     if (sprite_index != falling_sprite)

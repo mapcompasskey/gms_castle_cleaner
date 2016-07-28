@@ -11,9 +11,11 @@
     </sprites>
     <sprites name="Entities">
       <sprite>sprites\spr_player_idle</sprite>
+      <sprite>sprites\spr_player_attacking</sprite>
       <sprite>sprites\spr_player_crouching</sprite>
       <sprite>sprites\spr_player_falling</sprite>
       <sprite>sprites\spr_player_jumping</sprite>
+      <sprite>sprites\spr_player_attack_box</sprite>
       <sprite>sprites\spr_player_cart</sprite>
       <sprite>sprites\spr_crate</sprite>
       <sprite>sprites\spr_crate_falling</sprite>
@@ -81,6 +83,12 @@
           <script>scripts\scr_player_end_step.gml</script>
           <script>scripts\scr_player_animation_end.gml</script>
         </scripts>
+        <scripts name="PlayerAttack">
+          <script>scripts\scr_player_attack_create.gml</script>
+          <script>scripts\scr_player_attack_step.gml</script>
+          <script>scripts\scr_player_attack_end_step.gml</script>
+          <script>scripts\scr_player_attack_animation_end.gml</script>
+        </scripts>
         <scripts name="PlayerCart">
           <script>scripts\scr_player_cart_create.gml</script>
           <script>scripts\scr_player_cart_step.gml</script>
@@ -131,6 +139,7 @@
     </objects>
     <objects name="Entities">
       <object>objects\obj_player</object>
+      <object>objects\obj_player_attack</object>
       <object>objects\obj_crate</object>
     </objects>
     <objects name="Misc">

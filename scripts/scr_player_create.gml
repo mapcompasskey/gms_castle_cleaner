@@ -27,6 +27,7 @@ jumps = 0;
 jumpsmax = 2;
 
 can_attack = true;
+player_attack = noone;
 attack_cooldown_time = 240;
 attack_cooldown_timer = 0;
 
@@ -61,8 +62,8 @@ falling_sprite = spr_player_falling;
 //walking_speed = 0.1;
 //walking_sprite = spr_player_walking;
 
-//attacking_speed = 0.1;
-//attacking_sprite = spr_player_attacking;
+attacking_speed = 0.1;
+attacking_sprite = spr_player_attacking;
 
 //hurting_speed = 0;
 //hurting_sprite = spr_player_jumping;
