@@ -19,6 +19,22 @@ if (falling_counter > 0)
         
         // this crate hasn't reached the "ground", so let the crates above know that we are all still falling
         // find crates above -> set 'falling_counter' to 'falling_count'
+        
+        // if there are crates above us
+        if (place_meeting(x, y - sprite_height, obj_crate))
+        {
+            with (obj_crate)
+            {
+                if (id != other.id)
+                {
+                    if (place_meeting(x, y + other.sprite_height, other.id))
+                    {
+                        falling_counter = falling_count;
+                    }
+                }
+            }
+        }
+        
     }
     
     // reduce falling count
