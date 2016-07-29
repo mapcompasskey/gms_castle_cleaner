@@ -62,7 +62,7 @@ falling_sprite = spr_player_falling;
 //walking_speed = 0.1;
 //walking_sprite = spr_player_walking;
 
-attacking_speed = 0.1;
+attacking_speed = 0.5;
 attacking_sprite = spr_player_attacking;
 
 //hurting_speed = 0;

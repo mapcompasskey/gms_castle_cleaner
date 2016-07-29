@@ -10,8 +10,8 @@
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_down = keyboard_check(vk_down);
-key_jump_pressed = keyboard_check_pressed(ord("C")); // vk_space
-key_jump_released = keyboard_check_released(ord("C")); // vk_space
+key_jump_pressed = keyboard_check_pressed(ord("X")); // vk_space
+key_jump_released = keyboard_check_released(ord("X")); // vk_space
 key_attack_pressed = keyboard_check_released(ord("Z"));
 
 // is object standing on a wall

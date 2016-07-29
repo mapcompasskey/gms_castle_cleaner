@@ -18,7 +18,7 @@ if ( ! dying && ! hurting && ! recovering)
             current_health -= is_colliding_with.damage;
             if (current_health <= 0)
             {
-                // if there are crates above us
+                // if there are crates above us, tell them to start falling
                 if (place_meeting(x, y - sprite_height, obj_crate))
                 {
                     with (obj_crate)
@@ -27,7 +27,7 @@ if ( ! dying && ! hurting && ! recovering)
                         {
                             if (place_meeting(x, y + other.sprite_height, other.id))
                             {
-                                falling_counter = falling_count;
+                                falling = true;
                             }
                         }
                     }

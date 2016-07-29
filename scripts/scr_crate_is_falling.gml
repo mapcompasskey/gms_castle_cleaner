@@ -10,6 +10,28 @@
  * for another few steps to make sure it is grounded.
  */
 
+if (falling)
+{
+    // if there are crates above this one, tell them to start falling
+    if (place_meeting(x, y - sprite_height, obj_crate))
+    {
+        with (obj_crate)
+        {
+            if (id != other.id)
+            {
+                if (place_meeting(x, y + other.sprite_height, other.id))
+                {
+                    falling = true;
+                }
+            }
+        }
+    }
+    
+    // reset falling counter
+    falling_counter = falling_count;
+    falling = false;
+}
+
 // if the object is falling or was previously falling
 if (falling_counter > 0)
 {
@@ -18,24 +40,7 @@ if (falling_counter > 0)
     
     if ( ! grounded)
     {
-        // reset falling counter
-        falling_counter = falling_count;
-        
-        // if there are crates above this one
-        if (place_meeting(x, y - sprite_height, obj_crate))
-        {
-            with (obj_crate)
-            {
-                if (id != other.id)
-                {
-                    if (place_meeting(x, y + other.sprite_height, other.id))
-                    {
-                        falling_counter = falling_count;
-                    }
-                }
-            }
-        }
-        
+        falling = true;
     }
     
     // reduce falling count
