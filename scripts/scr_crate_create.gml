@@ -18,7 +18,6 @@ maximum_health = 3;
 
 hurting = false;
 recovering = false;
-dying = false;
 falling = true;
 
 recovering_cooldown_time = 10; // 1/6 second
@@ -26,4 +25,6 @@ recovering_cooldown_timer = 0;
 
 falling_count = 5;
 falling_counter = 0;
+
+crates_above = ds_list_create();
 
