@@ -1,12 +1,12 @@
-///scr_crate_end_step()
+///scr_block_end_step()
 
 /**
- * Crate: On End of Update
+ * Block: On End of Update
  *
- * Added to the crate object's End Step event.
+ * Added to the block object's End Step event.
  */
 
-// if the object is falling or was previously falling
+// if the instance is falling or was previously falling
 if (falling_counter > 0)
 {
     /**

@@ -10,16 +10,20 @@
       <sprite>sprites\spr_game_logo</sprite>
     </sprites>
     <sprites name="Entities">
-      <sprite>sprites\spr_player_idle</sprite>
-      <sprite>sprites\spr_player_attacking</sprite>
-      <sprite>sprites\spr_player_crouching</sprite>
-      <sprite>sprites\spr_player_falling</sprite>
-      <sprite>sprites\spr_player_jumping</sprite>
-      <sprite>sprites\spr_player_attack_box</sprite>
+      <sprites name="Player">
+        <sprite>sprites\spr_player_idle</sprite>
+        <sprite>sprites\spr_player_attacking</sprite>
+        <sprite>sprites\spr_player_crouching</sprite>
+        <sprite>sprites\spr_player_falling</sprite>
+        <sprite>sprites\spr_player_jumping</sprite>
+        <sprite>sprites\spr_player_attack_box</sprite>
+      </sprites>
+      <sprites name="Block">
+        <sprite>sprites\spr_block</sprite>
+        <sprite>sprites\spr_block_falling</sprite>
+        <sprite>sprites\spr_dying_block</sprite>
+      </sprites>
       <sprite>sprites\spr_player_cart</sprite>
-      <sprite>sprites\spr_crate</sprite>
-      <sprite>sprites\spr_crate_dying</sprite>
-      <sprite>sprites\spr_crate_falling</sprite>
     </sprites>
     <sprites name="Misc">
       <sprite>sprites\spr_wall</sprite>
@@ -96,13 +100,13 @@
           <script>scripts\scr_player_cart_step.gml</script>
           <script>scripts\scr_player_cart_draw.gml</script>
         </scripts>
-        <scripts name="Crate">
-          <script>scripts\scr_crate_create.gml</script>
-          <script>scripts\scr_crate_step.gml</script>
-          <script>scripts\scr_crate_is_hurting.gml</script>
-          <script>scripts\scr_crate_is_falling.gml</script>
-          <script>scripts\scr_crate_end_step.gml</script>
-          <script>scripts\scr_dying_crate_animation_end.gml</script>
+        <scripts name="Block">
+          <script>scripts\scr_block_create.gml</script>
+          <script>scripts\scr_block_step.gml</script>
+          <script>scripts\scr_block_is_hurting.gml</script>
+          <script>scripts\scr_block_is_falling.gml</script>
+          <script>scripts\scr_block_end_step.gml</script>
+          <script>scripts\scr_dying_block_animation_end.gml</script>
         </scripts>
       </scripts>
       <scripts name="Misc">
@@ -145,8 +149,7 @@
     <objects name="Entities">
       <object>objects\obj_player</object>
       <object>objects\obj_player_attack</object>
-      <object>objects\obj_crate</object>
-      <object>objects\obj_dying_crate</object>
+      <object>objects\obj_block</object>
       <object>objects\obj_dying_block</object>
     </objects>
     <objects name="Misc">

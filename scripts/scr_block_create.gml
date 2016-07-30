@@ -1,9 +1,9 @@
-///scr_crate_create()
+///scr_block_create()
 
 /**
- * Crate: Initialize Variables
+ * Block: Initialize Variables
  *
- * Added to the crate object's Create event.
+ * Added to the block object's Create event.
  */
 
 scr_entity_movement_vars();
@@ -25,4 +25,8 @@ recovering_cooldown_timer = 0;
 
 falling_count = 5;
 falling_counter = 0;
+
+idle_sprite = spr_block;
+falling_sprite = spr_block_falling;
+dying_object = obj_dying_block;
 

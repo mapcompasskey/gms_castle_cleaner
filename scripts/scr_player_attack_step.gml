@@ -19,10 +19,10 @@ if (colliding_with != noone)
 }
 */
 
-// if colliding with crates
-if (place_meeting(x, y, obj_crate))
+// if colliding with block objects
+if (place_meeting(x, y, obj_block))
 {
-    with (obj_crate)
+    with (obj_block)
     {
         if (place_meeting(x, y, other.id))
         {

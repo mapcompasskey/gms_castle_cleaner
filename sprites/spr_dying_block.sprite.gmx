@@ -20,9 +20,9 @@
   <width>16</width>
   <height>16</height>
   <frames>
-    <frame index="0">images\spr_crate_dying_0.png</frame>
-    <frame index="1">images\spr_crate_dying_1.png</frame>
-    <frame index="2">images\spr_crate_dying_2.png</frame>
-    <frame index="3">images\spr_crate_dying_3.png</frame>
+    <frame index="0">images\spr_dying_block_0.png</frame>
+    <frame index="1">images\spr_dying_block_1.png</frame>
+    <frame index="2">images\spr_dying_block_2.png</frame>
+    <frame index="3">images\spr_dying_block_3.png</frame>
   </frames>
 </sprite>

@@ -1,9 +1,9 @@
-///scr_crate_is_hurting()
+///scr_block_is_hurting()
 
 /**
- * Crate: Is Hurting
+ * Block: Is Hurting
  *
- * On death, find crates standing on this instance and tell them to start falling.
+ * On death, find blocks standing on this instance and tell them to start falling.
  */
 
 if (recovering)
@@ -35,10 +35,10 @@ if ( ! hurting && ! recovering)
             current_health -= is_colliding_with.damage;
             if (current_health <= 0)
             {
-                // if there are crates standing ontop of this crate
-                if (place_meeting(x, y - sprite_height, obj_crate))
+                // if there are blocks standing ontop of this instance
+                if (place_meeting(x, y - sprite_height, obj_block))
                 {
-                    with (obj_crate)
+                    with (obj_block)
                     {
                         if (id != other.id)
                         {
@@ -50,8 +50,8 @@ if ( ! hurting && ! recovering)
                     }
                 }
                 
-                // replace this instance with a dying crate
-                instance_create(x, y, obj_dying_crate);
+                // replace this instance with the dying version
+                instance_create(x, y, dying_object);
                 instance_destroy();
             }
         }
