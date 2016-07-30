@@ -26,5 +26,3 @@ recovering_cooldown_timer = 0;
 falling_count = 5;
 falling_counter = 0;
 
-crates_above = ds_list_create();
-

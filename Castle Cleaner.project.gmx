@@ -70,6 +70,7 @@
           <script>scripts\scr_entity_update_image_xscale.gml</script>
           <script>scripts\scr_entity_movement_update.gml</script>
           <script>scripts\scr_entity_check_wall_collisions.gml</script>
+          <script>scripts\scr_entity_check_dying_block_collisions.gml</script>
           <script>scripts\scr_entity_check_wall_edges.gml</script>
           <script>scripts\scr_entity_keep_in_room.gml</script>
         </scripts>
@@ -101,7 +102,7 @@
           <script>scripts\scr_crate_is_hurting.gml</script>
           <script>scripts\scr_crate_is_falling.gml</script>
           <script>scripts\scr_crate_end_step.gml</script>
-          <script>scripts\scr_crate_dying_animation_end.gml</script>
+          <script>scripts\scr_dying_crate_animation_end.gml</script>
         </scripts>
       </scripts>
       <scripts name="Misc">
@@ -145,7 +146,8 @@
       <object>objects\obj_player</object>
       <object>objects\obj_player_attack</object>
       <object>objects\obj_crate</object>
-      <object>objects\obj_crate_dying</object>
+      <object>objects\obj_dying_crate</object>
+      <object>objects\obj_dying_block</object>
     </objects>
     <objects name="Misc">
       <object>objects\obj_wall</object>

@@ -35,7 +35,7 @@ if ( ! hurting && ! recovering)
             current_health -= is_colliding_with.damage;
             if (current_health <= 0)
             {
-                // if there are crates standing ontop of this crate, collect their ids
+                // if there are crates standing ontop of this crate
                 if (place_meeting(x, y - sprite_height, obj_crate))
                 {
                     with (obj_crate)
@@ -44,62 +44,18 @@ if ( ! hurting && ! recovering)
                         {
                             if (place_meeting(x, y + other.sprite_height, other.id))
                             {
-                                // add this crate to the list
-                                ds_list_add(other.crates_above, id);
+                                falling = true;
                             }
                         }
                     }
                 }
                 
-                // destory this crate
-                instance_create(x, y, obj_crate_dying);
+                // replace this instance with a dying crate
+                instance_create(x, y, obj_dying_crate);
                 instance_destroy();
-                
-                // loop through the list and tell each crate to start falling
-                for (var i = 0; i < ds_list_size(crates_above); i++)
-                {
-                    var crate_id = ds_list_find_value(crates_above, i);
-                    if (crate_id != noone)
-                    {
-                        with (crate_id)
-                        {
-                            falling = true;
-                            
-                            // push the crate down a little bit to prevent the player from moving into where its going to fall
-                            var drop_y = 5;
-                            var temp_y = 0;
-                            
-                            // check vertical collision
-                            if (place_meeting(x, y + drop_y, obj_wall))
-                            {
-                                while ( ! place_meeting(x, y + temp_y + sign(drop_y), obj_wall))
-                                {
-                                    temp_y += sign(drop_y);
-                                }
-                                drop_y = temp_y;
-                            }
-                            
-                            y += drop_y;
-                        }
-                    }
-                }
-                
             }
         }
         
-        /*
-        // apply horizontal knockback
-        var knockback_x = 2;
-        if (x < is_colliding_with.x)
-        {
-            knockback_x = -knockback_x;
-        }
-        velocity_x = knockback_x;
-        
-        // apply vertical knockback
-        velocity_y = -3;
-        grounded = false;
-        */
     }
 }
 

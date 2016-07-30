@@ -31,6 +31,13 @@ scr_entity_check_wall_collisions();
 
 
 /**
+ * Is Colliding with Dying Blocks
+ */
+
+scr_entity_check_dying_block_collisions();
+
+
+/**
  * Update Object Position
  */
 
