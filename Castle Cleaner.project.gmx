@@ -22,6 +22,8 @@
         <sprite>sprites\spr_block</sprite>
         <sprite>sprites\spr_block_falling</sprite>
         <sprite>sprites\spr_dying_block</sprite>
+        <sprite>sprites\spr_crate</sprite>
+        <sprite>sprites\spr_barrel</sprite>
       </sprites>
       <sprite>sprites\spr_player_cart</sprite>
     </sprites>
@@ -107,6 +109,8 @@
           <script>scripts\scr_block_is_falling.gml</script>
           <script>scripts\scr_block_end_step.gml</script>
           <script>scripts\scr_dying_block_animation_end.gml</script>
+          <script>scripts\scr_crate_create.gml</script>
+          <script>scripts\scr_barrel_create.gml</script>
         </scripts>
       </scripts>
       <scripts name="Misc">
@@ -151,6 +155,8 @@
       <object>objects\obj_player_attack</object>
       <object>objects\obj_block</object>
       <object>objects\obj_dying_block</object>
+      <object>objects\obj_crate</object>
+      <object>objects\obj_barrel</object>
     </objects>
     <objects name="Misc">
       <object>objects\obj_wall</object>
