@@ -27,6 +27,17 @@ var i = 2;
 object_array[i, 0] = "Object 3";
 object_array[i, 1] = spr_player_cart_item3;
 
+// highlight the selected item
+var i, name;
+for (i = 0; i < array_height_2d(object_array); i++)
+{
+    name = object_array[i, 0];
+    if (PLAYER_FOO == name)
+    {
+        object_array_position = i;
+    }
+}
+
 // create a snapshot of the scene from the current application surface
 var width = surface_get_width(application_surface);
 var height = surface_get_height(application_surface);
