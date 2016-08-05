@@ -5,14 +5,19 @@
  *
  * Added to the door object's Create event.
  * 'can_use_door' gets set to false whenever the obj_player exits through it.
+ * The door sprite's origin needs to be center/bottom so the player is positioned correctly when exiting a door.
  */
 
 door_text = 'PRESS UP'
 show_text = false;
 
 can_use_door = true;
-disabled_time = 60; // 2 seconds
+disabled_time = 15; // 1/2 second
 disabled_timer = 0;
+
+opened_sprite = spr_door;
+closed_sprite = spr_door_closed;
+sprite_index = opened_sprite;
 
 /*
     door_code - This door's unique identifier. Used to find where to start the player when the room with this door loads.

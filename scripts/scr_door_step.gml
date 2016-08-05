@@ -39,13 +39,15 @@ if (can_use_door)
 
 if ( ! can_use_door)
 {
-    image_alpha = 0.5;
+    //image_alpha = 0.5;
+    sprite_index = closed_sprite;
     disabled_timer += TICK;
     
     // if the timer has ended
     if (disabled_timer >= disabled_time)
     {
-        image_alpha = 1.0;
+        //image_alpha = 1.0;
+        sprite_index = opened_sprite;
         can_use_door  = true;
         disabled_timer = 0;
     }

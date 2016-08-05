@@ -35,6 +35,7 @@
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_ladder</sprite>
       <sprite>sprites\spr_door</sprite>
+      <sprite>sprites\spr_door_closed</sprite>
     </sprites>
     <sprites name="PlayerCartMenu">
       <sprite>sprites\spr_player_cart_item1</sprite>
