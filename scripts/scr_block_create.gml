@@ -28,5 +28,6 @@ falling_counter = 0;
 
 idle_sprite = spr_block;
 falling_sprite = spr_block_falling;
+hurting_sprite = spr_block_falling;
 dying_object = obj_dying_block;
 

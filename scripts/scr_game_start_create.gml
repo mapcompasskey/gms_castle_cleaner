@@ -66,7 +66,8 @@ globalvar GAME_SCALE, VIEW_WIDTH, VIEW_HEIGHT, BG_COLOR;
 VIEW_WIDTH = 400;
 VIEW_HEIGHT = 240;
 GAME_SCALE = 2;
-BG_COLOR = make_color_rgb(25, 25, 25); //c_black;
+//BG_COLOR = make_color_rgb(25, 25, 25); //c_black;
+BG_COLOR = make_color_rgb(20, 12, 28); // dark purple
 
 // resize game window at start
 // *or set the Width/Height of the first room (under the Settings tab)

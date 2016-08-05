@@ -19,7 +19,11 @@ scr_block_is_falling();
  * Update Object Sprite
  */
 
-if (falling_counter > 0)
+if (hurting)
+{
+    sprite_index = hurting_sprite;
+}
+else if (falling_counter > 0)
 {
     sprite_index = falling_sprite;
 }
