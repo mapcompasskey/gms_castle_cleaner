@@ -136,6 +136,15 @@ else if (jumping)
         image_speed = jumping_speed;
     }
 }
+else if (walking)
+{
+    if (sprite_index != walking_sprite)
+    {
+        sprite_index = walking_sprite;
+        image_index = 0;
+        image_speed = walking_speed;
+    }
+}
 else
 {
     if (sprite_index != idle_sprite)

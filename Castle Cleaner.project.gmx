@@ -12,11 +12,13 @@
     <sprites name="Entities">
       <sprites name="Player">
         <sprite>sprites\spr_player_idle</sprite>
+        <sprite>sprites\spr_player_walking</sprite>
         <sprite>sprites\spr_player_attacking</sprite>
         <sprite>sprites\spr_player_crouching</sprite>
         <sprite>sprites\spr_player_falling</sprite>
         <sprite>sprites\spr_player_jumping</sprite>
         <sprite>sprites\spr_player_attack_box</sprite>
+        <sprite>sprites\spr_player_mask</sprite>
       </sprites>
       <sprites name="Block">
         <sprite>sprites\spr_block</sprite>

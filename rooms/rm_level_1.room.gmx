@@ -92,7 +92,7 @@
     <instance objName="obj_wall" x="128" y="336" name="inst_382360FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="144" y="336" name="inst_377CC4B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="160" y="336" name="inst_E5821B22" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="592" y="416" name="inst_6EA22019" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="496" y="416" name="inst_6EA22019" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door" x="144" y="336" name="inst_C80BE7A7" locked="0" code="door_code = '1-01';&#xA;&#xA;exit_room_id = rm_level_1;&#xA;exit_door_code = '1-02';" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door" x="752" y="128" name="inst_870D5889" locked="0" code="door_code = '1-02';&#xA;&#xA;exit_room_id = rm_level_1;&#xA;exit_door_code = '1-01';&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="752" y="128" name="inst_8185C558" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

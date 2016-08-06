@@ -7,7 +7,7 @@
  */
 
 scr_entity_movement_vars();
-speed_x = 4;
+speed_x = 3;
 speed_y = 4;
 max_velocity_x = speed_x * 2;
 max_velocity_y = speed_y * 2;
@@ -47,7 +47,7 @@ key_attack_pressed = false;
 //image_index = 0;
 
 // sprite animations
-idle_speed = 0;
+idle_speed = 0.05;
 idle_sprite = spr_player_idle;
 
 crouching_speed = 0;
@@ -59,8 +59,8 @@ jumping_sprite = spr_player_jumping;
 falling_speed = 0;
 falling_sprite = spr_player_falling;
 
-//walking_speed = 0.1;
-//walking_sprite = spr_player_walking;
+walking_speed = 0.1;
+walking_sprite = spr_player_walking;
 
 attacking_speed = 0.5;
 attacking_sprite = spr_player_attacking;
@@ -74,5 +74,5 @@ attacking_sprite = spr_player_attacking;
 sprite_index = idle_sprite;
 image_index = 0;
 image_speed = idle_speed;
-//mask_index = spr_player_standing_mask;
+mask_index = spr_player_mask;
 
