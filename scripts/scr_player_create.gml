@@ -41,12 +41,7 @@ key_jump_pressed = false;
 key_jump_released = false;
 key_attack_pressed = false;
 
-// object sprite
-//sprite_index = spr_player;
-//image_speed = 0;
-//image_index = 0;
-
-// sprite animations
+// object sprites and animations
 idle_speed = 0.05;
 idle_sprite = spr_player_idle;
 
@@ -62,14 +57,11 @@ falling_sprite = spr_player_falling;
 walking_speed = 0.1;
 walking_sprite = spr_player_walking;
 
-attacking_speed = 0.5;
+attacking_speed = 0.25;
 attacking_sprite = spr_player_attacking;
 
 //hurting_speed = 0;
 //hurting_sprite = spr_player_jumping;
-
-//idle_speed = 0;
-//idle_sprite = spr_player_box;
 
 sprite_index = idle_sprite;
 image_index = 0;

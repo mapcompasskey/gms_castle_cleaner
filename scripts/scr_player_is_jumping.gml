@@ -3,7 +3,7 @@
  *
  */
 
-if ( ! hurting && ! dying && ! crouching)
+if ( ! hurting && ! dying && ! crouching && ! attacking)
 {
     // if jumping again while in the air
     if (jumping && jumps < jumpsmax && key_jump_pressed)

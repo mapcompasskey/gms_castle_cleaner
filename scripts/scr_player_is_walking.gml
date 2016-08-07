@@ -22,5 +22,11 @@ if ( ! dying && ! hurting && ! crouching)
         walking = false;
         velocity_x = 0;
     }
+    
+    // reduce movement speed if attacking
+    if (attacking)
+    {
+        velocity_x *= 0.5;
+    }
 }
 
