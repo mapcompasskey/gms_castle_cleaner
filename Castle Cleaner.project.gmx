@@ -31,6 +31,13 @@
         <sprite>sprites\spr_barrel</sprite>
         <sprite>sprites\spr_barrel_falling</sprite>
       </sprites>
+      <sprites name="Enemies">
+        <sprites name="Rat">
+          <sprite>sprites\spr_rat_idle</sprite>
+          <sprite>sprites\spr_rat_walking</sprite>
+          <sprite>sprites\spr_rat_mask</sprite>
+        </sprites>
+      </sprites>
       <sprite>sprites\spr_player_cart</sprite>
     </sprites>
     <sprites name="Misc">
@@ -120,6 +127,17 @@
           <script>scripts\scr_crate_2x_create.gml</script>
           <script>scripts\scr_barrel_create.gml</script>
         </scripts>
+        <scripts name="Enemies">
+          <scripts name="Rat">
+            <script>scripts\scr_rat_create.gml</script>
+            <script>scripts\scr_rat_step.gml</script>
+            <script>scripts\scr_rat_update_action.gml</script>
+            <script>scripts\scr_rat_is_hurting.gml</script>
+            <script>scripts\scr_rat_is_walking.gml</script>
+            <script>scripts\scr_rat_is_attacking.gml</script>
+            <script>scripts\scr_rat_end_step.gml</script>
+          </scripts>
+        </scripts>
       </scripts>
       <scripts name="Misc">
         <scripts name="HUD">
@@ -159,13 +177,21 @@
       <object>objects\obj_player_cart_menu</object>
     </objects>
     <objects name="Entities">
-      <object>objects\obj_player</object>
-      <object>objects\obj_player_attack</object>
-      <object>objects\obj_block</object>
-      <object>objects\obj_dying_block</object>
-      <object>objects\obj_crate</object>
-      <object>objects\obj_crate_2x</object>
-      <object>objects\obj_barrel</object>
+      <objects name="Player">
+        <object>objects\obj_player</object>
+        <object>objects\obj_player_attack</object>
+      </objects>
+      <objects name="Blocks">
+        <object>objects\obj_block</object>
+        <object>objects\obj_dying_block</object>
+        <object>objects\obj_crate</object>
+        <object>objects\obj_crate_2x</object>
+        <object>objects\obj_barrel</object>
+      </objects>
+      <objects name="Enemies">
+        <object>objects\obj_enemy</object>
+        <object>objects\obj_rat</object>
+      </objects>
     </objects>
     <objects name="Misc">
       <object>objects\obj_wall</object>

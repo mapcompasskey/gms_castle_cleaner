@@ -54,7 +54,7 @@ jumping_sprite = spr_player_jumping;
 falling_speed = 0;
 falling_sprite = spr_player_falling;
 
-walking_speed = 0.1;
+walking_speed = 0.15;
 walking_sprite = spr_player_walking;
 
 attacking_speed = 0.25;
