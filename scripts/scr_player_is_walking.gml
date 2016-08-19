@@ -1,3 +1,5 @@
+///scr_player_is_walking()
+
 /**
  * Player: Is Moving
  *

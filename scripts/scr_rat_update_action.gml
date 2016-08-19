@@ -8,7 +8,7 @@
 if ( ! dying && ! hurting && ! jumping && ! falling)
 {
     action_timer += TICK;
-    show_debug_message(string(action_timer) + ', ' + string(action_time));
+    
     if (action_timer > action_time)
     {
         switch (irandom(5))

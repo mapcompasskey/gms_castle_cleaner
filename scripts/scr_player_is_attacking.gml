@@ -1,3 +1,5 @@
+///scr_player_is_attacking()
+
 /**
  * Player: Is Attacking
  *

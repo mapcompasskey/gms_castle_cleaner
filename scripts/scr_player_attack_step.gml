@@ -31,3 +31,15 @@ if (place_meeting(x, y, obj_block))
     }
 }
 
+// if colliding with bookcases objects
+if (place_meeting(x, y, obj_bookcase))
+{
+    with (obj_bookcase)
+    {
+        if (place_meeting(x, y, other.id))
+        {
+            is_colliding_with = other.id;
+        }
+    }
+}
+

@@ -1,3 +1,5 @@
+///scr_player_is_crouching()
+
 /**
  * Player: Is Crouching
  *

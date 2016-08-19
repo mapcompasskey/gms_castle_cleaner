@@ -41,6 +41,11 @@
       <sprite>sprites\spr_player_cart</sprite>
     </sprites>
     <sprites name="Misc">
+      <sprites name="Furniture">
+        <sprite>sprites\spr_bookcase_idle</sprite>
+        <sprite>sprites\spr_bookcase_hurting</sprite>
+        <sprite>sprites\spr_bookcase_dying</sprite>
+      </sprites>
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_ladder</sprite>
       <sprite>sprites\spr_door</sprite>
@@ -150,6 +155,12 @@
           <script>scripts\scr_door_step.gml</script>
           <script>scripts\scr_door_draw.gml</script>
         </scripts>
+        <scripts name="Furniture">
+          <script>scripts\scr_bookcase_create.gml</script>
+          <script>scripts\scr_bookcase_step.gml</script>
+          <script>scripts\scr_bookcase_is_hurting.gml</script>
+          <script>scripts\scr_bookcase_animation_end.gml</script>
+        </scripts>
       </scripts>
     </scripts>
     <scripts name="Rooms">
@@ -194,6 +205,9 @@
       </objects>
     </objects>
     <objects name="Misc">
+      <objects name="Furniture">
+        <object>objects\obj_bookcase</object>
+      </objects>
       <object>objects\obj_wall</object>
       <object>objects\obj_hud</object>
       <object>objects\obj_door</object>
