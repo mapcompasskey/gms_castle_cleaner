@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>23</bbox_left>
-  <bbox_right>39</bbox_right>
-  <bbox_top>32</bbox_top>
-  <bbox_bottom>38</bbox_bottom>
+  <bbox_left>9</bbox_left>
+  <bbox_right>36</bbox_right>
+  <bbox_top>15</bbox_top>
+  <bbox_bottom>39</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -20,8 +20,9 @@
   <width>40</width>
   <height>40</height>
   <frames>
-    <frame index="0">images\spr_player_attack_box_0.png</frame>
-    <frame index="1">images\spr_player_attack_box_1.png</frame>
-    <frame index="2">images\spr_player_attack_box_2.png</frame>
+    <frame index="0">images\spr_player_attacking2_0.png</frame>
+    <frame index="1">images\spr_player_attacking2_1.png</frame>
+    <frame index="2">images\spr_player_attacking2_2.png</frame>
+    <frame index="3">images\spr_player_attacking2_3.png</frame>
   </frames>
 </sprite>

@@ -10,9 +10,10 @@
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_down = keyboard_check(vk_down);
-key_jump_pressed = keyboard_check_pressed(ord("X")); // vk_space
-key_jump_released = keyboard_check_released(ord("X")); // vk_space
+key_jump_pressed = keyboard_check_pressed(ord("C")); // vk_space
+key_jump_released = keyboard_check_released(ord("C")); // vk_space
 key_attack_pressed = keyboard_check_released(ord("Z"));
+key_attack2_pressed = keyboard_check_released(ord("X"));
 
 // is object standing on a wall
 grounded = place_meeting(x, y + 1, obj_wall);
@@ -49,11 +50,23 @@ if (crouching)
 }
 else if (attacking)
 {
-    if (sprite_index != attacking_sprite)
+    if (attack_1)
     {
-        sprite_index = attacking_sprite;
-        image_index = 0;
-        image_speed = attacking_speed;
+        if (sprite_index != attacking_sprite)
+        {
+            sprite_index = attacking_sprite;
+            image_index = 0;
+            image_speed = attacking_speed;
+        }
+    }
+    else if (attack_2)
+    {
+         if (sprite_index != attacking2_sprite)
+        {
+            sprite_index = attacking2_sprite;
+            image_index = 0;
+            image_speed = attacking2_speed;
+        }   
     }
 }
 else if (falling)

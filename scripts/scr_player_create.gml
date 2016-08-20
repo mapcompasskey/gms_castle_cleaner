@@ -26,6 +26,8 @@ dying = false;
 jumps = 0;
 jumpsmax = 2;
 
+attack_1 = false;
+attack_2 = false;
 can_attack = true;
 player_attack = noone;
 attack_cooldown_time = 240;
@@ -40,6 +42,7 @@ key_down = false;
 key_jump_pressed = false;
 key_jump_released = false;
 key_attack_pressed = false;
+key_attack2_pressed = false;
 
 // object sprites and animations
 idle_speed = 0.05;
@@ -59,6 +62,11 @@ walking_sprite = spr_player_walking;
 
 attacking_speed = 0.25;
 attacking_sprite = spr_player_attacking;
+attacking_box_sprite = spr_player_attack_box;
+
+attacking2_speed = 0.25;
+attacking2_sprite = spr_player_attacking2;
+attacking2_box_sprite = spr_player_attack2_box;
 
 //hurting_speed = 0;
 //hurting_sprite = spr_player_jumping;

@@ -23,9 +23,10 @@ if ( ! persistent)
     GRAV - the gravity
     TILE_SIZE - the default tile size
     GAME_HAS_FOCUS - whether the game window has focus
+    DEBUG_MODE = show bouding boxes
 */
 
-globalvar RIGHT, LEFT, TICK, GRAV, TILE_SIZE, GAME_HAS_FOCUS;
+globalvar RIGHT, LEFT, TICK, GRAV, TILE_SIZE, GAME_HAS_FOCUS, DEBUG_MODE;
 
 RIGHT = 1;
 LEFT = -1;
@@ -33,6 +34,7 @@ TICK = 1;
 GRAV = 0.3;
 TILE_SIZE = 16;
 GAME_HAS_FOCUS = false;
+DEBUG_MODE = true;
 
 
 /*

@@ -10,6 +10,8 @@ belongs_to = noone;
 damage = 1;
 
 // sprite animations
+visible = false;
+sprite_index = spr_player_attack_box;
 image_index = 0;
 image_speed = 0;
 //image_alpha = 0;

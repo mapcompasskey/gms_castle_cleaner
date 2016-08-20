@@ -19,26 +19,30 @@ if (colliding_with != noone)
 }
 */
 
-// if colliding with block objects
-if (place_meeting(x, y, obj_block))
+// if not the first or last frame of the animation
+if (image_index >= 1 && (image_number - image_index) >= 1)
 {
-    with (obj_block)
+    // if colliding with block objects
+    if (place_meeting(x, y, obj_block))
     {
-        if (place_meeting(x, y, other.id))
+        with (obj_block)
         {
-            is_colliding_with = other.id;
+            if (place_meeting(x, y, other.id))
+            {
+                is_colliding_with = other.id;
+            }
         }
     }
-}
-
-// if colliding with bookcases objects
-if (place_meeting(x, y, obj_bookcase))
-{
-    with (obj_bookcase)
+    
+    // if colliding with bookcases objects
+    if (place_meeting(x, y, obj_bookcase))
     {
-        if (place_meeting(x, y, other.id))
+        with (obj_bookcase)
         {
-            is_colliding_with = other.id;
+            if (place_meeting(x, y, other.id))
+            {
+                is_colliding_with = other.id;
+            }
         }
     }
 }
