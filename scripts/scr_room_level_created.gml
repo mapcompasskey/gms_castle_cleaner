@@ -15,3 +15,12 @@ if ( ! instance_exists(obj_hud))
     instance_create(0, 0, obj_hud);
 }
 
+// add the debug layer
+if (DEBUG_MODE)
+{
+    if ( ! instance_exists(obj_debug_mode))
+    {
+        instance_create(0, 0, obj_debug_mode);
+    }    
+}
+

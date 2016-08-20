@@ -90,6 +90,10 @@
           <script>scripts\scr_player_cart_menu_step.gml</script>
           <script>scripts\scr_player_cart_menu_draw.gml</script>
         </scripts>
+        <scripts name="DebugMode">
+          <script>scripts\scr_debug_mode_draw_gui.gml</script>
+          <script>scripts\scr_debug_mode_draw_bouding_box.gml</script>
+        </scripts>
       </scripts>
       <scripts name="Entities">
         <scripts name="Entity">
@@ -117,7 +121,6 @@
           <script>scripts\scr_player_attack_step.gml</script>
           <script>scripts\scr_player_attack_end_step.gml</script>
           <script>scripts\scr_player_attack_animation_end.gml</script>
-          <script>scripts\scr_player_attack_draw.gml</script>
         </scripts>
         <scripts name="PlayerCart">
           <script>scripts\scr_player_cart_create.gml</script>
@@ -189,6 +192,7 @@
       <object>objects\obj_pause_screen</object>
       <object>objects\obj_game_focus</object>
       <object>objects\obj_player_cart_menu</object>
+      <object>objects\obj_debug_mode</object>
     </objects>
     <objects name="Entities">
       <objects name="Player">
