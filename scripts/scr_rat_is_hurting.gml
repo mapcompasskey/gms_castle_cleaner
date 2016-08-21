@@ -13,6 +13,7 @@ if ( ! dying && ! hurting && ! recovering)
         hurting = true;
         recovering = true;
         
+        /*
         // apply damage
         if (is_colliding_with.damage)
         {
@@ -23,6 +24,7 @@ if ( ! dying && ! hurting && ! recovering)
                 instance_destroy();
             }
         }
+        */
         
         // apply horizontal knockback
         var knockback_x = 2;
@@ -35,6 +37,15 @@ if ( ! dying && ! hurting && ! recovering)
         // apply vertical knockback
         velocity_y = -3;
         grounded = false;
+        
+        // move away from the attack
+        key_left = false;
+        key_right = true;
+        if (velocity_x < 0)
+        {
+            key_left = true;
+            key_right = false;
+        }
     }
 }
 
@@ -57,5 +68,15 @@ if (recovering)
         is_colliding_with = noone;
         recovering_cooldown_timer = 0;
     }
+}
+
+if (hurting)
+{
+    //image_blend = c_red;
+    image_blend = make_colour_rgb(255, 200, 20);
+}
+else
+{
+    image_blend = c_white;
 }
 

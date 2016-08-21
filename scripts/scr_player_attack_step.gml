@@ -22,6 +22,18 @@ if (colliding_with != noone)
 // if not the first or last frame of the animation
 if (image_index >= 1 && (image_number - image_index) >= 1)
 {
+    // if colliding with enemy objects
+    if (place_meeting(x, y, obj_enemy))
+    {
+        with (obj_enemy)
+        {
+            if (place_meeting(x, y, other.id))
+            {
+                is_colliding_with = other.id;
+            }
+        }
+    }
+    
     // if colliding with block objects
     if (place_meeting(x, y, obj_block))
     {

@@ -25,7 +25,7 @@ dying = false;
 action_timer = 500;
 action_time = irandom_range(200, 400);
 
-recovering_cooldown_time = 60; // 1 second
+recovering_cooldown_time = 15; // 1/4 a second
 recovering_cooldown_timer = 0;
 
 // faux inputs

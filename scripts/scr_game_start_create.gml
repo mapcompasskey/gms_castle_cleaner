@@ -34,7 +34,7 @@ TICK = 1;
 GRAV = 0.3;
 TILE_SIZE = 16;
 GAME_HAS_FOCUS = false;
-DEBUG_MODE = true;
+DEBUG_MODE = false;
 
 
 /*
@@ -70,6 +70,8 @@ VIEW_HEIGHT = 240;
 GAME_SCALE = 3;
 //BG_COLOR = make_color_rgb(25, 25, 25); //c_black;
 BG_COLOR = make_color_rgb(20, 12, 28); // dark purple
+//BG_COLOR = make_color_rgb(48, 52, 109); // blue
+//BG_COLOR = make_color_rgb(109, 194, 202); // light blue
 
 // resize game window at start
 // *or set the Width/Height of the first room (under the Settings tab)
