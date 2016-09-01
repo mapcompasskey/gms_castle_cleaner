@@ -40,6 +40,9 @@
           <sprite>sprites\spr_rat_mask</sprite>
         </sprites>
       </sprites>
+      <sprites name="Items">
+        <sprite>sprites\spr_dead_rat</sprite>
+      </sprites>
       <sprite>sprites\spr_player_cart</sprite>
     </sprites>
     <sprites name="Misc">
@@ -150,6 +153,14 @@
             <script>scripts\scr_rat_end_step.gml</script>
           </scripts>
         </scripts>
+        <scripts name="Items">
+          <scripts name="DeadRat">
+            <script>scripts\scr_dead_rat_events.gml</script>
+            <script>scripts\scr_dead_rat_create.gml</script>
+            <script>scripts\scr_dead_rat_step.gml</script>
+            <script>scripts\scr_dead_rat_end_step.gml</script>
+          </scripts>
+        </scripts>
       </scripts>
       <scripts name="Misc">
         <scripts name="HUD">
@@ -210,6 +221,9 @@
       <objects name="Enemies">
         <object>objects\obj_enemy</object>
         <object>objects\obj_rat</object>
+      </objects>
+      <objects name="Items">
+        <object>objects\obj_dead_rat</object>
       </objects>
     </objects>
     <objects name="Misc">

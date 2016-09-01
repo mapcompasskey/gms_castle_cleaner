@@ -1,7 +1,7 @@
 ///scr_rat_end_step()
 
 /**
- * Rate: On End of Update
+ * Rat: On End of Update
  *
  * Added to the rat object's End Step event.
  */
