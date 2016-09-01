@@ -27,6 +27,10 @@ action_time = irandom_range(200, 400);
 
 recovering_cooldown_time = 15; // 1/4 a second
 recovering_cooldown_timer = 0;
+flashing_time = 2; // 1/60 a second
+flashing_timer = 0;
+//flashing_color = c_white;
+is_flashing = false;
 
 // faux inputs
 key_left = false;

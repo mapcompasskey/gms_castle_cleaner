@@ -142,6 +142,7 @@
           <scripts name="Rat">
             <script>scripts\scr_rat_create.gml</script>
             <script>scripts\scr_rat_step.gml</script>
+            <script>scripts\scr_rat_draw.gml</script>
             <script>scripts\scr_rat_update_action.gml</script>
             <script>scripts\scr_rat_is_hurting.gml</script>
             <script>scripts\scr_rat_is_walking.gml</script>
