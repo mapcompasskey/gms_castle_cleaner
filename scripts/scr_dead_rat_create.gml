@@ -7,8 +7,8 @@
  */
 
 scr_entity_movement_vars();
-speed_x = 0;
-speed_y = 0;
+speed_x = 4;
+speed_y = 4;
 
 move_friction = 0.9; // reduce by 10% every step
 move_friction_min = 1; // if less than 1

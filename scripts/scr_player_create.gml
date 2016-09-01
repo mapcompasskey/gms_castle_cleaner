@@ -22,6 +22,7 @@ crouching = false;
 attacking = false;
 hurting = false;
 dying = false;
+carrying = false;
 
 jumps = 0;
 jumpsmax = 2;

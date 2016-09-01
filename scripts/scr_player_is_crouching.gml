@@ -5,7 +5,7 @@
  *
  */
 
-if ( ! hurting && ! dying && ! jumping && ! attacking)
+if ( ! hurting && ! dying && ! jumping && ! attacking && ! carrying)
 {
     // if grounded and pressing the DOWN button
     //if (grounded && key_down)

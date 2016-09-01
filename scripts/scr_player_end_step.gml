@@ -56,7 +56,7 @@ if (is_carrying_item)
     with (is_carrying_item)
     {
         x = other.x;
-        y = other.bbox_top;//other.y
+        y = other.bbox_top;
     }
 }
 

@@ -6,7 +6,7 @@
  * Player will stop attacking when the attack animation ends or is hurt while attacking.
  */
 
-if ( ! dying && ! hurting && ! crouching && ! attacking)
+if ( ! dying && ! hurting && ! crouching && ! attacking && ! carrying)
 {
     // if the attack key was pressed
     if (key_attack_pressed && player_attack == noone)

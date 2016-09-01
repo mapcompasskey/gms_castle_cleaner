@@ -34,6 +34,7 @@ if ( ! is_being_carried)
                     // if the player object is not already carrying an item
                     if (is_carrying_item == noone)
                     {
+                        carrying = true;
                         is_carrying_item = other.id;
                         other.is_being_carried = true;
                     }
