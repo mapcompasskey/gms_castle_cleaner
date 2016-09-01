@@ -34,6 +34,7 @@ attack_cooldown_time = 240;
 attack_cooldown_timer = 0;
 
 on_ladder = false;
+is_carrying_item = noone;
 
 // inputs
 key_left = false

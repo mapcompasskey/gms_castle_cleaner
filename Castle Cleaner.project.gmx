@@ -223,6 +223,7 @@
         <object>objects\obj_rat</object>
       </objects>
       <objects name="Items">
+        <object>objects\obj_item</object>
         <object>objects\obj_dead_rat</object>
       </objects>
     </objects>

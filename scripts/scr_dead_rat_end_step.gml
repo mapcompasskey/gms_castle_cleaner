@@ -3,9 +3,13 @@
 /**
  * Dead Rat: On End of Update
  *
- * Called durinig this object's End Step event.
+ * Called during this object's End Step event.
  */
 
+if (is_being_carried)
+{
+    return false;
+}
 
 /**
  * Update Movement Speeds

@@ -34,7 +34,7 @@ TICK = 1;
 GRAV = 0.3;
 TILE_SIZE = 16;
 GAME_HAS_FOCUS = false;
-DEBUG_MODE = false;
+DEBUG_MODE = true;//false;
 
 
 /*

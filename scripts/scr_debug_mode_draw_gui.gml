@@ -24,3 +24,9 @@ with (obj_enemy)
     scr_debug_mode_draw_bouding_box(bbox_left, bbox_top, bbox_right, bbox_bottom);
 }
 
+with (obj_item)
+{
+    // draw item objects bounding box
+    scr_debug_mode_draw_bouding_box(bbox_left, bbox_top, bbox_right, bbox_bottom);
+}
+

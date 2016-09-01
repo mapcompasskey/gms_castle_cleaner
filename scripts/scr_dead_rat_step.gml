@@ -9,30 +9,36 @@
 // is object standing on a wall
 grounded = place_meeting(x, y + 1, obj_wall);
 
-
 /**
- * Check Object State
+ * Check for Player Collision
  */
 
-//scr_rat_update_action();
-//scr_rat_is_hurting();
-//scr_rat_is_walking();
-//scr_rat_is_attacking();
+// reset player collision variable
+player_collision = false;
 
-
-/**
- * Check Player Collision
- * /
-
-if (can_use_item)
+// if not being carried
+if ( ! is_being_carried)
 {
-    // if overlapping with the player object
-    if (place_meeting(x, y, obj_player))
+    if (can_use_item)
     {
-        // if the UP key was released
-        if (keyboard_check_released(vk_up))
+        // if overlapping with the player object
+        if (place_meeting(x, y, obj_player))
         {
+            player_collision = true;
             
+            // if the UP key was released
+            if (keyboard_check_released(vk_up))
+            {
+                with (obj_player)
+                {
+                    // if the player object is not already carrying an item
+                    if (is_carrying_item == noone)
+                    {
+                        is_carrying_item = other.id;
+                        other.is_being_carried = true;
+                    }
+                }
+            }
         }
     }
 }
@@ -40,28 +46,14 @@ if (can_use_item)
 
 /**
  * Update Object Sprite
- * /
+ */
 
-scr_entity_update_image_xscale();
-
-// update the sprite and animation speed
-if (walking)
+if (player_collision)
 {
-    if (sprite_index != walking_sprite)
-    {
-        sprite_index = walking_sprite;
-        image_index = 0;
-        image_speed = walking_speed;
-    }
+    image_index = 1;
 }
 else
 {
-    if (sprite_index != idle_sprite)
-    {
-        sprite_index = idle_sprite;
-        image_index = 0;
-        image_speed = idle_speed;
-    }
+    image_index = 0;
 }
-*/
 
