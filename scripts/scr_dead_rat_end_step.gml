@@ -6,10 +6,18 @@
  * Called during this object's End Step event.
  */
 
-if (is_being_carried)
+// if being carried, follow the object
+if (is_being_carried != noone)
 {
+    with (is_being_carried)
+    {
+        other.x = x;
+        other.y = bbox_top;
+    }
+
     return false;
 }
+
 
 /**
  * Update Movement Speeds

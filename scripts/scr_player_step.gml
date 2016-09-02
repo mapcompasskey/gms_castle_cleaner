@@ -26,26 +26,11 @@ on_ladder = place_meeting(x, y, obj_ladder);
  * Check Object State
  */
 
+scr_player_is_hurting();
 scr_player_is_crouching();
 scr_player_is_jumping();
 scr_player_is_attacking();
 scr_player_is_walking();
-
-if (carrying && is_carrying_item != noone)
-{
-    if (key_attack_pressed)
-    {
-        with (is_carrying_item)
-        {
-            other.carrying = false;
-            other.is_carrying_item = noone;
-            
-            is_being_carried = false;
-            velocity_x = speed_x * other.facing;
-            velocity_y = -(speed_y);
-        }
-    }
-}
 
 
 /**

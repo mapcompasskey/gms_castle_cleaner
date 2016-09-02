@@ -20,12 +20,16 @@ jumping = false;
 falling = false;
 crouching = false;
 attacking = false;
+recovering = false;
 hurting = false;
 dying = false;
 carrying = false;
 
 jumps = 0;
 jumpsmax = 2;
+
+recovering_cooldown_time = 30; // 1/2 a second
+recovering_cooldown_timer = 0;
 
 attack_1 = false;
 attack_2 = false;

@@ -112,6 +112,7 @@
           <script>scripts\scr_player_create.gml</script>
           <script>scripts\scr_player_room_start.gml</script>
           <script>scripts\scr_player_step.gml</script>
+          <script>scripts\scr_player_is_hurting.gml</script>
           <script>scripts\scr_player_is_crouching.gml</script>
           <script>scripts\scr_player_is_jumping.gml</script>
           <script>scripts\scr_player_is_attacking.gml</script>

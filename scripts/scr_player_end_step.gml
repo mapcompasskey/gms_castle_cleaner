@@ -48,20 +48,6 @@ scr_entity_keep_in_room();
 
 
 /**
- * Update Item Position
- */
-
-if (is_carrying_item)
-{
-    with (is_carrying_item)
-    {
-        x = other.x;
-        y = other.bbox_top;
-    }
-}
-
-
-/**
  * Update Camera Position
  */
 

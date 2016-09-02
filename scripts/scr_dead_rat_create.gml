@@ -17,7 +17,7 @@ jump_bounce_min = 1; // if less than 1
 
 can_use_item = true;
 player_collision = false;
-is_being_carried = false;
+is_being_carried = noone;
 
 image_index = 0;
 image_speed = 0;

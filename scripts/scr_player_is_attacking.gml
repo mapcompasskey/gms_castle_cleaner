@@ -41,10 +41,13 @@ if ( ! dying && ! hurting && ! crouching && ! attacking && ! carrying)
     }
 }
 
-// if hurt while attacking
-if (attacking && hurting)
+// cancel attack
+if (attacking)
 {
-    attacking = false;
+    if (hurting || carrying)
+    {
+        attacking = false;
+    }
 }
 
 // if no longer attacking but the player attack object still exist

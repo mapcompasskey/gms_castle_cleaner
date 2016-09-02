@@ -17,7 +17,7 @@ grounded = place_meeting(x, y + 1, obj_wall);
 player_collision = false;
 
 // if not being carried
-if ( ! is_being_carried)
+if (is_being_carried == noone)
 {
     if (can_use_item)
     {
@@ -29,6 +29,8 @@ if ( ! is_being_carried)
             // if the UP key was released
             if (keyboard_check_released(vk_up))
             {
+                io_clear();
+                
                 with (obj_player)
                 {
                     // if the player object is not already carrying an item
@@ -36,11 +38,31 @@ if ( ! is_being_carried)
                     {
                         carrying = true;
                         is_carrying_item = other.id;
-                        other.is_being_carried = true;
+                        other.is_being_carried = id;
                     }
                 }
             }
         }
+    }
+}
+
+// else, if being carried
+else if (is_being_carried != noone)
+{
+    if (keyboard_check_released(vk_up))
+    {
+        io_clear();
+        
+        with (is_being_carried)
+        {
+            carrying = false;
+            is_carrying_item = noone;
+            other.facing = facing;
+        }
+        
+        is_being_carried = noone;
+        velocity_x = speed_x * facing;
+        velocity_y = -(speed_y);
     }
 }
 
