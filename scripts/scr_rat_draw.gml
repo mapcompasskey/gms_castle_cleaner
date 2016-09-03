@@ -6,6 +6,7 @@
  * Added to the rat object's Draw event.
  */
 
+/*
 var border_color = c_white;
 if (recovering)
 {
@@ -25,6 +26,31 @@ switch (sprite_index)
 }
 
 draw_self();
+*/
+
+/**/
+var border_color = c_white;
+if (recovering)
+{
+    border_color = c_red;
+}
+
+d3d_set_fog(1, border_color, 0, 0);
+draw_sprite_ext(sprite_index, image_index, x - 1, y, image_xscale, image_yscale, 0, c_white, 1);
+draw_sprite_ext(sprite_index, image_index, x + 1, y, image_xscale, image_yscale, 0, c_white, 1);
+draw_sprite_ext(sprite_index, image_index, x, y - 1, image_xscale, image_yscale, 0, c_white, 1);
+draw_sprite_ext(sprite_index, image_index, x, y + 1, image_xscale, image_yscale, 0, c_white, 1);
+d3d_set_fog(0, 0, 0, 0);
+
+draw_self();
+/**/
+
+/*
+draw_self();
+draw_set_blend_mode(bm_add);
+draw_self();
+draw_set_blend_mode(bm_normal);
+*/
 
 
 /*
