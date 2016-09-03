@@ -9,6 +9,7 @@
 // is object standing on a wall
 grounded = place_meeting(x, y + 1, obj_wall);
 
+
 /**
  * Check for Player Collision
  */
@@ -71,6 +72,7 @@ else if (is_being_carried != noone)
  * Update Object Sprite
  */
 
+/*
 if (player_collision)
 {
     image_index = 1;
@@ -79,4 +81,5 @@ else
 {
     image_index = 0;
 }
+*/
 

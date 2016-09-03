@@ -19,5 +19,9 @@ switch(argument0)
     case 'end step':
         scr_dead_rat_end_step();
         break;
+        
+    case 'draw':
+        scr_dead_rat_draw();
+        break;
 }
 

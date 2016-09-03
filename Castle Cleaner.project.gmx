@@ -36,12 +36,15 @@
       <sprites name="Enemies">
         <sprites name="Rat">
           <sprite>sprites\spr_rat_idle</sprite>
+          <sprite>sprites\spr_rat_idle_border</sprite>
           <sprite>sprites\spr_rat_walking</sprite>
+          <sprite>sprites\spr_rat_walking_border</sprite>
           <sprite>sprites\spr_rat_mask</sprite>
         </sprites>
       </sprites>
       <sprites name="Items">
         <sprite>sprites\spr_dead_rat</sprite>
+        <sprite>sprites\spr_dead_rat_b</sprite>
       </sprites>
       <sprite>sprites\spr_player_cart</sprite>
     </sprites>
@@ -146,12 +149,12 @@
           <scripts name="Rat">
             <script>scripts\scr_rat_create.gml</script>
             <script>scripts\scr_rat_step.gml</script>
-            <script>scripts\scr_rat_draw.gml</script>
             <script>scripts\scr_rat_update_action.gml</script>
             <script>scripts\scr_rat_is_hurting.gml</script>
             <script>scripts\scr_rat_is_walking.gml</script>
             <script>scripts\scr_rat_is_attacking.gml</script>
             <script>scripts\scr_rat_end_step.gml</script>
+            <script>scripts\scr_rat_draw.gml</script>
           </scripts>
         </scripts>
         <scripts name="Items">
@@ -160,6 +163,7 @@
             <script>scripts\scr_dead_rat_create.gml</script>
             <script>scripts\scr_dead_rat_step.gml</script>
             <script>scripts\scr_dead_rat_end_step.gml</script>
+            <script>scripts\scr_dead_rat_draw.gml</script>
           </scripts>
         </scripts>
       </scripts>
