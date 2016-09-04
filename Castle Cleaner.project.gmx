@@ -36,15 +36,12 @@
       <sprites name="Enemies">
         <sprites name="Rat">
           <sprite>sprites\spr_rat_idle</sprite>
-          <sprite>sprites\spr_rat_idle_border</sprite>
           <sprite>sprites\spr_rat_walking</sprite>
-          <sprite>sprites\spr_rat_walking_border</sprite>
           <sprite>sprites\spr_rat_mask</sprite>
         </sprites>
       </sprites>
       <sprites name="Items">
         <sprite>sprites\spr_dead_rat</sprite>
-        <sprite>sprites\spr_dead_rat_b</sprite>
       </sprites>
       <sprite>sprites\spr_player_cart</sprite>
     </sprites>
@@ -122,6 +119,7 @@
           <script>scripts\scr_player_is_walking.gml</script>
           <script>scripts\scr_player_end_step.gml</script>
           <script>scripts\scr_player_animation_end.gml</script>
+          <script>scripts\scr_player_draw.gml</script>
         </scripts>
         <scripts name="PlayerAttack">
           <script>scripts\scr_player_attack_create.gml</script>
@@ -195,6 +193,7 @@
       <script>scripts\scr_room_resize_view.gml</script>
       <script>scripts\scr_get_gui_center.gml</script>
       <script>scripts\scr_camera_update.gml</script>
+      <script>scripts\scr_draw_border.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

@@ -24,9 +24,10 @@ if ( ! persistent)
     TILE_SIZE - the default tile size
     GAME_HAS_FOCUS - whether the game window has focus
     DEBUG_MODE = show bouding boxes
+    BORDER_COLOR = default border color for sprites
 */
 
-globalvar RIGHT, LEFT, TICK, GRAV, TILE_SIZE, GAME_HAS_FOCUS, DEBUG_MODE;
+globalvar RIGHT, LEFT, TICK, GRAV, TILE_SIZE, GAME_HAS_FOCUS, DEBUG_MODE, BORDER_COLOR;
 
 RIGHT = 1;
 LEFT = -1;
@@ -35,6 +36,7 @@ GRAV = 0.3;
 TILE_SIZE = 16;
 GAME_HAS_FOCUS = false;
 DEBUG_MODE = true;//false;
+BORDER_COLOR = c_black;
 
 
 /*

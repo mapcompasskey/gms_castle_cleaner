@@ -6,41 +6,13 @@
  * Added to the rat object's Draw event.
  */
 
-/*
-var border_color = c_white;
-if (recovering)
-{
-    border_color = c_red;
-}
-
-// draw border sprite
-switch (sprite_index)
-{
-    case walking_sprite:
-        draw_sprite_ext(spr_rat_walking_border, image_index, x, y, image_xscale, 1, 0, border_color, 1);
-        break;
-    
-    case idle_sprite:
-        draw_sprite_ext(spr_rat_idle_border, image_index, x, y, image_xscale, 1, 0, border_color, 1);
-        break;
-}
-
-draw_self();
-*/
-
 /**/
-var border_color = c_white;
+var border_color = BORDER_COLOR;
 if (recovering)
 {
     border_color = c_red;
 }
-
-d3d_set_fog(1, border_color, 0, 0);
-draw_sprite_ext(sprite_index, image_index, x - 1, y, image_xscale, image_yscale, 0, c_white, 1);
-draw_sprite_ext(sprite_index, image_index, x + 1, y, image_xscale, image_yscale, 0, c_white, 1);
-draw_sprite_ext(sprite_index, image_index, x, y - 1, image_xscale, image_yscale, 0, c_white, 1);
-draw_sprite_ext(sprite_index, image_index, x, y + 1, image_xscale, image_yscale, 0, c_white, 1);
-d3d_set_fog(0, 0, 0, 0);
+scr_draw_border(border_color)
 
 draw_self();
 /**/
