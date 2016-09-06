@@ -8,15 +8,14 @@
 if ( ! hurting && ! dying && ! crouching && ! attacking)
 {
     // if jumping again while in the air
-    if (jumping && jumps < jumpsmax && key_jump_pressed)
+    if (jumping && jumps < jumpsmax && PLAYER_KEY_JUMP_PRESSED)
     {
         jumps++;
         velocity_y = -speed_y;
     }
     
     // if grounded and just pressed the JUMP button
-    //if (grounded && ! jumping && key_jump_pressed)
-    if ((grounded || on_ladder) && ! jumping && key_jump_pressed)
+    if ((grounded || on_ladder) && ! jumping && PLAYER_KEY_JUMP_PRESSED)
     {
         jumping = true;
         grounded = false;
@@ -24,20 +23,18 @@ if ( ! hurting && ! dying && ! crouching && ! attacking)
     }
         
     // reduce jump height
-    if (jumping && velocity_y < 0 && key_jump_released)
+    if (jumping && velocity_y < 0 && PLAYER_KEY_JUMP_RELEASED)
     {
         velocity_y = velocity_y / 2;
     }
     
     // if falling
-    //if (velocity_y > 0 && ! grounded)
     if (velocity_y > 0 && ! grounded && ! on_ladder)
     {
         falling = true;
     }
     
     // if grounded after jumping or falling
-    //if ((jumping || falling) && grounded)
     if ((jumping || falling) && (grounded || on_ladder))
     {
         jumps = 0;

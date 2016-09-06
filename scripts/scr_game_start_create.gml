@@ -23,8 +23,8 @@ if ( ! persistent)
     GRAV - the gravity
     TILE_SIZE - the default tile size
     GAME_HAS_FOCUS - whether the game window has focus
-    DEBUG_MODE = show bouding boxes
-    BORDER_COLOR = default border color for sprites
+    DEBUG_MODE - show bouding boxes
+    BORDER_COLOR - default border color for sprites
 */
 
 globalvar RIGHT, LEFT, TICK, GRAV, TILE_SIZE, GAME_HAS_FOCUS, DEBUG_MODE, BORDER_COLOR;
@@ -37,6 +37,34 @@ TILE_SIZE = 16;
 GAME_HAS_FOCUS = false;
 DEBUG_MODE = true;//false;
 BORDER_COLOR = c_black;
+
+
+/*
+
+*/
+
+globalvar KEY_LEFT, KEY_RIGHT, KEY_DOWN, KEY_JUMP, KEY_ATTACK_1, KEY_ATTACK_2;
+
+KEY_LEFT = vk_left;
+KEY_RIGHT = vk_right;
+KEY_UP = vk_up;
+KEY_DOWN = vk_down;
+KEY_JUMP = ord("C");
+KEY_ATTACK_1 = ord("Z");
+KEY_ATTACK_2 = ord("X");
+
+globalvar PLAYER_KEY_LEFT, PLAYER_KEY_RIGHT, PLAYER_KEY_DOWN;
+globalvar PLAYER_KEY_JUMP_PRESSED, PLAYER_KEY_JUMP_RELEASED, PLAYER_KEY_ACTION;
+globalvar PLAYER_KEY_ATTACK_1, PLAYER_KEY_ATTACK_2;
+
+PLAYER_KEY_LEFT = false;
+PLAYER_KEY_RIGHT = false;
+PLAYER_KEY_DOWN = false;
+PLAYER_KEY_JUMP_PRESSED = false;
+PLAYER_KEY_JUMP_RELEASED = false;
+PLAYER_KEY_ACTION = false;
+PLAYER_KEY_ATTACK_1 = false;
+PLAYER_KEY_ATTACK_2 = false;
 
 
 /*

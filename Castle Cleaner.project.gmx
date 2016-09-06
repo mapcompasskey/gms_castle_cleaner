@@ -70,6 +70,7 @@
         <scripts name="GameStart">
           <script>scripts\scr_game_start_create.gml</script>
           <script>scripts\scr_game_start_step.gml</script>
+          <script>scripts\scr_game_start_begin_step.gml</script>
         </scripts>
         <scripts name="GameMenu">
           <script>scripts\scr_game_menu_create.gml</script>
@@ -115,6 +116,7 @@
           <script>scripts\scr_player_is_hurting.gml</script>
           <script>scripts\scr_player_is_crouching.gml</script>
           <script>scripts\scr_player_is_jumping.gml</script>
+          <script>scripts\scr_player_is_carrying.gml</script>
           <script>scripts\scr_player_is_attacking.gml</script>
           <script>scripts\scr_player_is_walking.gml</script>
           <script>scripts\scr_player_end_step.gml</script>

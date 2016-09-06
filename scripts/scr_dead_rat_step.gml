@@ -14,6 +14,7 @@ grounded = place_meeting(x, y + 1, obj_wall);
  * Check for Player Collision
  */
 
+/*
 // reset player collision variable
 player_collision = false;
 
@@ -30,7 +31,7 @@ if (is_being_carried == noone)
             // if the UP key was released
             if (keyboard_check_released(vk_up))
             {
-                io_clear();
+                //io_clear();
                 
                 with (obj_player)
                 {
@@ -46,13 +47,18 @@ if (is_being_carried == noone)
         }
     }
 }
+*/
 
+/*
 // else, if being carried
 else if (is_being_carried != noone)
 {
-    if (keyboard_check_released(vk_up))
+    //if (keyboard_check_released(vk_up))
+    
+    // if ATTACK key was released
+    if (keyboard_check_released(KEY_ATTACK_1))
     {
-        io_clear();
+        //io_clear();
         
         with (is_being_carried)
         {
@@ -66,7 +72,7 @@ else if (is_being_carried != noone)
         velocity_y = -(speed_y);
     }
 }
-
+*/
 
 /**
  * Update Object Sprite

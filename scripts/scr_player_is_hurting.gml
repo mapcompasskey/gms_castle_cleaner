@@ -6,6 +6,45 @@
  * Player loses control when hurting. Player is invincible while recovering.
  */
 
+// if hurting
+if (hurting)
+{
+    /*
+    // drop item
+    if (is_carrying_item != noone)
+    {
+        with (is_carrying_item)
+        {
+            is_being_carried = noone;
+        }
+        
+        carrying = false;
+        is_carrying_item = noone;
+    }
+    */
+    // regain control when landing
+    if (grounded)
+    {
+        hurting = false;
+    }
+}
+
+if (recovering)
+{
+    //image_alpha = 0.5;
+    recovering_cooldown_timer += TICK;
+    
+    // if the timer has ended
+    if (recovering_cooldown_timer >= recovering_cooldown_time)
+    {
+        //image_alpha = 1.0;
+        hurting = false;
+        recovering = false;
+        is_colliding_with = noone;
+        recovering_cooldown_timer = 0;
+    }
+}
+
 if ( ! dying && ! hurting && ! recovering)
 {
     if (is_colliding_with != noone)
@@ -42,41 +81,4 @@ if ( ! dying && ! hurting && ! recovering)
     }
 }
 
-// if hurting
-if (hurting)
-{
-    // drop item
-    if (is_carrying_item != noone)
-    {
-        with (is_carrying_item)
-        {
-            is_being_carried = noone;
-        }
-        
-        carrying = false;
-        is_carrying_item = noone;
-    }
-    
-    // regain control when landing
-    if (grounded)
-    {
-        hurting = false;
-    }
-}
-
-if (recovering)
-{
-    image_alpha = 0.5;
-    recovering_cooldown_timer += TICK;
-    
-    // if the timer has ended
-    if (recovering_cooldown_timer >= recovering_cooldown_time)
-    {
-        image_alpha = 1.0;
-        hurting = false;
-        recovering = false;
-        is_colliding_with = noone;
-        recovering_cooldown_timer = 0;
-    }
-}
 

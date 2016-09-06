@@ -6,14 +6,16 @@
  * Added to the player object's Step event.
  */
 
+/*
 // get the player's input
-key_left = keyboard_check(vk_left);
-key_right = keyboard_check(vk_right);
-key_down = keyboard_check(vk_down);
-key_jump_pressed = keyboard_check_pressed(ord("C")); // vk_space
-key_jump_released = keyboard_check_released(ord("C")); // vk_space
-key_attack_pressed = keyboard_check_released(ord("Z"));
-key_attack2_pressed = keyboard_check_released(ord("X"));
+key_left = keyboard_check(KEY_LEFT);
+key_right = keyboard_check(KEY_RIGHT);
+key_down = keyboard_check(KEY_DOWN);
+key_jump_pressed = keyboard_check_pressed(KEY_JUMP);
+key_jump_released = keyboard_check_released(KEY_JUMP);
+key_attack_pressed = keyboard_check_released(KEY_ATTACK_1);
+key_attack2_pressed = keyboard_check_released(KEY_ATTACK_2);
+*/
 
 // is object standing on a wall
 grounded = place_meeting(x, y + 1, obj_wall);
@@ -29,6 +31,7 @@ on_ladder = place_meeting(x, y, obj_ladder);
 scr_player_is_hurting();
 scr_player_is_crouching();
 scr_player_is_jumping();
+scr_player_is_carrying();
 scr_player_is_attacking();
 scr_player_is_walking();
 

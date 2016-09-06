@@ -8,8 +8,8 @@
 
 if ( ! dying && ! hurting && ! crouching && ! attacking && ! carrying)
 {
-    // if the attack key was pressed
-    if (key_attack_pressed && player_attack == noone)
+    // if the Attack 1 key was pressed
+    if (PLAYER_KEY_ATTACK_1 && player_attack == noone)
     {
         attack_1 = true;
         attack_2 = false;
@@ -24,8 +24,8 @@ if ( ! dying && ! hurting && ! crouching && ! attacking && ! carrying)
         player_attack.image_speed = attacking_speed;
     }
     
-    // if the attack2 key was pressed
-    else if (key_attack2_pressed && player_attack == noone)
+    // if the Attack 2 key was pressed
+    else if (PLAYER_KEY_ATTACK_2 && player_attack == noone)
     {
         attack_1 = false;
         attack_2 = true;
