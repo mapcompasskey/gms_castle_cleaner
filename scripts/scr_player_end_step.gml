@@ -3,7 +3,7 @@
 /**
  * Player: On End of Update
  *
- * Added to the player object's End Step event.
+ * Called during this object's End Step event.
  */
 
 

@@ -110,8 +110,8 @@
           <script>scripts\scr_entity_keep_in_room.gml</script>
         </scripts>
         <scripts name="Player">
+          <script>scripts\scr_player_events.gml</script>
           <script>scripts\scr_player_create.gml</script>
-          <script>scripts\scr_player_room_start.gml</script>
           <script>scripts\scr_player_step.gml</script>
           <script>scripts\scr_player_is_hurting.gml</script>
           <script>scripts\scr_player_is_crouching.gml</script>
@@ -120,6 +120,7 @@
           <script>scripts\scr_player_is_attacking.gml</script>
           <script>scripts\scr_player_is_walking.gml</script>
           <script>scripts\scr_player_end_step.gml</script>
+          <script>scripts\scr_player_room_start.gml</script>
           <script>scripts\scr_player_animation_end.gml</script>
           <script>scripts\scr_player_draw.gml</script>
         </scripts>

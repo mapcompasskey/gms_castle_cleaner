@@ -3,7 +3,7 @@
 /**
  * Player: On Draw
  *
- * Added to the player object's Draw event.
+ * Called during this object's Draw event.
  */
 
 var border_color = BORDER_COLOR;

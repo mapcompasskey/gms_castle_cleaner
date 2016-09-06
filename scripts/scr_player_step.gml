@@ -3,7 +3,7 @@
 /**
  * Player: On Update
  *
- * Added to the player object's Step event.
+ * Called during this object's Step event.
  */
 
 /*

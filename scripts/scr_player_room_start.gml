@@ -3,7 +3,7 @@
 /**
  * Player: On Room Start
  *
- * Added to the player object's Room Start event.
+ * Called during this object's Room Start event.
  */
 
 // search for the door the player should exit from
