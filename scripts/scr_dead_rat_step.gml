@@ -5,87 +5,28 @@
  *
  * Called during this object's Step event.
  */
-
-// is object standing on a wall
-grounded = place_meeting(x, y + 1, obj_wall);
-
-
-/**
- * Check for Player Collision
- */
-
-/*
-// reset player collision variable
-player_collision = false;
-
-// if not being carried
-if (is_being_carried == noone)
+ 
+// if object has been disabled
+if ( ! can_be_carried)
 {
-    if (can_use_item)
-    {
-        // if overlapping with the player object
-        if (place_meeting(x, y, obj_player))
-        {
-            player_collision = true;
-            
-            // if the UP key was released
-            if (keyboard_check_released(vk_up))
-            {
-                //io_clear();
-                
-                with (obj_player)
-                {
-                    // if the player object is not already carrying an item
-                    if (is_carrying_item == noone)
-                    {
-                        carrying = true;
-                        is_carrying_item = other.id;
-                        other.is_being_carried = id;
-                    }
-                }
-            }
-        }
-    }
-}
-*/
-
-/*
-// else, if being carried
-else if (is_being_carried != noone)
-{
-    //if (keyboard_check_released(vk_up))
+    disable_timer += TICK;
     
-    // if ATTACK key was released
-    if (keyboard_check_released(KEY_ATTACK_1))
+    // if the timer has ended
+    if (disable_timer >= disable_time)
     {
-        //io_clear();
-        
-        with (is_being_carried)
-        {
-            carrying = false;
-            is_carrying_item = noone;
-            other.facing = facing;
-        }
-        
-        is_being_carried = noone;
-        velocity_x = speed_x * facing;
-        velocity_y = -(speed_y);
+        can_be_carried = true;
+        disable_timer = 0;
     }
 }
-*/
 
-/**
- * Update Object Sprite
- */
-
-/*
-if (player_collision)
+// check if the carried state has changed
+if (was_being_carried_by != is_being_carried_by)
 {
-    image_index = 1;
+    // if no longer being carried
+    if (is_being_carried_by == noone)
+    {
+        can_be_carried = false;
+    }
+    was_being_carried_by = is_being_carried_by;
 }
-else
-{
-    image_index = 0;
-}
-*/
 

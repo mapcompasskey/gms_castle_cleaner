@@ -6,10 +6,11 @@
  * Called during this object's End Step event.
  */
 
-// if being carried, follow the object
-if (is_being_carried != noone)
+// if being carried
+if (is_being_carried_by != noone)
 {
-    with (is_being_carried)
+    // reposition onto the object
+    with (is_being_carried_by)
     {
         other.x = x;
         other.y = bbox_top;
@@ -17,6 +18,9 @@ if (is_being_carried != noone)
 
     return false;
 }
+
+// is object standing on a wall
+grounded = place_meeting(x, y + 1, obj_wall);
 
 
 /**
@@ -34,8 +38,6 @@ scr_entity_check_wall_collisions();
 
 if (entity_hit_wall)
 {
-    //key_left = !key_left;
-    //key_right = !key_right;
     velocity_x = -(last_velocity_x);
 }
 

@@ -9,19 +9,6 @@
 // if hurting
 if (hurting)
 {
-    /*
-    // drop item
-    if (is_carrying_item != noone)
-    {
-        with (is_carrying_item)
-        {
-            is_being_carried = noone;
-        }
-        
-        carrying = false;
-        is_carrying_item = noone;
-    }
-    */
     // regain control when landing
     if (grounded)
     {

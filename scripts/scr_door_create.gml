@@ -12,7 +12,7 @@ door_text = 'PRESS UP'
 show_text = false;
 
 can_use_door = true;
-disabled_time = 15; // 1/2 second
+disabled_time = 15; // 1/4 second
 disabled_timer = 0;
 
 opened_sprite = spr_door;
