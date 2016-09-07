@@ -20,7 +20,7 @@ draw_self();
 if (is_colliding_with != noone)
 {
     // draw text above the cart
-    var text = ("PRESS " + string(ACTION_KEY_TEXT));
+    var text = 'PRESS ' + string(ACTION_KEY_TEXT);
     var pos_x = round(x);
     var pos_y = round(y - sprite_height);
     

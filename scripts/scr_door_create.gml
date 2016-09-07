@@ -3,13 +3,13 @@
 /**
  * Door: Initialize Variables
  *
- * Added to the door object's Create event.
- * 'can_use_door' gets set to false whenever the obj_player exits through it.
+ * Called during this object's Create event.
+ *
+ * The door starts disabled to prevent a player from accidentally entering a door right as they exit it.
  * The door sprite's origin needs to be center/bottom so the player is positioned correctly when exiting a door.
  */
 
-door_text = 'PRESS UP'
-show_text = false;
+is_colliding_with = noone;
 
 can_use_door = true;
 disabled_time = 15; // 1/4 second

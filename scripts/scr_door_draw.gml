@@ -3,23 +3,42 @@
 /**
  * Door: On Draw
  *
- * Added to the door object's Draw event.
+ * Called during this object's Draw event.
  */
+
+// draw a border around sprite
+border_color = BORDER_COLOR;
+if (can_use_door)
+{
+    if (is_colliding_with != noone)
+    {
+        border_color = c_yellow;
+    }
+}
+scr_draw_border(border_color);
 
 // draw the object's sprite
 draw_self();
 
-// draw text above the door
-if (show_text)
+/*
+if (can_use_door)
 {
-    var pos_x = round(x);
-    var pos_y = round(y - sprite_height);
-    
-    draw_set_color(c_white);
-    draw_set_halign(fa_center);
-    draw_set_valign(fa_bottom);
-    draw_set_font(fnt_silkscreen_game);
-    draw_text(pos_x, pos_y, door_text);
-    //draw_text_transformed(x, y, 'Imma Door', 0.5, 0.5, 0);
+    if (is_colliding_with != noone)
+    {
+        // draw text above the door
+        text = 'PRESS ' + string(ACTION_KEY_TEXT);
+        var pos_x = round(x);
+        var pos_y = round(y - sprite_height);
+        
+        draw_set_color(c_white);
+        draw_set_halign(fa_center);
+        draw_set_valign(fa_bottom);
+        draw_set_font(fnt_silkscreen_game);
+        draw_text(pos_x, pos_y, text);
+    }
 }
+*/
+
+// reset collision variable
+is_colliding_with = noone;
 
