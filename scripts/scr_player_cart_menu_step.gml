@@ -8,8 +8,8 @@
 
 // on object selection move
 var on_object_navigation = 0;
-on_object_navigation -= max(keyboard_check_pressed(vk_left), 0);
-on_object_navigation += max(keyboard_check_pressed(vk_right), 0);
+on_object_navigation -= max(keyboard_check_pressed(KEY_LEFT), 0);
+on_object_navigation += max(keyboard_check_pressed(KEY_RIGHT), 0);
 
 if (on_object_navigation != 0)
 {
@@ -26,7 +26,7 @@ if (on_object_navigation != 0)
 
 // on object selected
 var on_object_selected = 0;
-on_object_selected = max(keyboard_check_pressed(vk_enter), keyboard_check_pressed(ord("Z")));
+on_object_selected = max(keyboard_check_pressed(KEY_ENTER), keyboard_check_pressed(KEY_ATTACK_1));
 if (on_object_selected == 1)
 {
     var object_text = object_array[object_array_position, 0];
@@ -35,7 +35,7 @@ if (on_object_selected == 1)
 }
 
 // if ESC key is pressed
-if (keyboard_check_pressed(vk_escape))
+if (keyboard_check_pressed(KEY_ESCAPE))
 {
     on_exit_menu = true;
 }
@@ -43,6 +43,9 @@ if (keyboard_check_pressed(vk_escape))
 // exit menu
 if (on_exit_menu)
 {
+    // clear inputs
+    io_clear();
+    
     // destory the surface, freeing it from memory
     if (surface_exists(snapshot_surface))
     {

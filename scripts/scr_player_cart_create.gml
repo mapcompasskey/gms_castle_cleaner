@@ -3,9 +3,8 @@
 /**
  * Player Cart: Initialize Variables
  *
- * Added to the player cart object's Create event.
+ * Called during this object's Create event.
  */
 
-cart_text = 'PRESS UP'
-show_text = false;
+is_colliding_with = noone;
 

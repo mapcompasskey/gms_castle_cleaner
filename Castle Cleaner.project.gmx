@@ -113,6 +113,7 @@
           <script>scripts\scr_player_events.gml</script>
           <script>scripts\scr_player_create.gml</script>
           <script>scripts\scr_player_step.gml</script>
+          <script>scripts\scr_player_check_interactions.gml</script>
           <script>scripts\scr_player_is_hurting.gml</script>
           <script>scripts\scr_player_is_crouching.gml</script>
           <script>scripts\scr_player_is_jumping.gml</script>
@@ -131,8 +132,8 @@
           <script>scripts\scr_player_attack_animation_end.gml</script>
         </scripts>
         <scripts name="PlayerCart">
+          <script>scripts\scr_player_cart_events.gml</script>
           <script>scripts\scr_player_cart_create.gml</script>
-          <script>scripts\scr_player_cart_step.gml</script>
           <script>scripts\scr_player_cart_draw.gml</script>
         </scripts>
         <scripts name="Block">

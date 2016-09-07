@@ -19,11 +19,10 @@ if (carrying)
         // update player
         carrying = false;
         is_carrying_item = noone;
+        
+        return false;
     }
-}
-
-if (carrying)
-{
+    
     // if Action or Attack key was preseed
     if (PLAYER_KEY_ACTION || PLAYER_KEY_ATTACK_1 || PLAYER_KEY_ATTACK_2)
     {
@@ -43,9 +42,31 @@ if (carrying)
         // update the player
         carrying = false;
         is_carrying_item = noone;
+        
+        return false;
     }
+    
+    /*
+    // if colliding with Player Cart
+    if (place_meeting(x, y, obj_player_cart))
+    {
+        // drop item
+        with (is_carrying_item)
+        {
+            is_being_carried_by = noone;
+            instance_destroy();
+        }
+        
+        // update player
+        carrying = false;
+        is_carrying_item = noone;
+        
+        return false;
+    }
+    */
 }
 
+/*
 if ( ! carrying)
 {
     // if colliding with an item
@@ -78,4 +99,5 @@ if ( ! carrying)
         }
     }
 }
+*/
 

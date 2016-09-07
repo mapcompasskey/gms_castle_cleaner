@@ -28,6 +28,7 @@ on_ladder = place_meeting(x, y, obj_ladder);
  * Check Object State
  */
 
+scr_player_check_interactions();
 scr_player_is_hurting();
 scr_player_is_crouching();
 scr_player_is_jumping();
