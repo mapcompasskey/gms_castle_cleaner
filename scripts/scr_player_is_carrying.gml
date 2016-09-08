@@ -20,7 +20,7 @@ if (carrying)
         carrying = false;
         is_carrying_item = noone;
         
-        return false;
+        exit;
     }
     
     // if Action or Attack key was preseed
@@ -43,7 +43,7 @@ if (carrying)
         carrying = false;
         is_carrying_item = noone;
         
-        return false;
+        exit;
     }
     
     /*
@@ -61,7 +61,7 @@ if (carrying)
         carrying = false;
         is_carrying_item = noone;
         
-        return false;
+        exit;
     }
     */
 }

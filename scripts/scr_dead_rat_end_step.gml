@@ -16,7 +16,7 @@ if (is_being_carried_by != noone)
         other.y = bbox_top;
     }
 
-    return false;
+    exit;
 }
 
 // is object standing on a wall

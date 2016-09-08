@@ -8,6 +8,8 @@
 
 /**
  * Check Interactions with Items
+ *
+ * Check if colliding with an item and picking the item up.
  */
 
 // if not carrying an item
@@ -37,6 +39,8 @@ if ( ! carrying)
                         // update the player
                         other.carrying = true;
                         other.is_carrying_item = id;
+                        
+                        exit;
                     }
                 }
             }
@@ -48,6 +52,8 @@ if ( ! carrying)
 /**
  * Check Interactions with Player Carts
  */
+
+var open_cart = false;
 
 // check if colliding with a player cart
 if (place_meeting(x, y, obj_player_cart))
@@ -63,14 +69,35 @@ if (place_meeting(x, y, obj_player_cart))
             {
                 // clear input
                 PLAYER_KEY_ACTION = false;
-                
-                // add the Player Cart Menu object
-                instance_create(0, 0, obj_player_cart_menu);
+                open_cart = true;
             }
         }
     }
 }
 
+if (open_cart)
+{
+    // if carrying an item
+    if (carrying)
+    {
+        with (is_carrying_item)
+        {
+            // update the player
+            other.carrying = true;
+            other.is_carrying_item = id;
+            
+            // update the item
+            is_being_carried_by = noone;
+            instance_destroy();
+        }
+    }
+    else
+    {    
+        // add the Player Cart Menu object
+        instance_create(0, 0, obj_player_cart_menu);
+    }
+    open_cart = false;
+}
 
 /**
  * Check Interactions with Doors

@@ -6,6 +6,9 @@
  * Added to the level room's Creation Code.
  */
 
+// make the room persistent
+room_persistent = true;
+
 // resize room view to fit window
 scr_room_resize_view();
 
