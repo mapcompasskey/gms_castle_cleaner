@@ -54,11 +54,19 @@ draw_set_color(c_white);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_font(fnt_04b03_gui);
-draw_text(0, 0, txt);
+draw_text(5, 5, txt);
+
+// number of dead rat items collected
+var txt = 'Rats: ' + string(DEAD_RAT_ITEMS_COLLECTED);
+draw_set_color(c_white);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_font(fnt_04b03_gui);
+draw_text(5, 25, txt);
 
 // player test variable
-var pos_x = display_get_gui_width();
-var pos_y = 0;
+var pos_x = display_get_gui_width() - 5;
+var pos_y = 5;
 draw_set_color(c_white);
 draw_set_halign(fa_right);
 draw_set_valign(fa_top);

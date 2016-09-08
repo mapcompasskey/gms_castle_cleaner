@@ -10,7 +10,7 @@
  * in the creation code of "rm_initialize" when the game begins.
  */
 
-// object must be persistent
+// this object must be persistent
 if ( ! persistent)
 {
     persistent = true;
@@ -35,12 +35,12 @@ TICK = 1;
 GRAV = 0.3;
 TILE_SIZE = 16;
 GAME_HAS_FOCUS = false;
-DEBUG_MODE = true;//false;
+DEBUG_MODE = false;
 BORDER_COLOR = c_black;
 
 
 /*
-
+    The input keys - should be self explanatory
 */
 
 globalvar KEY_LEFT, KEY_RIGHT, KEY_UP, KEY_DOWN;
@@ -121,9 +121,11 @@ BG_COLOR = make_color_rgb(20, 12, 28); // dark purple
 
 /*
     PLAYER_FOO - variable to test player cart menu
+    DEAD_RAT_ITEMS_COLLECTED - variable to track item destruction
 */
 
-globalvar PLAYER_FOO;
+globalvar PLAYER_FOO, DEAD_RAT_ITEMS_COLLECTED;
 
 PLAYER_FOO = 'bar';
+DEAD_RAT_ITEMS_COLLECTED = 0;
 

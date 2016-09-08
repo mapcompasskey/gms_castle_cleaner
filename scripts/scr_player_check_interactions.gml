@@ -9,7 +9,7 @@
 /**
  * Check Interactions with Items
  *
- * Check if colliding with an item and picking the item up.
+ * Check if colliding with an item and picking it up.
  */
 
 // if not carrying an item
@@ -51,6 +51,10 @@ if ( ! carrying)
 
 /**
  * Check Interactions with Player Carts
+ *
+ * Check if colliding with the player cart. If carrying an item and interacting with the
+ * cart, the item will be placed "inside" it. If not carrying anything, then the player
+ * cart menu will be opened.
  */
 
 var open_cart = false;
@@ -82,9 +86,15 @@ if (open_cart)
     {
         with (is_carrying_item)
         {
+            // if dead rat object, increment the global counter
+            if (object_get_name(object_index) == 'obj_dead_rat')
+            {
+                DEAD_RAT_ITEMS_COLLECTED++;
+            }
+            
             // update the player
-            other.carrying = true;
-            other.is_carrying_item = id;
+            other.carrying = false;
+            other.is_carrying_item = noone;
             
             // update the item
             is_being_carried_by = noone;
