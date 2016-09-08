@@ -27,7 +27,7 @@ if ( ! persistent)
     BORDER_COLOR - default border color for sprites
 */
 
-globalvar RIGHT, LEFT, TICK, GRAV, TILE_SIZE, GAME_HAS_FOCUS, DEBUG_MODE, BORDER_COLOR;
+globalvar RIGHT, LEFT, TICK, GRAV, TILE_SIZE, GAME_HAS_FOCUS, DEBUG_MODE, BORDER_COLOR, HIGHLIGHT_BORDER_COLOR;
 
 RIGHT = 1;
 LEFT = -1;
@@ -37,6 +37,7 @@ TILE_SIZE = 16;
 GAME_HAS_FOCUS = false;
 DEBUG_MODE = false;
 BORDER_COLOR = c_black;
+HIGHLIGHT_BORDER_COLOR = c_white;
 
 
 /*

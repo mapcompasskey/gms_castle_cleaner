@@ -131,11 +131,6 @@
           <script>scripts\scr_player_attack_end_step.gml</script>
           <script>scripts\scr_player_attack_animation_end.gml</script>
         </scripts>
-        <scripts name="PlayerCart">
-          <script>scripts\scr_player_cart_events.gml</script>
-          <script>scripts\scr_player_cart_create.gml</script>
-          <script>scripts\scr_player_cart_draw.gml</script>
-        </scripts>
         <scripts name="Block">
           <script>scripts\scr_block_create.gml</script>
           <script>scripts\scr_block_step.gml</script>
@@ -181,6 +176,11 @@
           <script>scripts\scr_door_step.gml</script>
           <script>scripts\scr_door_draw.gml</script>
         </scripts>
+        <scripts name="PlayerCart">
+          <script>scripts\scr_player_cart_events.gml</script>
+          <script>scripts\scr_player_cart_create.gml</script>
+          <script>scripts\scr_player_cart_draw.gml</script>
+        </scripts>
         <scripts name="Furniture">
           <script>scripts\scr_bookcase_create.gml</script>
           <script>scripts\scr_bookcase_step.gml</script>
@@ -199,6 +199,7 @@
       <script>scripts\scr_get_gui_center.gml</script>
       <script>scripts\scr_camera_update.gml</script>
       <script>scripts\scr_draw_border.gml</script>
+      <script>scripts\scr_draw_flashing_overlay.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

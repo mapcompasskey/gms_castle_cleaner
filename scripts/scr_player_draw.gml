@@ -6,12 +6,16 @@
  * Called during this object's Draw event.
  */
 
-var border_color = BORDER_COLOR;
+// draw a border around sprite
+scr_draw_border(BORDER_COLOR);
+
+// draw the object's sprite
+draw_self();
+
+// if recovering
 if (recovering)
 {
-    border_color = c_red;
+    // draw flashing overlay
+    scr_draw_flashing_overlay(id);
 }
-scr_draw_border(border_color)
-
-draw_self();
 

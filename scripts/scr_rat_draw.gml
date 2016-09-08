@@ -6,73 +6,16 @@
  * Added to the rat object's Draw event.
  */
 
-/**/
-var border_color = BORDER_COLOR;
+// draw a border around sprite
+scr_draw_border(BORDER_COLOR);
+
+// draw the object's sprite
+draw_self();
+
+// if recovering
 if (recovering)
 {
-    border_color = c_red;
+    // draw flashing overlay
+    scr_draw_flashing_overlay(id);
 }
-scr_draw_border(border_color)
-
-draw_self();
-/**/
-
-/*
-draw_self();
-draw_set_blend_mode(bm_add);
-draw_self();
-draw_set_blend_mode(bm_normal);
-*/
-
-
-/*
-if (recovering && is_flashing)
-{
-    /** /
-    draw_set_blend_mode_ext(bm_inv_dest_colour, bm_zero);
-    draw_rectangle_colour(x-sprite_width/2, y-sprite_height/2, x+sprite_width/2, y+sprite_height/2, c_white,c_white,c_white,c_white,false);
-    draw_set_blend_mode(bm_normal);
-    draw_self();
-    
-    draw_set_blend_mode_ext(bm_inv_dest_colour, bm_zero);
-    draw_rectangle_colour(x-sprite_width/2, y-sprite_height/2, x+sprite_width/2, y+sprite_height/2, c_white,c_white,c_white,c_white,false);
-    draw_set_blend_mode(bm_normal);
-    /** /
-    
-    /*
-    draw_set_blend_mode_ext(bm_inv_src_color, bm_inv_dest_color);
-    draw_self();
-    draw_set_blend_mode(bm_normal);
-    * /
-    /*
-    draw_self();
-    draw_set_blend_mode_ext(bm_inv_dest_color,bm_inv_src_color);
-    draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,image_alpha)
-    draw_rectangle_color(x,y,x+sprite_width,y+sprite_height,c_white,c_white,c_white,c_white,0);
-    draw_set_blend_mode(bm_normal);
-    */
-    
-    /*
-    draw_set_blend_mode_ext(bm_inv_dest_colour, bm_zero);
-    draw_rectangle_colour(x-sprite_width/2, y-sprite_height/2, x+sprite_width/2, y+sprite_height/2, c_white,c_white,c_white,c_white,false);
-    //draw_rectangle_colour(x, y, x+sprite_width, y+sprite_height, c_white,c_white,c_white,c_white,false);
-    draw_set_blend_mode(bm_normal);
-    draw_self();
-    * /
-    
-    //draw_set_blend_mode_ext(bm_inv_dest_colour, bm_zero);
-    //draw_rectangle_colour(x-sprite_width/2, y-sprite_height/2, x+sprite_width/2, y+sprite_height/2, c_white,c_white,c_white,c_white,false);
-    //draw_rectangle_colour(x, y, x+sprite_width, y+sprite_height, c_white,c_white,c_white,c_white,false);
-    //draw_set_blend_mode(bm_normal);
-}
-else
-{
-    draw_self();
-}
-
-/** /
-d3d_set_fog(1,c_white,0,0)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,image_alpha)
-d3d_set_fog(0,0,0,0)
-/**/
 

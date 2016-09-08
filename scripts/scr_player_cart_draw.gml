@@ -10,7 +10,7 @@
 border_color = BORDER_COLOR;
 if (is_colliding_with != noone)
 {
-    border_color = c_yellow;
+    border_color = HIGHLIGHT_BORDER_COLOR;
 }
 scr_draw_border(border_color);
 

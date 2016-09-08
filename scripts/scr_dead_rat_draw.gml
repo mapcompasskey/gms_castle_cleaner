@@ -11,7 +11,7 @@ if (can_be_carried)
 {
     if (is_colliding_with != noone)
     {
-        border_color = c_yellow;
+        border_color = HIGHLIGHT_BORDER_COLOR;
         is_colliding_with = noone;
     }
 }

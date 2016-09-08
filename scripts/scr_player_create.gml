@@ -28,7 +28,7 @@ carrying = false;
 jumps = 0;
 jumpsmax = 2;
 
-recovering_cooldown_time = 30; // 1/2 a second
+recovering_cooldown_time = 15; // 1/4 a second
 recovering_cooldown_timer = 0;
 
 attack_1 = false;
