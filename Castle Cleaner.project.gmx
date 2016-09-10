@@ -22,10 +22,11 @@
         <sprite>sprites\spr_player_jumping</sprite>
         <sprite>sprites\spr_player_mask</sprite>
       </sprites>
-      <sprites name="Block">
+      <sprites name="Blocks">
         <sprite>sprites\spr_block</sprite>
         <sprite>sprites\spr_block_falling</sprite>
         <sprite>sprites\spr_dying_block</sprite>
+        <sprite>sprites\spr_dying_block_2x</sprite>
         <sprite>sprites\spr_crate</sprite>
         <sprite>sprites\spr_crate_falling</sprite>
         <sprite>sprites\spr_crate_2x</sprite>
@@ -131,13 +132,19 @@
           <script>scripts\scr_player_attack_end_step.gml</script>
           <script>scripts\scr_player_attack_animation_end.gml</script>
         </scripts>
-        <scripts name="Block">
-          <script>scripts\scr_block_create.gml</script>
-          <script>scripts\scr_block_step.gml</script>
-          <script>scripts\scr_block_is_hurting.gml</script>
-          <script>scripts\scr_block_is_falling.gml</script>
-          <script>scripts\scr_block_end_step.gml</script>
-          <script>scripts\scr_dying_block_animation_end.gml</script>
+        <scripts name="Blocks">
+          <scripts name="Block">
+            <script>scripts\scr_block_events.gml</script>
+            <script>scripts\scr_block_create.gml</script>
+            <script>scripts\scr_block_step.gml</script>
+            <script>scripts\scr_block_is_hurting.gml</script>
+            <script>scripts\scr_block_is_falling.gml</script>
+            <script>scripts\scr_block_end_step.gml</script>
+          </scripts>
+          <scripts name="Dying Block">
+            <script>scripts\scr_dying_block_events.gml</script>
+            <script>scripts\scr_dying_block_animation_end.gml</script>
+          </scripts>
           <script>scripts\scr_crate_create.gml</script>
           <script>scripts\scr_crate_2x_create.gml</script>
           <script>scripts\scr_barrel_create.gml</script>
@@ -224,6 +231,7 @@
       <objects name="Blocks">
         <object>objects\obj_block</object>
         <object>objects\obj_dying_block</object>
+        <object>objects\obj_dying_block_2x</object>
         <object>objects\obj_crate</object>
         <object>objects\obj_crate_2x</object>
         <object>objects\obj_barrel</object>

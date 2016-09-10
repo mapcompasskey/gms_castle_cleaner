@@ -3,7 +3,7 @@
 /**
  * Block: On Update
  *
- * Added to the block object's Step event.
+ * Called during this object's Step event.
  */
 
 

@@ -3,7 +3,7 @@
 /**
  * Crate: Initialize Variables
  *
- * Added to the crate object's Create event.
+ * Called during this object's Create event.
  * Crates are children of Blocks.
  */
 

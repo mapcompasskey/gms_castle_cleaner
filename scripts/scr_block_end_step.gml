@@ -3,7 +3,7 @@
 /**
  * Block: On End of Update
  *
- * Added to the block object's End Step event.
+ * Called during this object's End Step event.
  */
 
 // if the instance is falling or was previously falling

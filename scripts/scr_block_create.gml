@@ -3,7 +3,7 @@
 /**
  * Block: Initialize Variables
  *
- * Added to the block object's Create event.
+ * Called during this object's Create event.
  */
 
 scr_entity_movement_vars();
@@ -13,7 +13,7 @@ speed_y = 4;
 max_velocity_x = 0;
 max_velocity_y = speed_y * 2;
 
-current_health = 3;
+current_health = 1;
 maximum_health = 3;
 
 hurting = false;

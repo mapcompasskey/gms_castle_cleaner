@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_dying_block_animation_end();
+            <string>//scr_dying_block_animation_end();
+scr_dying_block_events('animation end');
 </string>
           </argument>
         </arguments>

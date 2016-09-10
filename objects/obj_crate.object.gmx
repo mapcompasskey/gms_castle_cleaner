@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_crate_create();
+            <string>//scr_crate_create();
+scr_block_events('create', 'crate');
 </string>
           </argument>
         </arguments>

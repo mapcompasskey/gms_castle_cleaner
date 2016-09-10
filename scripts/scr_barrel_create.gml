@@ -3,8 +3,8 @@
 /**
  * Barrel: Initialize Variables
  *
- * Added to the barrel object's Create event.
- * Crates are children of Blocks.
+ * Called during this object's Create event.
+ * Barrels are children of Blocks.
  */
 
 event_inherited();

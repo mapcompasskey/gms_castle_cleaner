@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_block_create();
+            <string>//scr_block_create();
+scr_block_events('create', 'block');
 </string>
           </argument>
         </arguments>
@@ -48,7 +49,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_block_end_step();
+            <string>//scr_block_end_step();
+scr_block_events('end step', 'block');
 </string>
           </argument>
         </arguments>
@@ -71,7 +73,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_block_step();
+            <string>//scr_block_step();
+scr_block_events('step', 'block');
 </string>
           </argument>
         </arguments>
