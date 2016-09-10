@@ -43,7 +43,6 @@
       <sprites name="Items">
         <sprite>sprites\spr_dead_rat</sprite>
       </sprites>
-      <sprite>sprites\spr_player_cart</sprite>
     </sprites>
     <sprites name="Misc">
       <sprites name="Furniture">
@@ -55,6 +54,7 @@
       <sprite>sprites\spr_ladder</sprite>
       <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_door_closed</sprite>
+      <sprite>sprites\spr_player_cart</sprite>
     </sprites>
     <sprites name="PlayerCartMenu">
       <sprite>sprites\spr_player_cart_item1</sprite>
