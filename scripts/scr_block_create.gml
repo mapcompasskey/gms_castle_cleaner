@@ -8,7 +8,7 @@
 
 scr_entity_movement_vars();
 
-gravity_factor = 0.1;
+//gravity_factor = 0.1;
 speed_x = 0;
 speed_y = 4;
 max_velocity_x = 0;
@@ -35,4 +35,6 @@ dying_object = obj_dying_block;
 
 placeholder = noone;
 placeholder_object = obj_block_placeholder;
+placeholder_height = 0;
+placeholder_end = 0;
 

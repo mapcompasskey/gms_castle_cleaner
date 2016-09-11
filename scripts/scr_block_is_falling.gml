@@ -13,24 +13,61 @@ if (dying)
     exit;
 }
 
+// create a placeholder object in this block's fall path
 if (falling && placeholder == noone)
 {
-    show_debug_message('make placeholder');
     placeholder = instance_create(x, bbox_bottom, placeholder_object);
     with (placeholder)
     {
+        // update width to match the parent block
         image_xscale = (other.sprite_width / sprite_width);
-        //image_yscale = 2;
+        
+        // determine the y scaling for the placeholder
+        // start with 2x as that's the most it could fall
+        placeholder_height = sprite_height;
+        placeholder_end = (y + (sprite_height * 2));
+        
+        // get as close to a lower wall as possible
+        if (place_meeting(x, (y + sprite_height), obj_wall))
+        {
+            temp_my = 0;
+            while ( ! place_meeting(x, y + temp_my + 1, obj_wall))
+            {
+                temp_my += 1;
+            }
+            placeholder_end = y + sprite_height + temp_my;
+        }
+        
+        // get the y scaling
+        var divisor = (placeholder_end - y);
+        if (divisor < 5)
+        {
+            // fall distance doesn't need to go below 5
+            divisor = 5;
+        }
+        image_yscale = (divisor / placeholder_height);
     }
 }
+
+// update the placholder object's position and height
 else if (falling && placeholder != noone)
 {
     with (placeholder)
     {
         x = other.x;
         y = other.bbox_bottom;
+        
+        // update the y scaling from the new y position to the end position
+        var divisor = (placeholder_end - y);
+        if (divisor < 5)
+        {
+            divisor = 5;
+        }
+        image_yscale = (divisor / placeholder_height);
     }
 }
+
+// destroy the placeholder object
 else if ( ! falling && placeholder != noone)
 {
     with (placeholder)
