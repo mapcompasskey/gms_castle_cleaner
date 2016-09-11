@@ -8,6 +8,7 @@
 
 scr_entity_movement_vars();
 
+gravity_factor = 0.1;
 speed_x = 0;
 speed_y = 4;
 max_velocity_x = 0;
@@ -16,6 +17,7 @@ max_velocity_y = speed_y * 2;
 current_health = 1;
 maximum_health = 3;
 
+dying = false;
 hurting = false;
 recovering = false;
 falling = true;
@@ -30,4 +32,7 @@ idle_sprite = spr_block;
 falling_sprite = spr_block_falling;
 hurting_sprite = spr_block_falling;
 dying_object = obj_dying_block;
+
+placeholder = noone;
+placeholder_object = obj_block_placeholder;
 

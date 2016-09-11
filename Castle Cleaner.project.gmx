@@ -33,6 +33,7 @@
         <sprite>sprites\spr_crate_2x_falling</sprite>
         <sprite>sprites\spr_barrel</sprite>
         <sprite>sprites\spr_barrel_falling</sprite>
+        <sprite>sprites\spr_block_placeholder</sprite>
       </sprites>
       <sprites name="Enemies">
         <sprites name="Rat">
@@ -235,6 +236,7 @@
         <object>objects\obj_crate</object>
         <object>objects\obj_crate_2x</object>
         <object>objects\obj_barrel</object>
+        <object>objects\obj_block_placeholder</object>
       </objects>
       <objects name="Enemies">
         <object>objects\obj_enemy</object>

@@ -35,6 +35,8 @@ if ( ! hurting && ! recovering)
             current_health -= is_colliding_with.damage;
             if (current_health <= 0)
             {
+                dying = true;
+                
                 // if there are blocks standing ontop of this instance
                 if (place_meeting(x, y - sprite_height, obj_block))
                 {
@@ -48,6 +50,16 @@ if ( ! hurting && ! recovering)
                             }
                         }
                     }
+                }
+                
+                // if there is a placeholder object
+                if (placeholder != noone)
+                {
+                    with (placeholder)
+                    {
+                        instance_destroy();
+                    }
+                    placeholder = noone;
                 }
                 
                 // replace this instance with the dying version
