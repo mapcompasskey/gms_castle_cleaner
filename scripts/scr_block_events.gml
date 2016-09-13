@@ -15,6 +15,22 @@ switch(argument0)
                 scr_crate_create();
                 break;
                 
+            case 'crate 2a':
+                scr_crate_2a_create();
+                break;
+                
+            case 'crate 2b':
+                scr_crate_2b_create();
+                break;
+                
+            case 'crate 2c':
+                scr_crate_2c_create();
+                break;
+                
+            case 'crate 2d':
+                scr_crate_2d_create();
+                break;
+                
             case 'crate 2x':
                 scr_crate_2x_create();
                 break;

@@ -30,6 +30,10 @@
         <sprite>sprites\spr_crate</sprite>
         <sprite>sprites\spr_crate_falling</sprite>
         <sprite>sprites\spr_crate_2x</sprite>
+        <sprite>sprites\spr_crate_2d</sprite>
+        <sprite>sprites\spr_crate_2c</sprite>
+        <sprite>sprites\spr_crate_2b</sprite>
+        <sprite>sprites\spr_crate_2a</sprite>
         <sprite>sprites\spr_crate_2x_falling</sprite>
         <sprite>sprites\spr_barrel</sprite>
         <sprite>sprites\spr_barrel_falling</sprite>
@@ -147,6 +151,10 @@
             <script>scripts\scr_dying_block_animation_end.gml</script>
           </scripts>
           <script>scripts\scr_crate_create.gml</script>
+          <script>scripts\scr_crate_2a_create.gml</script>
+          <script>scripts\scr_crate_2b_create.gml</script>
+          <script>scripts\scr_crate_2c_create.gml</script>
+          <script>scripts\scr_crate_2d_create.gml</script>
           <script>scripts\scr_crate_2x_create.gml</script>
           <script>scripts\scr_barrel_create.gml</script>
         </scripts>
@@ -234,6 +242,10 @@
         <object>objects\obj_dying_block</object>
         <object>objects\obj_dying_block_2x</object>
         <object>objects\obj_crate</object>
+        <object>objects\obj_crate_2a</object>
+        <object>objects\obj_crate_2b</object>
+        <object>objects\obj_crate_2c</object>
+        <object>objects\obj_crate_2d</object>
         <object>objects\obj_crate_2x</object>
         <object>objects\obj_barrel</object>
         <object>objects\obj_block_placeholder</object>
