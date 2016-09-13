@@ -111,6 +111,7 @@
           <script>scripts\scr_entity_update_image_xscale.gml</script>
           <script>scripts\scr_entity_movement_update.gml</script>
           <script>scripts\scr_entity_check_wall_collisions.gml</script>
+          <script>scripts\scr_entity_check_block_collisions.gml</script>
           <script>scripts\scr_entity_check_dying_block_collisions.gml</script>
           <script>scripts\scr_entity_check_wall_edges.gml</script>
           <script>scripts\scr_entity_keep_in_room.gml</script>
@@ -239,8 +240,6 @@
       </objects>
       <objects name="Blocks">
         <object>objects\obj_block</object>
-        <object>objects\obj_dying_block</object>
-        <object>objects\obj_dying_block_2x</object>
         <object>objects\obj_crate</object>
         <object>objects\obj_crate_2a</object>
         <object>objects\obj_crate_2b</object>
@@ -248,6 +247,8 @@
         <object>objects\obj_crate_2d</object>
         <object>objects\obj_crate_2x</object>
         <object>objects\obj_barrel</object>
+        <object>objects\obj_dying_block</object>
+        <object>objects\obj_dying_block_2x</object>
         <object>objects\obj_block_placeholder</object>
       </objects>
       <objects name="Enemies">

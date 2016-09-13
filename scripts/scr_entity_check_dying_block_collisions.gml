@@ -6,7 +6,7 @@
  * Include in an object's End Step event.
  */
 
-entity_hit_wall = false;
+entity_hit_dying_block = false;
 
 // check horizontal collision
 if (place_meeting(x + mx, y, obj_dying_block))
@@ -19,7 +19,7 @@ if (place_meeting(x + mx, y, obj_dying_block))
     mx = temp_mx;
     velocity_x = 0;
     
-    entity_hit_wall = true;
+    entity_hit_dying_block = true;
 }
 
 // check vertical collision

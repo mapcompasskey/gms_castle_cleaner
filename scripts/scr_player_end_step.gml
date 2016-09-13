@@ -6,13 +6,8 @@
  * Called during this object's End Step event.
  */
 
-
-/**
- * Update Movement Speeds
- */
-
+// apply faux physics
 scr_entity_movement_update();
-
 
 // if on a ladder, being pushed down and not crouching
 if (on_ladder && my > 0 && ! crouching)
@@ -22,34 +17,16 @@ if (on_ladder && my > 0 && ! crouching)
     velocity_y = 0;
 }
 
-
-/**
- * Is Colliding with Walls
- */
-
+// test collisions
 scr_entity_check_wall_collisions();
-
-
-/**
- * Is Colliding with Dying Blocks
- */
-
+scr_entity_check_block_collisions();
 scr_entity_check_dying_block_collisions();
 
-
-/**
- * Update Object Position
- */
-
+// update object position
 x += mx;
 y += my;
 
 scr_entity_keep_in_room();
-
-
-/**
- * Update Camera Position
- */
 
 // move towards the player
 scr_camera_update(x, y, true);

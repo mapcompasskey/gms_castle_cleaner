@@ -17,8 +17,10 @@ key_attack_pressed = keyboard_check_released(KEY_ATTACK_1);
 key_attack2_pressed = keyboard_check_released(KEY_ATTACK_2);
 */
 
-// is object standing on a wall
-grounded = place_meeting(x, y + 1, obj_wall);
+// is object standing on a wall or block
+var on_wall = place_meeting(x, y + 1, obj_wall);
+var on_block = place_meeting(x, y + 1, obj_block);
+grounded = max(on_wall, on_block);
 
 // is object standing in a ladder
 on_ladder = place_meeting(x, y, obj_ladder);

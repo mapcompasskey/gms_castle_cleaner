@@ -6,8 +6,10 @@
  * Added to the rat object's Step event.
  */
 
-// is object standing on a wall
-grounded = place_meeting(x, y + 1, obj_wall);
+// is object standing on a wall or block
+var on_wall = place_meeting(x, y + 1, obj_wall);
+var on_block = place_meeting(x, y + 1, obj_block);
+grounded = max(on_wall, on_block);
 
 
 /**

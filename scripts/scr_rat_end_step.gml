@@ -6,18 +6,10 @@
  * Added to the rat object's End Step event.
  */
 
-
-/**
- * Update Movement Speeds
- */
-
+// apply faux physics
 scr_entity_movement_update();
 
-
-/**
- * Has Reached Edge of Wall
- */
-
+// test if at the walls edge
 scr_entity_check_wall_edges();
 
 if (entity_at_wall_edge)
@@ -26,25 +18,21 @@ if (entity_at_wall_edge)
     key_right = !key_right;
 }
 
-
-/**
- * Is Colliding with Walls
- */
-
+// test collisions
 scr_entity_check_wall_collisions();
+scr_entity_check_block_collisions();
+scr_entity_check_dying_block_collisions();
 
-//if (entity_hit_wall)
-if ( ! entity_at_wall_edge && entity_hit_wall)
+if ( ! entity_at_wall_edge)
 {
-    key_left = !key_left;
-    key_right = !key_right;
+    if (entity_hit_wall || entity_hit_block || entity_hit_dying_block)
+    {
+        key_left = !key_left;
+        key_right = !key_right;
+    }
 }
 
-
-/**
- * Update Object Position
- */
-
+// update object position
 x += mx;
 y += my;
 

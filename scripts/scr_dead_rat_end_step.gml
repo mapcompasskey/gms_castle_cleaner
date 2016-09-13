@@ -19,33 +19,25 @@ if (is_being_carried_by != noone)
     exit;
 }
 
-// is object standing on a wall
-grounded = place_meeting(x, y + 1, obj_wall);
+// is object standing on a wall or block
+var on_wall = place_meeting(x, y + 1, obj_wall);
+var on_block = place_meeting(x, y + 1, obj_block);
+grounded = max(on_wall, on_block);
 
-
-/**
- * Update Movement Speeds
- */
-
+// apply faux physics
 scr_entity_movement_update();
 
-
-/**
- * Is Colliding with Walls
- */
-
+// test collisions
 scr_entity_check_wall_collisions();
+scr_entity_check_block_collisions();
+scr_entity_check_dying_block_collisions();
 
-if (entity_hit_wall)
+if (entity_hit_wall || entity_hit_block || entity_hit_dying_block)
 {
     velocity_x = -(last_velocity_x);
 }
 
-
-/**
- * Update Object Position
- */
-
+// update object position
 x += mx;
 y += my;
 

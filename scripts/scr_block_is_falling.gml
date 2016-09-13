@@ -104,8 +104,10 @@ if (falling)
 // if the instance is falling or was previously falling
 if (falling_counter > 0)
 {
-    // is instance is standing on a wall
-    grounded = place_meeting(x, y + 1, obj_wall);
+    // is instance is standing on a wall or block
+    var on_wall = place_meeting(x, y + 1, obj_wall);
+    var on_block = place_meeting(x, y + 1, obj_block);
+    grounded = max(on_wall, on_block);
     
     if ( ! grounded)
     {
