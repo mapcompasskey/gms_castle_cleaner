@@ -24,30 +24,22 @@ if (falling && placeholder == noone)
         // update width to match the parent block
         image_xscale = (other.sprite_width / sprite_width);
         
-        // determine the y scaling for the placeholder
-        // start with 2x as that's the most it could fall
+        // set the starting height and ending position
         placeholder_height = sprite_height;
-        placeholder_end = (y + (sprite_height * 2));
+        placeholder_end = y + placeholder_height;
         
-        // get as close to a lower wall as possible
-        if (place_meeting(x, (y + sprite_height), obj_wall))
+        // scale the height by a factor of one until colliding with a wall or exceeding the limit
+        var i = 0;
+        while ( ! place_meeting(x, (y + placeholder_height), obj_wall) && i <= 5)
         {
-            temp_my = 0;
-            while ( ! place_meeting(x, y + temp_my + 1, obj_wall))
-            {
-                temp_my += 1;
-            }
-            placeholder_end = y + sprite_height + temp_my;
+            i += 1;
+            placeholder_end = y + (placeholder_height * i);
+        
+            // update y scaling
+            var divisor = (placeholder_end - y);
+            image_yscale = (max(divisor, 1) / placeholder_height);
         }
         
-        // get the y scaling
-        var divisor = (placeholder_end - y);
-        if (divisor < 5)
-        {
-            // fall distance doesn't need to go below 5
-            divisor = 5;
-        }
-        image_yscale = (divisor / placeholder_height);
     }
 }
 
@@ -61,11 +53,7 @@ else if (falling && placeholder != noone)
         
         // update the y scaling from the new y position to the end position
         var divisor = (placeholder_end - y);
-        if (divisor < 5)
-        {
-            divisor = 5;
-        }
-        image_yscale = (divisor / placeholder_height);
+        image_yscale = (max(divisor, 1) / placeholder_height);
     }
 }
 

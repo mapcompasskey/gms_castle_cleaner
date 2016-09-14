@@ -110,10 +110,10 @@
           <script>scripts\scr_entity_movement_vars.gml</script>
           <script>scripts\scr_entity_update_image_xscale.gml</script>
           <script>scripts\scr_entity_movement_update.gml</script>
+          <script>scripts\scr_entity_check_wall_edges.gml</script>
           <script>scripts\scr_entity_check_wall_collisions.gml</script>
           <script>scripts\scr_entity_check_block_collisions.gml</script>
           <script>scripts\scr_entity_check_dying_block_collisions.gml</script>
-          <script>scripts\scr_entity_check_wall_edges.gml</script>
           <script>scripts\scr_entity_keep_in_room.gml</script>
         </scripts>
         <scripts name="Player">
