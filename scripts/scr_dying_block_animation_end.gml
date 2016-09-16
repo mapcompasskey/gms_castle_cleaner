@@ -4,6 +4,7 @@
  * Dying Block: On Animation End
  *
  * Called during this object's Animation End event.
+ * A child of the Placeholder Block object.
  *
  * When a block is destroyed, it is immediately removed and replaced with a dying block object.
  * The dying block acts as a different type of wall object. This prevents the player or NPC entities

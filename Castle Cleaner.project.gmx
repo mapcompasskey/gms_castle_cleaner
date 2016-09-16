@@ -24,20 +24,16 @@
       </sprites>
       <sprites name="Blocks">
         <sprite>sprites\spr_block</sprite>
-        <sprite>sprites\spr_block_falling</sprite>
         <sprite>sprites\spr_crate</sprite>
-        <sprite>sprites\spr_crate_falling</sprite>
-        <sprite>sprites\spr_crate_2x</sprite>
-        <sprite>sprites\spr_crate_2d</sprite>
-        <sprite>sprites\spr_crate_2c</sprite>
-        <sprite>sprites\spr_crate_2b</sprite>
         <sprite>sprites\spr_crate_2a</sprite>
-        <sprite>sprites\spr_crate_2x_falling</sprite>
+        <sprite>sprites\spr_crate_2b</sprite>
+        <sprite>sprites\spr_crate_2c</sprite>
+        <sprite>sprites\spr_crate_2d</sprite>
+        <sprite>sprites\spr_crate_2x</sprite>
         <sprite>sprites\spr_barrel</sprite>
-        <sprite>sprites\spr_barrel_falling</sprite>
         <sprite>sprites\spr_dying_block</sprite>
         <sprite>sprites\spr_dying_block_2x</sprite>
-        <sprite>sprites\spr_block_placeholder</sprite>
+        <sprite>sprites\spr_placeholder_block</sprite>
       </sprites>
       <sprites name="Enemies">
         <sprites name="Rat">
@@ -145,6 +141,7 @@
           <script>scripts\scr_block_is_hurting.gml</script>
           <script>scripts\scr_block_is_falling.gml</script>
           <script>scripts\scr_block_end_step.gml</script>
+          <script>scripts\scr_block_draw.gml</script>
           <script>scripts\scr_dying_block_animation_end.gml</script>
         </scripts>
         <scripts name="Enemies">

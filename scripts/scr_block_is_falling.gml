@@ -13,14 +13,13 @@ if (dying)
     exit;
 }
 
-// create a placeholder object in this block's fall path
+// create a placeholder object in this block's falling path
 if (falling && placeholder == noone)
 {
     placeholder = instance_create(x, bbox_bottom, placeholder_object);
     with (placeholder)
     {
-        //visible = false;
-        image_alpha = 0.3;
+        visible = false;
         
         // update width to match the parent block
         image_xscale = (other.sprite_width / sprite_width);
