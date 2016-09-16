@@ -19,7 +19,8 @@ if (falling && placeholder == noone)
     placeholder = instance_create(x, bbox_bottom, placeholder_object);
     with (placeholder)
     {
-        visible = false;
+        //visible = false;
+        image_alpha = 0.3;
         
         // update width to match the parent block
         image_xscale = (other.sprite_width / sprite_width);

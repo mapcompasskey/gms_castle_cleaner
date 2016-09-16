@@ -20,7 +20,7 @@ if (on_ladder && my > 0 && ! crouching)
 // test collisions
 scr_entity_check_wall_collisions();
 scr_entity_check_block_collisions();
-scr_entity_check_dying_block_collisions();
+scr_entity_check_placeholder_block_collisions();
 
 // update object position
 x += mx;

@@ -6,6 +6,11 @@
  * On death, find blocks standing on this instance and tell them to start falling.
  */
 
+if (dying)
+{
+    exit;
+}
+
 if (recovering)
 {
     //image_alpha = 0.5;
@@ -62,8 +67,16 @@ if ( ! hurting && ! recovering)
                     placeholder = noone;
                 }
                 
-                // replace this instance with the dying version
-                instance_create(x, y, dying_object);
+                // replace this instance with a dying block
+                with (instance_create(x, y, dying_object))
+                {
+                    // set sprite animation
+                    sprite_index = other.dying_object_sprite;
+                    image_index = 0;
+                    image_speed = other.dying_object_speed
+                }
+                
+                // destroy this object
                 instance_destroy();
             }
         }

@@ -25,8 +25,6 @@
       <sprites name="Blocks">
         <sprite>sprites\spr_block</sprite>
         <sprite>sprites\spr_block_falling</sprite>
-        <sprite>sprites\spr_dying_block</sprite>
-        <sprite>sprites\spr_dying_block_2x</sprite>
         <sprite>sprites\spr_crate</sprite>
         <sprite>sprites\spr_crate_falling</sprite>
         <sprite>sprites\spr_crate_2x</sprite>
@@ -37,6 +35,8 @@
         <sprite>sprites\spr_crate_2x_falling</sprite>
         <sprite>sprites\spr_barrel</sprite>
         <sprite>sprites\spr_barrel_falling</sprite>
+        <sprite>sprites\spr_dying_block</sprite>
+        <sprite>sprites\spr_dying_block_2x</sprite>
         <sprite>sprites\spr_block_placeholder</sprite>
       </sprites>
       <sprites name="Enemies">
@@ -113,7 +113,7 @@
           <script>scripts\scr_entity_check_wall_edges.gml</script>
           <script>scripts\scr_entity_check_wall_collisions.gml</script>
           <script>scripts\scr_entity_check_block_collisions.gml</script>
-          <script>scripts\scr_entity_check_dying_block_collisions.gml</script>
+          <script>scripts\scr_entity_check_placeholder_block_collisions.gml</script>
           <script>scripts\scr_entity_keep_in_room.gml</script>
         </scripts>
         <scripts name="Player">
@@ -139,25 +139,13 @@
           <script>scripts\scr_player_attack_animation_end.gml</script>
         </scripts>
         <scripts name="Blocks">
-          <scripts name="Block">
-            <script>scripts\scr_block_events.gml</script>
-            <script>scripts\scr_block_create.gml</script>
-            <script>scripts\scr_block_step.gml</script>
-            <script>scripts\scr_block_is_hurting.gml</script>
-            <script>scripts\scr_block_is_falling.gml</script>
-            <script>scripts\scr_block_end_step.gml</script>
-          </scripts>
-          <scripts name="Dying Block">
-            <script>scripts\scr_dying_block_events.gml</script>
-            <script>scripts\scr_dying_block_animation_end.gml</script>
-          </scripts>
-          <script>scripts\scr_crate_create.gml</script>
-          <script>scripts\scr_crate_2a_create.gml</script>
-          <script>scripts\scr_crate_2b_create.gml</script>
-          <script>scripts\scr_crate_2c_create.gml</script>
-          <script>scripts\scr_crate_2d_create.gml</script>
-          <script>scripts\scr_crate_2x_create.gml</script>
-          <script>scripts\scr_barrel_create.gml</script>
+          <script>scripts\scr_block_events.gml</script>
+          <script>scripts\scr_block_create.gml</script>
+          <script>scripts\scr_block_step.gml</script>
+          <script>scripts\scr_block_is_hurting.gml</script>
+          <script>scripts\scr_block_is_falling.gml</script>
+          <script>scripts\scr_block_end_step.gml</script>
+          <script>scripts\scr_dying_block_animation_end.gml</script>
         </scripts>
         <scripts name="Enemies">
           <scripts name="Rat">
@@ -248,8 +236,7 @@
         <object>objects\obj_crate_2x</object>
         <object>objects\obj_barrel</object>
         <object>objects\obj_dying_block</object>
-        <object>objects\obj_dying_block_2x</object>
-        <object>objects\obj_block_placeholder</object>
+        <object>objects\obj_placeholder_block</object>
       </objects>
       <objects name="Enemies">
         <object>objects\obj_enemy</object>

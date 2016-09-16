@@ -9,6 +9,7 @@
 switch(argument0)
 {
     case 'create':
+        /*
         switch(argument1)
         {
             case 'crate':
@@ -43,6 +44,49 @@ switch(argument0)
             default:
                 scr_block_create();
         }
+        */
+        
+        scr_block_create();
+        
+        switch(argument1)
+        {
+            case 'crate':
+                idle_sprite = spr_crate;
+                falling_sprite = spr_crate_falling;
+                hurting_sprite = spr_crate_falling;
+                break;
+                
+            case 'crate 2a':
+                idle_sprite = spr_crate_2a;
+                break;
+                
+            case 'crate 2b':
+                idle_sprite = spr_crate_2b;
+                break;
+                
+            case 'crate 2c':
+                idle_sprite = spr_crate_2c;
+                break;
+                
+            case 'crate 2d':
+                idle_sprite = spr_crate_2d;
+                break;
+                
+            case 'crate 2x':
+                idle_sprite = spr_crate_2x;
+                falling_sprite = spr_crate_2x_falling;
+                hurting_sprite = spr_crate_2x_falling
+                //dying_object = obj_dying_block_2x;
+                dying_object_sprite = spr_dying_block_2x;
+                break;
+                
+            case 'barrel':
+                idle_sprite = spr_barrel;
+                falling_sprite = spr_barrel_falling;
+                hurting_sprite = spr_barrel_falling;
+                break;
+        }
+        
         break;
         
     case 'step':

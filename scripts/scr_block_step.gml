@@ -6,29 +6,36 @@
  * Called during this object's Step event.
  */
 
-
-/**
- * Check Object State
- */
-
+// check object state
 scr_block_is_hurting();
 scr_block_is_falling();
 
-
-/**
- * Update Object Sprite
- */
-
+// update object sprite
 if (hurting)
 {
-    sprite_index = hurting_sprite;
+    if (sprite_index != hurting_sprite)
+    {
+        sprite_index = hurting_sprite;
+        image_index = 0;
+        image_speed = 0;
+    }
 }
 else if (falling_counter > 0)
 {
-    sprite_index = falling_sprite;
+    if (sprite_index != falling_sprite)
+    {
+        sprite_index = falling_sprite;
+        image_index = 0;
+        image_speed = 0;
+    }
 }
 else
 {
-    sprite_index = idle_sprite;
+    if (sprite_index != idle_sprite)
+    {
+        sprite_index = idle_sprite;
+        image_index = 0;
+        image_speed = 0;
+    }
 }
 

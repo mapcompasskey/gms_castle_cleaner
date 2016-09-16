@@ -31,10 +31,13 @@ falling_counter = 0;
 idle_sprite = spr_block;
 falling_sprite = spr_block_falling;
 hurting_sprite = spr_block_falling;
+
 dying_object = obj_dying_block;
+dying_object_speed = 0.1;
+dying_object_sprite = spr_dying_block;
 
 placeholder = noone;
-placeholder_object = obj_block_placeholder;
+placeholder_object = obj_placeholder_block;
 placeholder_height = 0;
 placeholder_end = 0;
 

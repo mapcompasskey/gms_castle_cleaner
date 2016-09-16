@@ -30,9 +30,9 @@ scr_entity_movement_update();
 // test collisions
 scr_entity_check_wall_collisions();
 scr_entity_check_block_collisions();
-scr_entity_check_dying_block_collisions();
+scr_entity_check_placeholder_block_collisions();
 
-if (entity_hit_wall || entity_hit_block || entity_hit_dying_block)
+if (entity_hit_wall || entity_hit_block || entity_hit_placeholder_block)
 {
     velocity_x = -(last_velocity_x);
 }
