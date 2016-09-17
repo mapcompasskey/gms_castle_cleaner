@@ -8,7 +8,7 @@
  * d3d_set_fog will recolor the sprite with a solid color.
  *
  * Requires the following values:
- *   recovering_flash_time = 10;
+ *   recovering_flash_time = 2; // 1/30 a second
  *   recovering_flash_timer = 0;
  *   recovering_flash_color = c_white;
  */

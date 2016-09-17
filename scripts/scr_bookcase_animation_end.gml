@@ -3,7 +3,7 @@
 /**
  * Bookcase: On Animation End
  *
- * Added to the bookcase object's Animation End event.
+ * Called during this object's Animation End event.
  */
 
 if (dying)

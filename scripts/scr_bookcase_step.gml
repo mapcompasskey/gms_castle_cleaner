@@ -3,21 +3,13 @@
 /**
  * Bookcase: On Update
  *
- * Added to the bookcase object's Step event.
+ * Called during this object's Step event.
  */
 
-
-/**
- * Check Object State
- */
-
+// check object state
 scr_bookcase_is_hurting();
 
-
-/**
- * Update Object Sprite
- */
-
+// update object sprite
 if (dying)
 {
     if (sprite_index != dying_sprite)
@@ -25,15 +17,6 @@ if (dying)
         sprite_index = dying_sprite;
         image_index = 0;
         image_speed = dying_speed;
-    }
-}
-else if (hurting)
-{
-    if (sprite_index != hurting_sprite)
-    {
-        sprite_index = hurting_sprite;
-        image_index = 0;
-        image_speed = hurting_speed;
     }
 }
 else

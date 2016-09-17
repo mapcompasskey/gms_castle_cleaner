@@ -7,13 +7,11 @@
 
 if (recovering)
 {
-    //image_alpha = 0.5;
     recovering_cooldown_timer += TICK;
     
     // if the timer has ended
     if (recovering_cooldown_timer >= recovering_cooldown_time)
     {
-        //image_alpha = 1.0;
         hurting = false;
         recovering = false;
         is_colliding_with = noone;
