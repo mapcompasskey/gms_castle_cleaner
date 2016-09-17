@@ -6,6 +6,8 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\spr_dying_tile_1x</sprite>
+    <sprite>sprites\spr_dying_tile_4x</sprite>
     <sprites name="GameMenu">
       <sprite>sprites\spr_game_logo</sprite>
     </sprites>
@@ -29,10 +31,8 @@
         <sprite>sprites\spr_crate_2b</sprite>
         <sprite>sprites\spr_crate_2c</sprite>
         <sprite>sprites\spr_crate_2d</sprite>
-        <sprite>sprites\spr_crate_2x</sprite>
+        <sprite>sprites\spr_crate_4x</sprite>
         <sprite>sprites\spr_barrel</sprite>
-        <sprite>sprites\spr_dying_block</sprite>
-        <sprite>sprites\spr_dying_block_2x</sprite>
         <sprite>sprites\spr_placeholder_block</sprite>
       </sprites>
       <sprites name="Enemies">
@@ -230,10 +230,10 @@
         <object>objects\obj_crate_2b</object>
         <object>objects\obj_crate_2c</object>
         <object>objects\obj_crate_2d</object>
-        <object>objects\obj_crate_2x</object>
+        <object>objects\obj_crate_4x</object>
         <object>objects\obj_barrel</object>
-        <object>objects\obj_dying_block</object>
         <object>objects\obj_placeholder_block</object>
+        <object>objects\obj_dying_block</object>
       </objects>
       <objects name="Enemies">
         <object>objects\obj_enemy</object>

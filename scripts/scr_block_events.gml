@@ -32,9 +32,9 @@ switch(argument0)
                 idle_sprite = spr_crate_2d;
                 break;
                 
-            case 'crate 2x':
-                idle_sprite = spr_crate_2x;
-                dying_object_sprite = spr_dying_block_2x;
+            case 'crate 4x':
+                idle_sprite = spr_crate_4x;
+                dying_object_sprite = spr_dying_tile_4x;
                 break;
                 
             case 'barrel':

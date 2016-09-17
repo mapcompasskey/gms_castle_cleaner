@@ -34,7 +34,7 @@ image_speed = 0;
 
 dying_object = obj_dying_block;
 dying_object_speed = 0.5;
-dying_object_sprite = spr_dying_block;
+dying_object_sprite = spr_dying_tile_1x;
 
 placeholder = noone;
 placeholder_object = obj_placeholder_block;

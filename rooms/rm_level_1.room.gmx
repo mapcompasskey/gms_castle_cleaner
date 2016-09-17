@@ -240,8 +240,8 @@
     <instance objName="obj_barrel" x="624" y="416" name="inst_9D9CF5B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_barrel" x="736" y="304" name="inst_31875DED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_barrel" x="640" y="416" name="inst_C39207D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_crate_2x" x="672" y="400" name="inst_DC463E9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_crate_2x" x="736" y="336" name="inst_DAA3EA75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_crate_4x" x="672" y="400" name="inst_DC463E9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_crate_4x" x="736" y="336" name="inst_DAA3EA75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_crate" x="704" y="384" name="inst_4B06BF0C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_crate" x="752" y="384" name="inst_AACB1A27" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_crate" x="656" y="400" name="inst_A0E424AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
