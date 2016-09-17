@@ -16,6 +16,6 @@ draw_self();
 if (recovering)
 {
     // draw flashing overlay
-    scr_draw_flashing_overlay();
+    scr_recovering_flash_overlay('draw');
 }
 

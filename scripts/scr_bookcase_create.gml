@@ -6,7 +6,7 @@
  * Called during this object's Create event.
  */
 
-scr_init_flashing_overlay();
+scr_recovering_flash_overlay('create');
 
 is_colliding_with = noone;
 
