@@ -31,8 +31,3 @@ damage = 1;
 current_health = 1;
 maximum_health = 1;
 
-// used by "scr_draw_flashing_overlay"
-recovering_flash_color = c_white;
-recovering_flash_time = 2; // 1/30 a second
-recovering_flash_timer = 0;
-

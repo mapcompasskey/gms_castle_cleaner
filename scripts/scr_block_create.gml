@@ -7,6 +7,7 @@
  */
 
 scr_entity_movement_vars();
+scr_init_flashing_overlay();
 
 speed_x = 0;
 speed_y = 4;

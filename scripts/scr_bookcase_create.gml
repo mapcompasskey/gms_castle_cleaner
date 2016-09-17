@@ -6,6 +6,8 @@
  * Called during this object's Create event.
  */
 
+scr_init_flashing_overlay();
+
 is_colliding_with = noone;
 
 current_health = 2;
