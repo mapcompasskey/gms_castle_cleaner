@@ -3,21 +3,8 @@
 /**
  * Player Attack: On Update
  *
- * Added to the player attack object's Step event.
+ * Called during this object's Step event.
  */
-
-/*
-// if colliding with an enemy
-var colliding_with = instance_place(x, y, obj_enemy);
-if (colliding_with != noone)
-{
-    with (colliding_with)
-    {
-        //is_colliding_with = other.object_index;
-        is_colliding_with = other.id;
-    }
-}
-*/
 
 // if not the first or last frame of the animation
 if (image_index >= 1 && (image_number - image_index) >= 1)
@@ -41,10 +28,41 @@ if (image_index >= 1 && (image_number - image_index) >= 1)
         {
             if (place_meeting(x, y, other.id))
             {
+                // if the player broom is not broken
+                if ( ! PLAYER_BROOM_IS_BROKEN)
+                {
+                    is_colliding_with = other.id;
+                    
+                    // if the block is not recovering
+                    if ( ! hurting && ! recovering)
+                    {
+                        // decrease player broom health and check if its broken
+                        PLAYER_BROOM_CURRENT_HEALTH--;
+                        if (PLAYER_BROOM_CURRENT_HEALTH < 1)
+                        {
+                            PLAYER_BROOM_IS_BROKEN = true;
+                            PLAYER_BROOM_CURRENT_HEALTH = 0;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    /*
+    // if colliding with block objects
+    if (place_meeting(x, y, obj_block))
+    {
+        with (obj_block)
+        {
+            if (place_meeting(x, y, other.id))
+            {
                 is_colliding_with = other.id;
             }
         }
     }
+    */
     
     // if colliding with bookcases objects
     if (place_meeting(x, y, obj_bookcase))

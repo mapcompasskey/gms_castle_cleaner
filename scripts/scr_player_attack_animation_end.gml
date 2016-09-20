@@ -3,7 +3,7 @@
 /**
  * Player Attack: On Animation End
  *
- * Added to the player attack object's Animation End event.
+ * Called during this object's Animation End event.
  */
 
 // pause the animation on the last frame and prevent it from looping

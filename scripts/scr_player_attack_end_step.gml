@@ -3,7 +3,7 @@
 /**
  * Player Attack: On End of Update
  *
- * Added to the player attack object's End Step event.
+ * Called during this object's End Step event.
  */
 
 // if this instance belongs to another
