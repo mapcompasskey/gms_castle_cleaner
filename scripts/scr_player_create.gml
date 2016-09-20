@@ -70,10 +70,12 @@ walking_sprite = spr_player_walking;
 
 attacking_speed = 0.25;
 attacking_sprite = spr_player_attacking;
+attacking_broken_sprite = spr_player_attacking_broken;
 attacking_box_sprite = spr_player_attack_box;
 
 attacking2_speed = 0.25;
 attacking2_sprite = spr_player_attacking2;
+attacking2_broken_sprite = spr_player_attacking2_broken;
 attacking2_box_sprite = spr_player_attack2_box;
 
 //hurting_speed = 0;

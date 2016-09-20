@@ -59,20 +59,58 @@ else if (attacking)
 {
     if (attack_1)
     {
-        if (sprite_index != attacking_sprite)
+        if (PLAYER_BROOM_IS_BROKEN)
         {
-            sprite_index = attacking_sprite;
-            image_index = 0;
-            image_speed = attacking_speed;
+            if (sprite_index != attacking_broken_sprite)
+            {
+                if (sprite_index == attacking_sprite)
+                {
+                    sprite_index = attacking_broken_sprite;
+                }
+                else
+                {
+                    sprite_index = attacking_broken_sprite;
+                    image_index = 0;
+                    image_speed = attacking_speed;
+                }
+            }
+        }
+        else
+        {
+            if (sprite_index != attacking_sprite)
+            {
+                sprite_index = attacking_sprite;
+                image_index = 0;
+                image_speed = attacking_speed;
+            }
         }
     }
     else if (attack_2)
     {
-         if (sprite_index != attacking2_sprite)
+        if (PLAYER_BROOM_IS_BROKEN)
         {
-            sprite_index = attacking2_sprite;
-            image_index = 0;
-            image_speed = attacking2_speed;
+            if (sprite_index != attacking2_broken_sprite)
+            {
+                if (sprite_index == attacking2_sprite)
+                {
+                    sprite_index = attacking2_broken_sprite;
+                }
+                else
+                {
+                    sprite_index = attacking2_broken_sprite;
+                    image_index = 0;
+                    image_speed = attacking2_speed;
+                }
+            }
+        }
+        else
+        {
+            if (sprite_index != attacking2_sprite)
+            {
+                sprite_index = attacking2_sprite;
+                image_index = 0;
+                image_speed = attacking2_speed;
+            }
         }   
     }
 }

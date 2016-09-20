@@ -16,8 +16,10 @@
         <sprite>sprites\spr_player_idle</sprite>
         <sprite>sprites\spr_player_walking</sprite>
         <sprite>sprites\spr_player_attacking</sprite>
+        <sprite>sprites\spr_player_attacking_broken</sprite>
         <sprite>sprites\spr_player_attack_box</sprite>
         <sprite>sprites\spr_player_attacking2</sprite>
+        <sprite>sprites\spr_player_attacking2_broken</sprite>
         <sprite>sprites\spr_player_attack2_box</sprite>
         <sprite>sprites\spr_player_crouching</sprite>
         <sprite>sprites\spr_player_falling</sprite>
