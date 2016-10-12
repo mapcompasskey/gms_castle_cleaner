@@ -9,7 +9,8 @@
 // draw the snapshot
 if (surface_exists(snapshot_surface))
 {
-    draw_surface(snapshot_surface, view_xview[0], view_yview[0]);
+    //draw_surface(snapshot_surface, view_xview[0], view_yview[0]);
+    draw_surface_stretched(snapshot_surface, view_xview[0], view_yview[0], round(view_wview[0]), round(view_hview[0]));
 }
 
 // darken the background by drawing a faded black rectangle over it

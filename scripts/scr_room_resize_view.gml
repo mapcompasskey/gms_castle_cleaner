@@ -14,7 +14,7 @@
  *  "Clear Background with Window Colour"
  *  "View 0" selected
  *  "Visible when room starts"
- */
+ * /
 
 // get the desired game size
 var aspect_ratio = VIEW_WIDTH / VIEW_HEIGHT;
@@ -48,6 +48,15 @@ view_hview[0] = scale_height;
 
 // resize application surface
 surface_resize(application_surface, scale_width, scale_height);
+
+// update background color
+background_color = BG_COLOR;
+
+*/
+
+//view_wview[0] = VIEW_WIDTH;
+//view_hview[0] = VIEW_HEIGHT;
+//display_set_gui_size((VIEW_WIDTH * VIEW_SCALE), (VIEW_HEIGHT * VIEW_SCALE));
 
 // update background color
 background_color = BG_COLOR;

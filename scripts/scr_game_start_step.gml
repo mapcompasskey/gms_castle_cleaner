@@ -40,3 +40,18 @@ if ( ! GAME_HAS_FOCUS)
     }
 }
 
+// if the game window needs resize
+if (VIEW_RESIZE)
+{
+    var width = VIEW_WIDTH * VIEW_SCALE;
+    var height = VIEW_HEIGHT * VIEW_SCALE;
+    
+    surface_resize(application_surface, width, height);
+    display_reset(0, false);
+    
+    if (window_get_width() == width && window_get_height() == height)
+    {
+        VIEW_RESIZE = false;
+    }
+}
+

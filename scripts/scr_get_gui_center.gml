@@ -10,17 +10,21 @@ var pos = 0;
 // if getting the x position
 if (argument0 == 'x')
 {
-    // find the center x position of the screen
-    var width = surface_get_width(application_surface);
-    pos = round((width * GAME_SCALE) / 2);
+    // find the center x position of the surface
+    var a = application_get_position();
+    var center_x = ((a[2] - a[0]) / 2);
+    
+    pos = round(center_x);
 }
 
 // else, if getting the y position
 else if (argument0 == 'y')
 {
-    // find the center y position of the screen
-    var height = surface_get_height(application_surface);
-    pos = round((height * GAME_SCALE) / 2);   
+    // find the center y position of the surface
+    var a = application_get_position();
+    var center_y = ((a[3] - a[1]) / 2);
+    
+    pos = round(center_y);
 }
 
 return pos;

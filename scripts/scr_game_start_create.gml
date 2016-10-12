@@ -100,7 +100,7 @@ PREVIOUS_ROOM_ID = noone;
     The VIEW_WIDTH and VIEW_HEIGHT are used to determine an aspect ratio to use when scaling the game to the window size.
     So if the VIEW_WIDTH x VIEW_HEIGHT is 400x240, and the game window is 500x500, and the GAME_SCALE is 2, each Room's View/Port
     will be resized 250x150. So when scaled up by a factor of 2, the size of the room becomes 500x300 - which is 1:1.6666 (400:240);
-*/
+*c/
 
 globalvar GAME_SCALE, VIEW_WIDTH, VIEW_HEIGHT, BG_COLOR;
 
@@ -118,6 +118,33 @@ BG_COLOR = make_color_rgb(20, 12, 28); // dark purple
 //var height = 500;
 //window_set_size(width, height);
 //window_center();
+*/
+
+globalvar VIEW_WIDTH, VIEW_HEIGHT, VIEW_SCALE, VIEW_RESIZE, BG_COLOR;
+
+VIEW_WIDTH = view_wview[0];
+VIEW_HEIGHT = view_hview[0];
+VIEW_SCALE = 3;
+VIEW_RESIZE = true;
+BG_COLOR = make_color_rgb(20, 12, 28); // dark purple
+
+// enabled Views in every room and set their width/height
+var i = true;
+var rm = room_next(room);
+while (i)
+{
+    room_set_view(rm, 0, true, 0, 0, VIEW_WIDTH, VIEW_HEIGHT, 0, 0, VIEW_WIDTH, VIEW_HEIGHT, 0, 0, -1, -1, -1);
+    room_set_view_enabled(rm, true);
+    if (rm == room_last)
+    {
+        i = false;
+    }
+    else
+    {
+        rm = room_next(rm);
+    }
+}
+
 
 
 /*
