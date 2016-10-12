@@ -6,8 +6,8 @@
  * Added to the pause screen object's Draw GUI event.
  */
 
-var pos_x = scr_get_gui_center('x');
-var pos_y = scr_get_gui_center('y');
+var pos_x = scr_get_gui_position('x', 'center');
+var pos_y = scr_get_gui_position('y', 'center');
 
 // draw pause screen text
 draw_set_color(c_white);

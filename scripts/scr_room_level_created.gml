@@ -6,11 +6,11 @@
  * Added to the level room's Creation Code.
  */
 
-// make the room persistent
+// make the Room persistent
 room_persistent = true;
 
-// resize room view to fit window
-scr_room_resize_view();
+// set the Room's background color
+background_color = BG_COLOR;
 
 // add the HUD if it doesn't exist
 if ( ! instance_exists(obj_hud))

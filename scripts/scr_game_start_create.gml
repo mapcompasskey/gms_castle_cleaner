@@ -35,7 +35,7 @@ TICK = 1;
 GRAV = 0.3;
 TILE_SIZE = 16;
 GAME_HAS_FOCUS = false;
-DEBUG_MODE = false;
+DEBUG_MODE = false;;
 BORDER_COLOR = c_black;
 HIGHLIGHT_BORDER_COLOR = c_white;
 
@@ -92,43 +92,22 @@ PREVIOUS_ROOM_ID = noone;
 
 
 /*
-    GAME_SCALE - the scale factor to apply to each Room's View/Port
-    VIEW_WIDTH  - the width of each Room's View/Port
-    VIEW_HEIGHT - the height of each Room's View/Port
-    BG_COLOR - the background color of each Room
-    
-    The VIEW_WIDTH and VIEW_HEIGHT are used to determine an aspect ratio to use when scaling the game to the window size.
-    So if the VIEW_WIDTH x VIEW_HEIGHT is 400x240, and the game window is 500x500, and the GAME_SCALE is 2, each Room's View/Port
-    will be resized 250x150. So when scaled up by a factor of 2, the size of the room becomes 500x300 - which is 1:1.6666 (400:240);
-*c/
-
-globalvar GAME_SCALE, VIEW_WIDTH, VIEW_HEIGHT, BG_COLOR;
-
-VIEW_WIDTH = 400;
-VIEW_HEIGHT = 240;
-GAME_SCALE = 3;
-//BG_COLOR = make_color_rgb(25, 25, 25); //c_black;
-BG_COLOR = make_color_rgb(20, 12, 28); // dark purple
-//BG_COLOR = make_color_rgb(48, 52, 109); // blue
-//BG_COLOR = make_color_rgb(109, 194, 202); // light blue
-
-// resize game window at start
-// *or set the Width/Height of the first room (under the Settings tab)
-//var width = 500;
-//var height = 500;
-//window_set_size(width, height);
-//window_center();
+    VIEW_WIDTH - The width of the first Room's View.
+    VIEW_HEIGHT - The height of the first Room's View.
+    VIEW_SCALE - The factor to scale every Room's View.
+    RESIZE_SURFACE - Whether to keep trying to resize the application surface.
+    BG_COLOR - The color to repaint each Room's View.
 */
 
-globalvar VIEW_WIDTH, VIEW_HEIGHT, VIEW_SCALE, VIEW_RESIZE, BG_COLOR;
+globalvar VIEW_WIDTH, VIEW_HEIGHT, VIEW_SCALE, RESIZE_SURFACE, BG_COLOR;
 
 VIEW_WIDTH = view_wview[0];
 VIEW_HEIGHT = view_hview[0];
-VIEW_SCALE = 3;
-VIEW_RESIZE = true;
+VIEW_SCALE = 1;//3;
+RESIZE_SURFACE = true;
 BG_COLOR = make_color_rgb(20, 12, 28); // dark purple
 
-// enabled Views in every room and set their width/height
+// enabled Views in every Room and update the size
 var i = true;
 var rm = room_next(room);
 while (i)
@@ -144,7 +123,6 @@ while (i)
         rm = room_next(rm);
     }
 }
-
 
 
 /*

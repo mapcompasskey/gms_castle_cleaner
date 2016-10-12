@@ -47,7 +47,7 @@ draw_text(0, 0, txt);
 */
 
 // players health as a percentage
-var player_health_percentage = player_current_health * 100 / player_maximum_health;
+var player_health_percentage = ((player_current_health * 100) / player_maximum_health);
 
 var txt = "Health: " + string(player_health_percentage);
 draw_set_color(c_white);
@@ -65,11 +65,9 @@ draw_set_font(fnt_04b03_gui);
 draw_text(5, 25, txt);
 
 // player test variable
-var pos_x = display_get_gui_width() - 5;
-var pos_y = 5;
 draw_set_color(c_white);
 draw_set_halign(fa_right);
 draw_set_valign(fa_top);
 draw_set_font(fnt_04b03_gui);
-draw_text(pos_x, pos_y, PLAYER_FOO);
+draw_text((scr_get_gui_position('x', 'right') - 5), 5, PLAYER_FOO);
 

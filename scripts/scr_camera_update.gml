@@ -13,8 +13,8 @@ if (view_wview[0])
     var target_y = argument1; // number 
     var move_towards_target = argument2; // bool
     
-    var easing_speed = 0.2;//0.1;
-    var distance_min = 10;//1;
+    var easing_speed = 0.1;
+    var distance_min = 1;
     var distance_max = 100;
     
     var distance_x = abs((target_x - (view_wview[0] / 2)) - view_xview[0]);
@@ -52,8 +52,11 @@ if (view_wview[0])
         camera_x = clamp(camera_x, 0, room_width - view_wview[0]);
         camera_y = clamp(camera_y, 0, room_height - view_hview[0]);
         
-        view_xview[0] = camera_x; //round(camera_x);
-        view_yview[0] = camera_y; //round(camera_y);
+        view_xview[0] = round(camera_x);
+        view_yview[0] = round(camera_y);
+        
+        //view_xview[0] = camera_x;
+        //view_yview[0] = camera_y;
     }
 }
 

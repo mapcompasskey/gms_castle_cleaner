@@ -5,16 +5,20 @@
  *
  */
 
-var pos_x1 = argument0 - view_xview[0]
-var pos_y1 = argument1 - view_yview[0];
+var pos_x1 = (argument0 - view_xview[0]);
+var pos_y1 = (argument1 - view_yview[0]);
 
-var pos_x2 = argument2 - view_xview[0]
-var pos_y2 = argument3 - view_yview[0];
+var pos_x2 = (argument2 - view_xview[0]);
+var pos_y2 = (argument3 - view_yview[0]);
 
-pos_x1 = pos_x1 * GAME_SCALE;
-pos_y1 = pos_y1 * GAME_SCALE;
-pos_x2 = pos_x2 * GAME_SCALE;
-pos_y2 = pos_y2 * GAME_SCALE;
+var a = application_get_position();
+var scale_x = ((a[2] - a[0]) / view_wview[0]);
+var scale_y = ((a[3] - a[1]) / view_hview[0]);
+
+pos_x1 = (pos_x1 * scale_x);
+pos_y1 = (pos_y1 * scale_y);
+pos_x2 = (pos_x2 * scale_x);
+pos_y2 = (pos_y2 * scale_y);
 
 // draw bounding box
 draw_set_colour(c_red);

@@ -29,10 +29,10 @@ draw_set_font(fnt_silkscreen_game);
 draw_text(pos_x, pos_y, '"ESC" TO CLOSE');
 
 // draw menu background container
-var pos_x1 = (view_xview[0] + TILE_SIZE);
-var pos_y1 = (view_yview[0] + TILE_SIZE);
-var pos_x2 = (pos_x1 + view_wview[0] - TILE_SIZE - TILE_SIZE);
-var pos_y2 = (pos_y1 + view_hview[0] - TILE_SIZE - TILE_SIZE);
+var pos_x1 = round(view_xview[0] + TILE_SIZE);
+var pos_y1 = round(view_yview[0] + TILE_SIZE);
+var pos_x2 = round(pos_x1 + view_wview[0] - TILE_SIZE - TILE_SIZE);
+var pos_y2 = round(pos_y1 + view_hview[0] - TILE_SIZE - TILE_SIZE);
 draw_set_colour(c_blue);
 draw_set_alpha(0.1);
 draw_rectangle(pos_x1, pos_y1, pos_x2, pos_y2, false);
@@ -60,10 +60,10 @@ for (i = 0; i < array_height_2d(object_array); i++)
             object_text = object_array[i, 0];
             
             // draw border around sprite
-            var pos_x1 = (pos_x - 1);
-            var pos_y1 = (pos_y - 1);
-            var pos_x2 = (pos_x + sprite_get_width(sprite) + 1);
-            var pos_y2 = (pos_y + sprite_get_height(sprite) + 1);
+            var pos_x1 = round(pos_x - 1);
+            var pos_y1 = round(pos_y - 1);
+            var pos_x2 = round(pos_x + sprite_get_width(sprite) + 1);
+            var pos_y2 = round(pos_y + sprite_get_height(sprite) + 1);
             draw_set_colour(c_white);
             draw_rectangle(pos_x1, pos_y1, pos_x2, pos_y2, true);
         }

@@ -9,6 +9,6 @@
 // add the Game Start object
 instance_create(0, 0, obj_game_start);
 
-// goto the next room
+// goto the next Room
 room_goto_next();
 
