@@ -44,6 +44,7 @@ draw_rectangle(pos_x1, pos_y1, pos_x2, pos_y2, true);
 
 // draw items in object array
 var object_text = '';
+var alpha = 1;
 var pos_x = ((view_xview[0] + TILE_SIZE) + 10);
 var pos_y = ((view_yview[0] + TILE_SIZE) + 10);
 
@@ -57,19 +58,27 @@ for (i = 0; i < array_height_2d(object_array); i++)
         if (i == object_array_position)
         {
             // get item name
-            object_text = object_array[i, 0];
+            object_text = object_array[i, 2];
             
-            // draw border around sprite
-            var pos_x1 = round(pos_x - 1);
-            var pos_y1 = round(pos_y - 1);
-            var pos_x2 = round(pos_x + sprite_get_width(sprite) + 1);
-            var pos_y2 = round(pos_y + sprite_get_height(sprite) + 1);
-            draw_set_colour(c_white);
-            draw_rectangle(pos_x1, pos_y1, pos_x2, pos_y2, true);
+            // draw selection sprite
+            draw_sprite(spr_player_cart_selection, 0, (pos_x - 1), (pos_y - 1));
         }
         
+        /*
+        // set alpha transparency of sprite
+        alpha = 1;
+        if (object_array[i, 0] == 'broom')
+        {
+            if ( ! PLAYER_BROOM_IS_BROKEN)
+            {
+                alpha = 0.5;
+            }
+        }
+        */
+        
         // draw the sprite
-        draw_sprite(sprite, 0, pos_x, pos_y);
+        //draw_sprite(sprite, 0, pos_x, pos_y);
+        draw_sprite_ext(sprite, 0, pos_x, pos_y, 1, 1, 0, c_white, alpha);
         
         // update the x/y positioning
         pos_x += (sprite_get_width(sprite) + 10);

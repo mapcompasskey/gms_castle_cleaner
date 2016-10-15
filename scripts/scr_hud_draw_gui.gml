@@ -10,7 +10,8 @@
 /**
  * Draw Player Health
  */
-/*
+
+/**/
 // positioning variables
 var i = 0;
 var gutter_x = 4;
@@ -30,10 +31,12 @@ for (i = 0; i < player_health_markers; i++)
     
     if (player_health_marker_size * i >= player_health_percentage)
     {
+        // empty marker
         draw_sprite(spr_player_health_marker, 1, pos_x, pos_y);
     }
     else
     {
+        // filled marker
         draw_sprite(spr_player_health_marker, 0, pos_x, pos_y);
     }
 }
@@ -43,9 +46,15 @@ draw_set_color(c_white);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_font(fnt_04b03_gui);
-draw_text(0, 0, txt);
-*/
+draw_text(5, 24, txt);
+/**/
 
+
+// draw HUD items
+scr_hud_draw_items();
+
+
+/*
 // players health as a percentage
 var player_health_percentage = ((player_current_health * 100) / player_maximum_health);
 
@@ -70,4 +79,4 @@ draw_set_halign(fa_right);
 draw_set_valign(fa_top);
 draw_set_font(fnt_04b03_gui);
 draw_text((scr_get_gui_position('x', 'right') - 5), 5, PLAYER_FOO);
-
+*/

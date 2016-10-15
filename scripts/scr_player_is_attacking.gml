@@ -16,14 +16,17 @@ if ( ! dying && ! hurting && ! crouching && ! attacking && ! carrying)
         
         attacking = true;
         
-        // create the player attack instance
-        player_attack = instance_create(0, 0, obj_player_attack);
-        player_attack.belongs_to = object_index;
-        player_attack.sprite_index = attacking_box_sprite;
-        player_attack.image_index = 0;
-        player_attack.image_speed = attacking_speed;
+        if ( ! PLAYER_BROOM_IS_BROKEN)
+        {
+            // create the player attack instance
+            player_attack = instance_create(0, 0, obj_player_attack);
+            player_attack.belongs_to = object_index;
+            player_attack.sprite_index = attacking_box_sprite;
+            player_attack.image_index = 0;
+            player_attack.image_speed = attacking_speed;
+        }
     }
-    
+        
     // if the Attack 2 key was pressed
     else if (PLAYER_KEY_ATTACK_2 && player_attack == noone)
     {
@@ -32,12 +35,15 @@ if ( ! dying && ! hurting && ! crouching && ! attacking && ! carrying)
         
         attacking = true;
         
-        // create the player attack instance
-        player_attack = instance_create(0, 0, obj_player_attack);
-        player_attack.belongs_to = object_index;
-        player_attack.sprite_index = attacking2_box_sprite;
-        player_attack.image_index = 0;
-        player_attack.image_speed = attacking2_speed;
+        if ( ! PLAYER_BROOM_IS_BROKEN)
+        {
+            // create the player attack instance
+            player_attack = instance_create(0, 0, obj_player_attack);
+            player_attack.belongs_to = object_index;
+            player_attack.sprite_index = attacking2_box_sprite;
+            player_attack.image_index = 0;
+            player_attack.image_speed = attacking2_speed;
+        }
     }
 }
 

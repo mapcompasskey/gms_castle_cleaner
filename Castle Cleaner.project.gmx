@@ -6,8 +6,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_dying_tile_1x</sprite>
-    <sprite>sprites\spr_dying_tile_4x</sprite>
     <sprites name="GameMenu">
       <sprite>sprites\spr_game_logo</sprite>
     </sprites>
@@ -47,6 +45,8 @@
       <sprites name="Items">
         <sprite>sprites\spr_dead_rat</sprite>
       </sprites>
+      <sprite>sprites\spr_dying_tile_1x</sprite>
+      <sprite>sprites\spr_dying_tile_4x</sprite>
     </sprites>
     <sprites name="Misc">
       <sprites name="Furniture">
@@ -57,12 +57,16 @@
       <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_door_closed</sprite>
       <sprite>sprites\spr_player_cart</sprite>
+      <sprite>sprites\spr_player_health_marker</sprite>
     </sprites>
     <sprites name="PlayerCartMenu">
+      <sprite>sprites\spr_player_cart_selection</sprite>
       <sprite>sprites\spr_player_cart_item1</sprite>
       <sprite>sprites\spr_player_cart_item2</sprite>
       <sprite>sprites\spr_player_cart_item3</sprite>
+      <sprite>sprites\spr_player_cart_broom</sprite>
     </sprites>
+    <sprite>sprites\spr_hud_broom</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -172,6 +176,7 @@
           <script>scripts\scr_hud_create.gml</script>
           <script>scripts\scr_hud_step.gml</script>
           <script>scripts\scr_hud_draw_gui.gml</script>
+          <script>scripts\scr_hud_draw_items.gml</script>
         </scripts>
         <scripts name="Door">
           <script>scripts\scr_door_events.gml</script>

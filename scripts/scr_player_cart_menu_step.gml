@@ -11,6 +11,7 @@ var on_object_navigation = 0;
 on_object_navigation -= max(keyboard_check_pressed(KEY_LEFT), 0);
 on_object_navigation += max(keyboard_check_pressed(KEY_RIGHT), 0);
 
+// move to the next item, wrap around if reached an end
 if (on_object_navigation != 0)
 {
     object_array_position += on_object_navigation;
@@ -29,8 +30,19 @@ var on_object_selected = 0;
 on_object_selected = max(keyboard_check_pressed(KEY_ENTER), keyboard_check_pressed(KEY_ATTACK_1));
 if (on_object_selected == 1)
 {
-    var object_text = object_array[object_array_position, 0];
+    var object_id = object_array[object_array_position, 0];
+    
+    // if selecting broom item
+    if (object_id == 'broom')
+    {
+        // refill broom uses
+        PLAYER_BROOM_IS_BROKEN = false;
+        PLAYER_BROOM_CURRENT_HEALTH = PLAYER_BROOM_MAXIMUM_HEALTH;
+    }
+    
+    var object_text = object_array[object_array_position, 2];
     PLAYER_FOO = object_text;
+    
     on_exit_menu = true;
 }
 
