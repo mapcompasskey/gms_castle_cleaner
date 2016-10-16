@@ -1,8 +1,9 @@
-///scr_mouse_trap_draw()
+///scr_item_draw()
 
 /**
- * Mouse Trap: On Draw
+ * Item: On Draw
  *
+ * Base Draw event call for Item objects.
  * Called during this object's Draw event.
  */
 

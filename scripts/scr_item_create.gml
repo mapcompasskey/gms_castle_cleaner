@@ -1,8 +1,9 @@
-///scr_mouse_trap_create()
+///scr_item_create()
 
 /**
- * Mouse Trap: Initialize Variables
+ * Item: Initialize Variables
  *
+ * Base Create event call for Item objects.
  * Called during this object's Create event.
  */
 

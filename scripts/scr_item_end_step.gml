@@ -1,8 +1,9 @@
-///scr_mouse_trap_end_step()
+///scr_item_end_step()
 
 /**
- * Mouse Trap: On End of Update
+ * Item: On End of Update
  *
+ * Base End Step event call for Item objects.
  * Called during this object's End Step event.
  */
 

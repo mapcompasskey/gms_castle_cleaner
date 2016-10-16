@@ -1,8 +1,9 @@
-///scr_mouse_trap_step()
+///scr_item_step()
 
 /**
- * Mouse Trap: On Update
+ * Item: On Update
  *
+ * Base Step event call for Item objects.
  * Called during this object's Step event.
  */
  

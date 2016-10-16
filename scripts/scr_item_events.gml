@@ -1,27 +1,28 @@
-///scr_mouse_trap_events(event)
+///scr_item_events(event)
 
 /**
- * Mouse Trap: Events Controller
+ * Item: Events Controller
  *
+ * Base Create event call for Item objects.
  * Added to each of this object's events.
  */
 
 switch(argument0)
 {
     case 'create':
-        scr_mouse_trap_create();
+        scr_item_create();
         break;
         
     case 'step':
-        scr_mouse_trap_step();
+        scr_item_step();
         break;
         
     case 'end step':
-        scr_mouse_trap_end_step();
+        scr_item_end_step();
         break;
         
     case 'draw':
-        scr_mouse_trap_draw();
+        scr_item_draw();
         break;
 }
 

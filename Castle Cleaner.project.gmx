@@ -163,19 +163,12 @@
           </scripts>
         </scripts>
         <scripts name="Items">
-          <scripts name="DeadRat">
-            <script>scripts\scr_dead_rat_events.gml</script>
-            <script>scripts\scr_dead_rat_create.gml</script>
-            <script>scripts\scr_dead_rat_step.gml</script>
-            <script>scripts\scr_dead_rat_end_step.gml</script>
-            <script>scripts\scr_dead_rat_draw.gml</script>
-          </scripts>
-          <scripts name="MouseTrap">
-            <script>scripts\scr_mouse_trap_events.gml</script>
-            <script>scripts\scr_mouse_trap_create.gml</script>
-            <script>scripts\scr_mouse_trap_step.gml</script>
-            <script>scripts\scr_mouse_trap_end_step.gml</script>
-            <script>scripts\scr_mouse_trap_draw.gml</script>
+          <scripts name="Item">
+            <script>scripts\scr_item_events.gml</script>
+            <script>scripts\scr_item_create.gml</script>
+            <script>scripts\scr_item_step.gml</script>
+            <script>scripts\scr_item_end_step.gml</script>
+            <script>scripts\scr_item_draw.gml</script>
           </scripts>
         </scripts>
       </scripts>
