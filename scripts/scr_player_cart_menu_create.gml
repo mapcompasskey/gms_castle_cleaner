@@ -36,6 +36,11 @@ object_array[i, 0] = 'broom';
 object_array[i, 1] = spr_player_cart_broom;
 object_array[i, 2] = 'Grab A New Broom';
 
+var i = 4;
+object_array[i, 0] = 'mousetrap';
+object_array[i, 1] = spr_player_cart_broom;
+object_array[i, 2] = 'Mouse Trap';
+
 // highlight the selected item
 var i, name;
 for (i = 0; i < array_height_2d(object_array); i++)

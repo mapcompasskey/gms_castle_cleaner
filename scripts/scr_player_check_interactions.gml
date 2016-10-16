@@ -79,18 +79,15 @@ if (place_meeting(x, y, obj_player_cart))
     }
 }
 
-if (open_cart)
+// if interacting with the cart and carrying an item
+if (open_cart && carrying)
 {
-    // if carrying an item
-    if (carrying)
+    with (is_carrying_item)
     {
-        with (is_carrying_item)
+        // if dead rat object, increment the global counter
+        if (object_get_name(object_index) == 'obj_dead_rat')
         {
-            // if dead rat object, increment the global counter
-            if (object_get_name(object_index) == 'obj_dead_rat')
-            {
-                DEAD_RAT_ITEMS_COLLECTED++;
-            }
+            DEAD_RAT_ITEMS_COLLECTED++;
             
             // update the player
             other.carrying = false;
@@ -99,15 +96,20 @@ if (open_cart)
             // update the item
             is_being_carried_by = noone;
             instance_destroy();
+            
+            open_cart = false;
         }
     }
-    else
-    {    
-        // add the Player Cart Menu object
-        instance_create(0, 0, obj_player_cart_menu);
-    }
-    open_cart = false;
 }
+
+// if interacting with the cart
+if (open_cart)
+{
+    // add the Player Cart Menu object
+    instance_create(0, 0, obj_player_cart_menu);
+    open_cart = false;    
+}
+
 
 /**
  * Check Interactions with Doors

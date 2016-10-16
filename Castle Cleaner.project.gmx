@@ -44,6 +44,7 @@
       </sprites>
       <sprites name="Items">
         <sprite>sprites\spr_dead_rat</sprite>
+        <sprite>sprites\spr_mouse_trap</sprite>
       </sprites>
       <sprite>sprites\spr_dying_tile_1x</sprite>
       <sprite>sprites\spr_dying_tile_4x</sprite>
@@ -169,6 +170,13 @@
             <script>scripts\scr_dead_rat_end_step.gml</script>
             <script>scripts\scr_dead_rat_draw.gml</script>
           </scripts>
+          <scripts name="MouseTrap">
+            <script>scripts\scr_mouse_trap_events.gml</script>
+            <script>scripts\scr_mouse_trap_create.gml</script>
+            <script>scripts\scr_mouse_trap_step.gml</script>
+            <script>scripts\scr_mouse_trap_end_step.gml</script>
+            <script>scripts\scr_mouse_trap_draw.gml</script>
+          </scripts>
         </scripts>
       </scripts>
       <scripts name="Misc">
@@ -249,6 +257,7 @@
       <objects name="Items">
         <object>objects\obj_item</object>
         <object>objects\obj_dead_rat</object>
+        <object>objects\obj_mouse_trap</object>
       </objects>
     </objects>
     <objects name="Misc">
