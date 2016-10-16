@@ -8,6 +8,7 @@
 
 var on_exit_menu = false;
 var exit_with_mouse_trap = false;
+var exit_with_cheese = false;
 
 // on object selection move
 var on_object_navigation = 0;
@@ -49,6 +50,12 @@ if (on_object_selected == 1)
         exit_with_mouse_trap = true;
     }
     
+    // else, if selecting the cheese item
+    else if (object_id == 'cheese')
+    {
+        exit_with_cheese = true;
+    }
+    
     var object_text = object_array[object_array_position, 2];
     PLAYER_FOO = object_text;
     
@@ -76,24 +83,34 @@ if (on_exit_menu)
     // activate everything
     instance_activate_all();
     
-    // if a mouse trap was selected
-    // *player must be active before it can be interacted with
-    if (exit_with_mouse_trap)
+    // if an item was selected
+    // *player must be active before being interacted with
+    if (exit_with_mouse_trap || exit_with_cheese)
     {
         with (obj_player)
         {
             if ( ! carrying)
             {
-                // create mouse trap and update
-                var mousetrap = instance_create(x, y, obj_mouse_trap);
-                mousetrap.is_being_carried_by = id;
+                // create the item and see the player as the carrier
+                if (exit_with_mouse_trap)
+                {
+                    var item = instance_create(x, y, obj_mouse_trap);
+                    item.is_being_carried_by = id;
+                }
+                else if (exit_with_cheese)
+                {
+                    var item = instance_create(x, y, obj_cheese);
+                    item.is_being_carried_by = id;
+                }
                 
                 // update player
                 carrying = true;
-                is_carrying_item = mousetrap.id;
+                is_carrying_item = item.id;
             }
         }
+        
         exit_with_mouse_trap = false;
+        exit_with_cheese = false;
     }
     
     // destroy the pause screen

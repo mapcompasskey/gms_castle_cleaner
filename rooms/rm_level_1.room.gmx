@@ -266,6 +266,7 @@
     <instance objName="obj_crate_2d" x="592" y="352" name="inst_07AFA553" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_crate_2d" x="592" y="304" name="inst_239E119A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mouse_trap" x="64" y="432" name="inst_2AFCBFD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_cheese" x="32" y="400" name="inst_5C6EB7A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

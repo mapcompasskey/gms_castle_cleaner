@@ -40,6 +40,11 @@ object_array[i, 0] = 'mousetrap';
 object_array[i, 1] = spr_player_cart_broom;
 object_array[i, 2] = 'Mouse Trap';
 
+var i = 5;
+object_array[i, 0] = 'cheese';
+object_array[i, 1] = spr_player_cart_broom;
+object_array[i, 2] = 'Cheese';
+
 // highlight the selected item
 var i, name;
 for (i = 0; i < array_height_2d(object_array); i++)
