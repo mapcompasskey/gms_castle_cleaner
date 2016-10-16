@@ -7,7 +7,6 @@
  * Loaded into a room whenever the player cart object is interacted with.
  */
 
-on_exit_menu = false;
 object_array_position = 0;
 
 // object array

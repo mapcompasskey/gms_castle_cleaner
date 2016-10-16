@@ -6,6 +6,9 @@
  * Added to the player cart menu object's Step event.
  */
 
+var on_exit_menu = false;
+var exit_with_mouse_trap = false;
+
 // on object selection move
 var on_object_navigation = 0;
 on_object_navigation -= max(keyboard_check_pressed(KEY_LEFT), 0);
@@ -32,12 +35,18 @@ if (on_object_selected == 1)
 {
     var object_id = object_array[object_array_position, 0];
     
-    // if selecting broom item
+    // if selecting a new broom
     if (object_id == 'broom')
     {
         // refill broom uses
         PLAYER_BROOM_IS_BROKEN = false;
         PLAYER_BROOM_CURRENT_HEALTH = PLAYER_BROOM_MAXIMUM_HEALTH;
+    }
+    
+    // else, if selecting the mouse trap item
+    else if (object_id == 'mousetrap')
+    {
+        exit_with_mouse_trap = true;
     }
     
     var object_text = object_array[object_array_position, 2];
@@ -66,6 +75,26 @@ if (on_exit_menu)
     
     // activate everything
     instance_activate_all();
+    
+    // if a mouse trap was selected
+    // *player must be active before it can be interacted with
+    if (exit_with_mouse_trap)
+    {
+        with (obj_player)
+        {
+            if ( ! carrying)
+            {
+                // create mouse trap and update
+                var mousetrap = instance_create(x, y, obj_mouse_trap);
+                mousetrap.is_being_carried_by = id;
+                
+                // update player
+                carrying = true;
+                is_carrying_item = mousetrap.id;
+            }
+        }
+        exit_with_mouse_trap = false;
+    }
     
     // destroy the pause screen
     instance_destroy();

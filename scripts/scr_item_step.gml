@@ -6,8 +6,8 @@
  * Base Step event call for Item objects.
  * Called during this object's Step event.
  */
- 
-// if object has been disabled
+
+// if the object has been disabled
 if ( ! can_be_carried)
 {
     disable_timer += TICK;
