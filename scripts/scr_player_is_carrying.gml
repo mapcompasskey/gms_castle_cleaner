@@ -7,6 +7,11 @@
 
 if (carrying)
 {
+    if (PLAYER_IS_CARRYING == '')
+    {
+        PLAYER_IS_CARRYING = is_carrying_item.item_name;
+    }
+    
     // if hurting
     if (hurting)
     {
@@ -45,5 +50,11 @@ if (carrying)
         
         exit;
     }
+}
+
+if ( ! carrying && PLAYER_IS_CARRYING != '')
+{
+    // update global
+    PLAYER_IS_CARRYING = '';
 }
 

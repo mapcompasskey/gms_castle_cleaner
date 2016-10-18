@@ -43,12 +43,28 @@ draw_sprite_ext(spr_hud_broom, 0, pos_x, pos_y, scale_factor, scale_factor, 0, c
  
 // position text to the bottom/right of the image
 var txt = string(PLAYER_BROOM_CURRENT_HEALTH);
-pos_x = (pos_x + width);
-pos_y = (pos_y + height);
+var pos_x2 = (pos_x + width);
+var pos_y2 = (pos_y + height);
 
 draw_set_color(c_white);
 draw_set_halign(fa_right);
 draw_set_valign(fa_bottom);
 draw_set_font(fnt_silkscreen_game);
-draw_text_transformed(pos_x, pos_y, txt, scale_factor, scale_factor, 0);
+draw_text_transformed(pos_x2, pos_y2, txt, scale_factor, scale_factor, 0);
+
+
+/**
+ * Draw the Name of the Item being Carried by the Player
+ */
+ 
+// position text to the bottom/right of the image
+var txt = string(PLAYER_IS_CARRYING);
+var pos_x3 = (pos_x - padding);
+var pos_y3 = (pos_y);
+
+draw_set_color(c_white);
+draw_set_halign(fa_right);
+draw_set_valign(fa_top);
+draw_set_font(fnt_silkscreen_game);
+draw_text_transformed(pos_x3, pos_y3, txt, scale_factor, scale_factor, 0);
 
