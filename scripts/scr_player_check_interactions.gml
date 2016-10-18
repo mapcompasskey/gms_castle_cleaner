@@ -59,35 +59,38 @@ if (carrying && is_carrying_item != noone)
         var mouse_trap_item = instance_place(x, y, obj_mouse_trap);
         if (mouse_trap_item != noone)
         {
-            // highlight the mouse trap item
-            with (mouse_trap_item)
+            if ( ! mouse_trap_item.has_cheese)
             {
-                is_colliding_with = other.id;
-            }
-            
-            // if the Action key was pressed
-            if (PLAYER_KEY_ACTION)
-            {
-                // clear input
-                PLAYER_KEY_ACTION = false;
-                
-                // update the mouse trap item
+                // highlight the mouse trap item
                 with (mouse_trap_item)
                 {
-                    has_cheese = true;
+                    is_colliding_with = other.id;
                 }
                 
-                // destory the cheese item
-                with (is_carrying_item)
+                // if the Action key was pressed
+                if (PLAYER_KEY_ACTION)
                 {
-                    instance_destroy();
+                    // clear input
+                    PLAYER_KEY_ACTION = false;
+                    
+                    // update the mouse trap item
+                    with (mouse_trap_item)
+                    {
+                        has_cheese = true;
+                    }
+                    
+                    // destory the cheese item
+                    with (is_carrying_item)
+                    {
+                        instance_destroy();
+                    }
+                    
+                    // update the player
+                    carrying = false;
+                    is_carrying_item = noone;
+                    
+                    exit;
                 }
-                
-                // update the player
-                carrying = false;
-                is_carrying_item = noone;
-                
-                exit;
             }
         }
     }

@@ -23,6 +23,8 @@ was_being_carried_by = noone;
 disable_time = 30; // 0.5 second
 disable_timer = 0;
 
+item_name = 'item';
+
 image_index = 0;
 image_speed = 0;
 

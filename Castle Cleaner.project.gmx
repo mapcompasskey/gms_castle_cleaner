@@ -171,10 +171,15 @@
             <script>scripts\scr_item_end_step.gml</script>
             <script>scripts\scr_item_draw.gml</script>
           </scripts>
+          <scripts name="DeadRat">
+            <script>scripts\scr_dead_rat_create.gml</script>
+          </scripts>
           <scripts name="MouseTrap">
-            <script>scripts\scr_mouse_trap_events.gml</script>
             <script>scripts\scr_mouse_trap_create.gml</script>
             <script>scripts\scr_mouse_trap_step.gml</script>
+          </scripts>
+          <scripts name="Cheese">
+            <script>scripts\scr_cheese_create.gml</script>
           </scripts>
         </scripts>
       </scripts>
