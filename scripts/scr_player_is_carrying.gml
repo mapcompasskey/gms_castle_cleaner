@@ -45,59 +45,5 @@ if (carrying)
         
         exit;
     }
-    
-    /*
-    // if colliding with Player Cart
-    if (place_meeting(x, y, obj_player_cart))
-    {
-        // drop item
-        with (is_carrying_item)
-        {
-            is_being_carried_by = noone;
-            instance_destroy();
-        }
-        
-        // update player
-        carrying = false;
-        is_carrying_item = noone;
-        
-        exit;
-    }
-    */
 }
-
-/*
-if ( ! carrying)
-{
-    // if colliding with an item
-    if (place_meeting(x, y, obj_item))
-    {
-        with (obj_item)
-        {
-            if (can_be_carried)
-            {
-                // if this item is colliding with the player
-                if (place_meeting(x, y, other.id))
-                {
-                    is_colliding_with = other.id;
-                    
-                    // if the Action key was pressed
-                    if (PLAYER_KEY_ACTION)
-                    {
-                        // clear input
-                        PLAYER_KEY_ACTION = false;
-                        
-                        // update the item
-                        is_being_carried_by = other.id;
-                        
-                        // update the player
-                        other.carrying = true;
-                        other.is_carrying_item = id;
-                    }
-                }
-            }
-        }
-    }
-}
-*/
 
