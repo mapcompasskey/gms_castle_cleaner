@@ -19,12 +19,13 @@ if ( ! carrying)
     // check if colliding with an item
     if (place_meeting(x, y, obj_item))
     {
-        with (obj_item)
+        // get the item
+        var item = instance_place(x, y, obj_item);
+        if (item != noone)
         {
-            if (can_be_carried)
+            with (item)
             {
-                // if this item is colliding with the player
-                if (place_meeting(x, y, other.id))
+                if (can_be_carried)
                 {
                     // highlight the item
                     is_colliding_with = other.id;
@@ -126,54 +127,60 @@ if (carrying && is_carrying_item != noone)
  * cart menu will be opened.
  */
 
-var open_cart = false;
-
 // check if colliding with a player cart
 if (place_meeting(x, y, obj_player_cart))
 {
-    with (obj_player_cart)
+    // if not carrying an item
+    if ( ! carrying)
     {
-        if (place_meeting(x, y, other.id))
+        // get the player cart
+        var player_cart = instance_place(x, y, obj_player_cart);
+        if (player_cart != noone)
         {
-            is_colliding_with = other.id;
+            // highlight the player cart
+            player_cart.is_colliding_with = other.id;
             
             // if the Action key was pressed
             if (PLAYER_KEY_ACTION)
             {
                 // clear input
                 PLAYER_KEY_ACTION = false;
-                open_cart = true;
+                
+                // add the Player Cart Menu object
+                instance_create(0, 0, obj_player_cart_menu);
             }
         }
     }
-}
-
-// if interacting with the cart and carrying an item
-if (open_cart && carrying)
-{
-    with (is_carrying_item)
+    
+    // else, if carrying an item
+    else if (carrying && is_carrying_item != noone)
     {
-        // if dead rat item
-        if (object_get_name(object_index) == 'obj_dead_rat')
+        // if item is a dead rat
+        if (object_get_name(is_carrying_item.object_index) == 'obj_dead_rat')
         {
-            // increment the global counter
-            DEAD_RAT_ITEMS_COLLECTED++;
-            
-            // update the player and item
-            scr_update_player_and_item(other.id, id, 'destroy');
-            
-            // prevent the cart from opening
-            open_cart = false;
+            // get the player cart
+            var player_cart = instance_place(x, y, obj_player_cart);
+            if (player_cart != noone)
+            {
+                // highlight the player cart
+                player_cart.is_colliding_with = id;
+                
+                // if the Action key was pressed
+                if (PLAYER_KEY_ACTION)
+                {
+                    // clear input
+                    PLAYER_KEY_ACTION = false;
+                    
+                    // increment the global counter
+                    DEAD_RAT_ITEMS_COLLECTED++;
+                    
+                    // update the player and item
+                    scr_update_player_and_item(id, is_carrying_item, 'destroy');
+                }
+            }
         }
     }
-}
-
-// if interacting with the cart
-if (open_cart)
-{
-    // add the Player Cart Menu object
-    instance_create(0, 0, obj_player_cart_menu);
-    open_cart = false;    
+    
 }
 
 
@@ -184,18 +191,22 @@ if (open_cart)
 // check if colliding with a door
 if (place_meeting(x, y, obj_door))
 {
-    with (obj_door)
+    // get the door
+    var door = instance_place(x, y, obj_door);
+    if (door != noone)
     {
-        if (place_meeting(x, y, other.id))
+        with (door)
         {
+            // if door is active
             if (can_use_door)
             {
-                is_colliding_with = other.id;
+                // highlight the door
+                is_colliding_with = other.id
                 
                 // if the Action key was pressed
                 if (PLAYER_KEY_ACTION)
                 {
-                    // clear inputs
+                    // clear all inputs
                     PLAYER_KEY_ACTION = false;
                     io_clear();
                     
@@ -211,10 +222,10 @@ if (place_meeting(x, y, obj_door))
                         // switch rooms
                         room_goto(exit_room_id);
                     }
-                    
                 }
+                
             }
         }
     }
+    
 }
-
