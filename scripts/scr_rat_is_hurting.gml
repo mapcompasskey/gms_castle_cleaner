@@ -5,7 +5,6 @@
  *
  */
 
-
 if ( ! dying && ! hurting && ! recovering)
 {
     if (is_colliding_with != noone)
@@ -56,25 +55,18 @@ if (hurting && grounded)
 
 if (recovering)
 {
-    //image_alpha = 0.5;
     recovering_cooldown_timer += TICK;
     
     // if the timer has ended
     if (recovering_cooldown_timer >= recovering_cooldown_time)
     {
-        //image_alpha = 1.0;
         hurting = false;
         recovering = false;
         is_colliding_with = noone;
         recovering_cooldown_timer = 0;
     }
-    
-    //show_debug_message(string(recovering_cooldown_timer) + ', ' + string(recovering_cooldown_timer%2));
-    //show_debug_message(string(recovering_cooldown_timer) + ', ' + string(recovering_cooldown_timer & 1));
 }
 
-//image_blend = c_white;
-//image_alpha = 1;
 if (recovering)
 {
     flashing_timer += TICK;
@@ -83,41 +75,6 @@ if (recovering)
     {
         flashing_timer = 0;
         is_flashing = !is_flashing;
-        /*
-        if (flashing_color < 1)
-        {
-            flashing_color = 1;
-        }
-        else
-        {
-            flashing_color = 0.25;
-        }
-        image_alpha = flashing_color;
-        */
-        /*
-        if (flashing_color == c_white)
-        {
-            flashing_color = c_red;
-            flashing_color = c_black;
-        }
-        else
-        {
-            flashing_color = c_white;
-        }
-        image_blend = flashing_color;
-        */
     }
 }
-/*
-if (hurting)
-{
-    image_blend = c_red;
-    //image_blend = c_yellow;
-    //image_blend = make_colour_rgb(255, 200, 20);
-}
-else
-{
-    image_blend = c_white;
-}
-*/
 
