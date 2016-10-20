@@ -91,21 +91,20 @@ if (on_exit_menu)
         {
             if ( ! carrying)
             {
-                // create the item and see the player as the carrier
+                var item = noone;
+                
+                // create the item
                 if (exit_with_mouse_trap)
                 {
-                    var item = instance_create(x, y, obj_mouse_trap);
-                    item.is_being_carried_by = id;
+                    item = instance_create(x, y, obj_mouse_trap);
                 }
                 else if (exit_with_cheese)
                 {
-                    var item = instance_create(x, y, obj_cheese);
-                    item.is_being_carried_by = id;
+                    item = instance_create(x, y, obj_cheese);
                 }
                 
-                // update player
-                carrying = true;
-                is_carrying_item = item.id;
+                // update the player and item
+                scr_update_player_and_item(id, item, 'pickup'); 
             }
         }
         

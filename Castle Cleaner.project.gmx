@@ -221,6 +221,7 @@
       <script>scripts\scr_camera_update.gml</script>
       <script>scripts\scr_draw_border.gml</script>
       <script>scripts\scr_recovering_flash_overlay.gml</script>
+      <script>scripts\scr_update_player_and_item.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

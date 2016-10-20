@@ -9,7 +9,8 @@
 /**
  * Check Interactions with Items
  *
- * Check if colliding with an item and picking it up.
+ * Check if colliding with an item and picking it up. Some items can interact
+ * with other items if the player is carrying one of them.
  */
 
 // if not carrying an item
@@ -34,12 +35,8 @@ if ( ! carrying)
                         // clear input
                         PLAYER_KEY_ACTION = false;
                         
-                        // update the item
-                        is_being_carried_by = other.id;
-                        
-                        // update the player
-                        other.carrying = true;
-                        other.is_carrying_item = id;
+                        // update the player and item
+                        scr_update_player_and_item(other.id, id, 'pickup');
                         
                         exit;
                     }
@@ -74,20 +71,44 @@ if (carrying && is_carrying_item != noone)
                     PLAYER_KEY_ACTION = false;
                     
                     // update the mouse trap item
-                    with (mouse_trap_item)
-                    {
-                        has_cheese = true;
-                    }
+                    mouse_trap_item.has_cheese = true;
+                    
+                    // update the player and cheese item
+                    scr_update_player_and_item(id, is_carrying_item, 'destroy');
+                    
+                    exit;
+                }
+            }
+        }
+    }
+    
+    // if carrying the mouse trap item
+    if (object_get_name(is_carrying_item.object_index) == 'obj_mouse_trap')
+    {
+        // if the mouse trap is unbaited
+        if ( ! is_carrying_item.has_cheese)
+        {
+            // check if colliding with a cheese item
+            var cheese_item = instance_place(x, y, obj_cheese);
+            if (cheese_item != noone)
+            {
+                // highlight the cheese item
+                cheese_item.is_colliding_with = id;
+                
+                // if the Action key was pressed
+                if (PLAYER_KEY_ACTION)
+                {
+                    // clear input
+                    PLAYER_KEY_ACTION = false;
                     
                     // destory the cheese item
-                    with (is_carrying_item)
+                    with (cheese_item)
                     {
                         instance_destroy();
                     }
                     
-                    // update the player
-                    carrying = false;
-                    is_carrying_item = noone;
+                    // update the mouse trap item
+                    is_carrying_item.has_cheese = true;
                     
                     exit;
                 }
@@ -101,7 +122,7 @@ if (carrying && is_carrying_item != noone)
  * Check Interactions with Player Carts
  *
  * Check if colliding with the player cart. If carrying an item and interacting with the
- * cart, the item will be placed "inside" it. If not carrying anything, then the player
+ * cart, the item could be placed "inside" it. If not carrying anything, then the player
  * cart menu will be opened.
  */
 
@@ -132,19 +153,16 @@ if (open_cart && carrying)
 {
     with (is_carrying_item)
     {
-        // if dead rat object, increment the global counter
+        // if dead rat item
         if (object_get_name(object_index) == 'obj_dead_rat')
         {
+            // increment the global counter
             DEAD_RAT_ITEMS_COLLECTED++;
             
-            // update the player
-            other.carrying = false;
-            other.is_carrying_item = noone;
+            // update the player and item
+            scr_update_player_and_item(other.id, id, 'destroy');
             
-            // update the item
-            is_being_carried_by = noone;
-            instance_destroy();
-            
+            // prevent the cart from opening
             open_cart = false;
         }
     }
