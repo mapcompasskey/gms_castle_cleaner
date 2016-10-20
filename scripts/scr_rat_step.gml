@@ -20,6 +20,7 @@ scr_rat_update_action();
 scr_rat_is_hurting();
 scr_rat_is_walking();
 scr_rat_is_attacking();
+scr_rat_is_eating();
 
 
 /**
