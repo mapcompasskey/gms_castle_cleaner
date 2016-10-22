@@ -30,7 +30,16 @@ scr_rat_is_eating();
 scr_entity_update_image_xscale();
 
 // update the sprite and animation speed
-if (walking)
+if (eating)
+{
+    if (sprite_index != eating_sprite)
+    {
+        sprite_index = eating_sprite;
+        image_index = 0;
+        image_speed = eating_speed;
+    }
+}
+else if (walking)
 {
     if (sprite_index != walking_sprite)
     {

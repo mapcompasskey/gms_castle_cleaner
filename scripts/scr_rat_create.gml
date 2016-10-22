@@ -19,6 +19,7 @@ maximum_health = 2;
 walking = false;
 jumping = false;
 falling = false;
+eating = false;
 attacking = false;
 hurting = false;
 recovering = false;
@@ -26,6 +27,9 @@ dying = false;
 
 action_timer = 500;
 action_time = irandom_range(200, 400);
+
+eating_timer = 0;
+eating_time = 60;
 
 recovering_cooldown_time = 15; // 1/4 a second
 recovering_cooldown_timer = 0;
@@ -48,6 +52,9 @@ idle_sprite = spr_rat_idle;
 
 walking_speed = 0.3;
 walking_sprite = spr_rat_walking;
+
+eating_speed = 0.3;
+eating_sprite = spr_rat_eating;
 
 sprite_index = idle_sprite;
 image_index = 0;

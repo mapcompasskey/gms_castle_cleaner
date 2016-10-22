@@ -38,6 +38,7 @@
       <sprites name="Enemies">
         <sprites name="Rat">
           <sprite>sprites\spr_rat_idle</sprite>
+          <sprite>sprites\spr_rat_eating</sprite>
           <sprite>sprites\spr_rat_walking</sprite>
           <sprite>sprites\spr_rat_mask</sprite>
         </sprites>

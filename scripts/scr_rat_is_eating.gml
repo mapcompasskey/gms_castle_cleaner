@@ -5,7 +5,19 @@
  *
  */
 
-if ( ! dying && ! hurting && ! recovering)
+if (eating)
+{
+    eating_timer += TICK;
+    
+    if (eating_timer > eating_time)
+    {
+        eating = 0;
+        eating_timer = 0;
+        action_time = 0;
+    }
+}
+
+if ( ! dying && ! hurting && ! recovering && ! eating)
 {
     if (place_meeting(x, y, obj_cheese))
     {
@@ -22,7 +34,14 @@ if ( ! dying && ! hurting && ! recovering)
             // stop moving
             key_left = false;
             key_right = false;
+            
+            eating = true;
         }
     }
+}
+
+if (dying || hurting)
+{
+    eating = false;
 }
 

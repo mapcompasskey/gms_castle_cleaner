@@ -5,7 +5,7 @@
  *
  */
 
-if ( ! dying && ! hurting && ! jumping && ! falling)
+if ( ! dying && ! hurting && ! jumping && ! falling && ! eating)
 {
     action_timer += TICK;
     
