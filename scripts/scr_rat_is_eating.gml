@@ -3,6 +3,8 @@
 /**
  * Rat: Is Eating
  *
+ * When the rat collides with a cheese item, the item is destroyed and
+ * the rat idles while playing an eating animation.
  */
 
 if (eating)

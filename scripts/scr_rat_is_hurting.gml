@@ -26,7 +26,7 @@ if ( ! dying && ! hurting && ! recovering)
         */
         
         // apply horizontal knockback
-        var knockback_x = 2;
+        var knockback_x = 3;
         if (x < is_colliding_with.x)
         {
             knockback_x = -knockback_x;
@@ -34,7 +34,7 @@ if ( ! dying && ! hurting && ! recovering)
         velocity_x = knockback_x;
         
         // apply vertical knockback
-        velocity_y = -3;
+        velocity_y = -2;
         grounded = false;
         
         // move away from the attack

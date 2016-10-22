@@ -50,11 +50,14 @@ key_attack_pressed = false;
 idle_speed = 0.05;
 idle_sprite = spr_rat_idle;
 
-walking_speed = 0.3;
-walking_sprite = spr_rat_walking;
+hurting_speed = 0;
+hurting_sprite = spr_rat_hurting;
 
 eating_speed = 0.3;
 eating_sprite = spr_rat_eating;
+
+walking_speed = 0.3;
+walking_sprite = spr_rat_walking;
 
 sprite_index = idle_sprite;
 image_index = 0;
