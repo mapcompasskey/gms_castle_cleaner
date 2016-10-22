@@ -7,8 +7,8 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>23</bbox_left>
-  <bbox_right>39</bbox_right>
+  <bbox_left>25</bbox_left>
+  <bbox_right>43</bbox_right>
   <bbox_top>32</bbox_top>
   <bbox_bottom>38</bbox_bottom>
   <HTile>0</HTile>
@@ -17,7 +17,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>40</width>
+  <width>44</width>
   <height>40</height>
   <frames>
     <frame index="0">images\spr_player_attack_box_0.png</frame>
