@@ -6,7 +6,8 @@
  * Include in an object's End Step event.
  */
 
-entity_hit_placeholder_block = false;
+entity_hit_placeholder_block_x = false;
+entity_hit_placeholder_block_y = false;
 
 // check horizontal collision
 if (place_meeting(x + mx, y, obj_placeholder_block))
@@ -19,7 +20,7 @@ if (place_meeting(x + mx, y, obj_placeholder_block))
     mx = temp_mx;
     velocity_x = 0;
     
-    entity_hit_placeholder_block = true;
+    entity_hit_placeholder_block_x = true;
 }
 
 // check vertical collision
@@ -32,5 +33,7 @@ if (place_meeting(x + mx, y + my, obj_placeholder_block))
     }
     my = temp_my;
     velocity_y = 0;
+    
+    entity_hit_placeholder_block_y = true;
 }
 

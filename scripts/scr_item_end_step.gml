@@ -11,11 +11,38 @@
 if (is_being_carried_by != noone)
 {
     // reposition onto the object
-    with (is_being_carried_by)
+    /*with (is_being_carried_by)
     {
         other.x = x;
         other.y = bbox_top;
+    }*/
+    
+    //x = is_being_carried_by.x;
+    //y = is_being_carried_by.bbox_top;
+    
+    // new x/y positions
+    mx = (is_being_carried_by.x - x);
+    my = (is_being_carried_by.bbox_top - y);
+    
+    /**/
+    // test collisions
+    scr_entity_check_wall_collisions();
+    scr_entity_check_block_collisions();
+    scr_entity_check_placeholder_block_collisions();
+    
+    if (entity_hit_wall_x || entity_hit_block_x || entity_hit_placeholder_block_x)
+    {
+        scr_update_player_and_item(is_being_carried_by, id, 'drop');
     }
+    if (entity_hit_wall_y || entity_hit_block_y || entity_hit_placeholder_block_y)
+    {
+        scr_update_player_and_item(is_being_carried_by, id, 'drop');
+    }
+    /**/
+    
+    // update object position
+    x += mx;
+    y += my;
 
     exit;
 }
@@ -33,7 +60,7 @@ scr_entity_check_wall_collisions();
 scr_entity_check_block_collisions();
 scr_entity_check_placeholder_block_collisions();
 
-if (entity_hit_wall || entity_hit_block || entity_hit_placeholder_block)
+if (entity_hit_wall_x || entity_hit_block_x || entity_hit_placeholder_block_x)
 {
     velocity_x = -(last_velocity_x);
 }

@@ -25,7 +25,7 @@ scr_entity_check_placeholder_block_collisions();
 
 if ( ! entity_at_wall_edge)
 {
-    if (entity_hit_wall || entity_hit_block || entity_hit_placeholder_block)
+    if (entity_hit_wall_x || entity_hit_block_x || entity_hit_placeholder_block_x)
     {
         key_left = !key_left;
         key_right = !key_right;

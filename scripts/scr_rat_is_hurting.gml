@@ -38,8 +38,13 @@ if ( ! dying && ! hurting && ! recovering)
         grounded = false;
         
         // move away from the attack
-        key_left = (velocity_x < 0 ? true : false);
-        key_right = (velocity_x < 0 ? false : true);
+        key_left = false;
+        key_right = true;
+        if (velocity_x < 0)
+        {
+            key_left = true;
+            key_right = false;
+        }
     }
 }
 
