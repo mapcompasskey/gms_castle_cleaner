@@ -14,7 +14,7 @@ if (player == noone || item == noone)
     exit;
 }
 
-// if pickup, attach the item to the player
+// if action is 'pickup', attach the item to the player
 if (action == 'pickup')
 {
     // update the item
@@ -28,8 +28,8 @@ if (action == 'pickup')
     PLAYER_IS_CARRYING = item.item_name;
 }
 
-// else, action is drop, throw, destroy
-else
+// else, if the action is 'drop', 'throw', 'destroy'
+else if (action == 'drop' || action == 'throw' || action == 'destroy')
 {
     // update the item
     item.is_being_carried_by = noone;

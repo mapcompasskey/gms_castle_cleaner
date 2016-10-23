@@ -41,9 +41,11 @@ if ( ! carrying)
                         
                         exit;
                     }
+                    exit;
                 }
             }
         }
+        
     }
 }
 
@@ -83,8 +85,10 @@ if (carrying && is_carrying_item != noone)
         }
     }
     
-    // if carrying the mouse trap item
-    if (object_get_name(is_carrying_item.object_index) == 'obj_mouse_trap')
+    /** /
+    // * the name of the mouse doesn't update from "unbaited" to "baited"
+    // else, if carrying the mouse trap item
+    else if (object_get_name(is_carrying_item.object_index) == 'obj_mouse_trap')
     {
         // if the mouse trap is unbaited
         if ( ! is_carrying_item.has_cheese)
@@ -116,6 +120,7 @@ if (carrying && is_carrying_item != noone)
             }
         }
     }
+    /**/
 }
 
 
