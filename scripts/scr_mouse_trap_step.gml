@@ -12,3 +12,9 @@ if (has_cheese)
     item_name = 'Baited Mouse Trap';
 }
 
+if (dying)
+{
+    // mark this instance for destruction
+    instance_destroy();
+}
+

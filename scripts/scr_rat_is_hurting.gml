@@ -38,13 +38,8 @@ if ( ! dying && ! hurting && ! recovering)
         grounded = false;
         
         // move away from the attack
-        key_left = false;
-        key_right = true;
-        if (velocity_x < 0)
-        {
-            key_left = true;
-            key_right = false;
-        }
+        key_left = (velocity_x < 0 ? true : false);
+        key_right = (velocity_x < 0 ? false : true);
     }
 }
 
@@ -76,5 +71,43 @@ if (recovering)
         flashing_timer = 0;
         is_flashing = !is_flashing;
     }
+}
+
+if ( ! dying && ! hurting && ! recovering)
+{
+    // check if colliding with a mouse trap
+    // * need to check with all mouse traps incase an unbaited trap is ontop of a baited one
+    if (place_meeting(x, y, obj_mouse_trap))
+    {
+        with (obj_mouse_trap)
+        {
+            // if the mouse trap is baited and not dying
+            if (has_cheese && ! dying)
+            {
+                // if the mouse trap is colliding with the rat
+                if (place_meeting(x, y, other.id))
+                {
+                    // if the rat isn't dying
+                    if ( ! other.dying)
+                    {
+                        // update mouse trap
+                        dying = true;
+                        
+                        // update rat
+                        other.dying = true;
+                    }
+                }
+            }
+        }
+    }
+}
+
+if (dying)
+{
+    // create a dead rat item
+    instance_create(x, (y - 2), obj_dead_rat);
+    
+    // mark rat for destruction
+    instance_destroy();
 }
 
