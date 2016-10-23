@@ -11,25 +11,16 @@ var on_wall = place_meeting(x, y + 1, obj_wall);
 var on_block = place_meeting(x, y + 1, obj_block);
 grounded = max(on_wall, on_block);
 
-
-/**
- * Check Object State
- */
-
+// check object state
 scr_rat_update_action();
 scr_rat_is_hurting();
 scr_rat_is_walking();
 scr_rat_is_attacking();
 scr_rat_is_eating();
 
-
-/**
- * Update Object Sprite
- */
-
+// update the sprite and animation speed
 scr_entity_update_image_xscale();
 
-// update the sprite and animation speed
 if (hurting)
 {
     if (sprite_index != hurting_sprite)
