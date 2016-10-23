@@ -6,17 +6,6 @@
  * Called during this object's Step event.
  */
 
-/*
-// get the player's input
-key_left = keyboard_check(KEY_LEFT);
-key_right = keyboard_check(KEY_RIGHT);
-key_down = keyboard_check(KEY_DOWN);
-key_jump_pressed = keyboard_check_pressed(KEY_JUMP);
-key_jump_released = keyboard_check_released(KEY_JUMP);
-key_attack_pressed = keyboard_check_released(KEY_ATTACK_1);
-key_attack2_pressed = keyboard_check_released(KEY_ATTACK_2);
-*/
-
 // is object standing on a wall or block
 var on_wall = place_meeting(x, y + 1, obj_wall);
 var on_block = place_meeting(x, y + 1, obj_block);
@@ -25,11 +14,7 @@ grounded = max(on_wall, on_block);
 // is object standing in a ladder
 on_ladder = place_meeting(x, y, obj_ladder);
 
-
-/**
- * Check Object State
- */
-
+// check object state
 scr_player_check_interactions();
 scr_player_is_hurting();
 scr_player_is_crouching();
@@ -38,14 +23,9 @@ scr_player_is_carrying();
 scr_player_is_attacking();
 scr_player_is_walking();
 
-
-/**
- * Update Object Sprite
- */
-
+// update the sprite and animation speed
 scr_entity_update_image_xscale();
 
-// update the sprite and animation speed
 if (crouching)
 {
     if (sprite_index != crouching_sprite)

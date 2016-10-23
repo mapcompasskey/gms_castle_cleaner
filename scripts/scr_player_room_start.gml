@@ -18,11 +18,6 @@ with (obj_door)
     }
 }
 
-
-/**
- * Update Camera Position
- */
-
 // start camera on the player
 scr_camera_update(x, y, false);
 
