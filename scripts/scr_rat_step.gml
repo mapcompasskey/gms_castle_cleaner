@@ -3,7 +3,7 @@
 /**
  * Rat: On Update
  *
- * Added to the rat object's Step event.
+ * Called during this object's Step event.
  */
 
 // is object standing on a wall or block

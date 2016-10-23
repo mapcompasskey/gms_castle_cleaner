@@ -3,7 +3,7 @@
 /**
  * Rat: On End of Update
  *
- * Added to the rat object's End Step event.
+ * Called during this object's End Step event.
  */
 
 // apply faux physics

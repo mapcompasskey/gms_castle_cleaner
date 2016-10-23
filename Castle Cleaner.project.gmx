@@ -155,6 +155,7 @@
         </scripts>
         <scripts name="Enemies">
           <scripts name="Rat">
+            <script>scripts\scr_rat_events.gml</script>
             <script>scripts\scr_rat_create.gml</script>
             <script>scripts\scr_rat_step.gml</script>
             <script>scripts\scr_rat_update_action.gml</script>

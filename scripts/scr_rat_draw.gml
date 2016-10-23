@@ -3,7 +3,7 @@
 /**
  * Rat: On Draw
  *
- * Added to the rat object's Draw event.
+ * Called during this object's Draw event.
  */
 
 // draw a border around sprite
