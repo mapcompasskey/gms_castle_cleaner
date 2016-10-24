@@ -9,7 +9,7 @@
 // apply faux physics
 scr_entity_movement_update();
 
-// if on a ladder, being pushed down and not crouching
+// if on a ladder, being pushed down (gravity) and not crouching
 if (on_ladder && my > 0 && ! crouching)
 {
     // reset y step movement and velocity
@@ -18,11 +18,9 @@ if (on_ladder && my > 0 && ! crouching)
 }
 
 // test collisions
-scr_entity_check_wall_collisions();
-scr_entity_check_block_collisions();
-scr_entity_check_placeholder_block_collisions();
+scr_entity_check_collision_with_solids();
 
-// update object position
+// update position
 x += mx;
 y += my;
 

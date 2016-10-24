@@ -9,30 +9,25 @@
 // apply faux physics
 scr_entity_movement_update();
 
-// test if at the walls edge
-scr_entity_check_wall_edges();
+// if reached the edge of a solid
+scr_entity_check_edge_of_solids();
 
-if (entity_at_wall_edge)
+if (entity_at_edge_of_solid)
 {
     key_left = !key_left;
     key_right = !key_right;
 }
 
 // test collisions
-scr_entity_check_wall_collisions();
-scr_entity_check_block_collisions();
-scr_entity_check_placeholder_block_collisions();
+scr_entity_check_collision_with_solids();
 
-if ( ! entity_at_wall_edge)
+if (entity_hit_solid_x)
 {
-    if (entity_hit_wall_x || entity_hit_block_x || entity_hit_placeholder_block_x)
-    {
-        key_left = !key_left;
-        key_right = !key_right;
-    }
+    key_left = !key_left;
+    key_right = !key_right;    
 }
 
-// update object position
+// update position
 x += mx;
 y += my;
 

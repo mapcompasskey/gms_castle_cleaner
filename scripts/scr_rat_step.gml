@@ -6,12 +6,10 @@
  * Called during this object's Step event.
  */
 
-// is object standing on a wall or block
-var on_wall = place_meeting(x, y + 1, obj_wall);
-var on_block = place_meeting(x, y + 1, obj_block);
-grounded = max(on_wall, on_block);
+// is this instance standing on a solid object
+grounded = place_meeting(x, y + 1, obj_solid);
 
-// check object state
+// check instance state
 scr_rat_update_action();
 scr_rat_is_hurting();
 scr_rat_is_walking();

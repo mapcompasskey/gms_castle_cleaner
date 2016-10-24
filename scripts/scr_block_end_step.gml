@@ -6,7 +6,7 @@
  * Called during this object's End Step event.
  */
 
-// if the object has stopped falling
+// if no longer falling
 if ( ! falling_counter)
 {
     exit;
@@ -16,10 +16,10 @@ if ( ! falling_counter)
 scr_entity_movement_update();
 
 // test collisions
-scr_entity_check_wall_collisions();
-scr_entity_check_block_collisions();
+scr_entity_check_collision_with_walls();
+scr_entity_check_collision_with_blocks();
 
-// update object position
+// update position
 x += mx;
 y += my;
 

@@ -1,4 +1,4 @@
-///scr_entity_check_block_collisions()
+///scr_entity_check_collision_with_blocks()
 
 /**
  * Check if Colliding with Blocks
