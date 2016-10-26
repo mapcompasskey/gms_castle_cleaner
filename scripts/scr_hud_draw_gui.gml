@@ -6,12 +6,15 @@
  * Added to the hud object's Draw GUI event.
  */
 
+// draw HUD items
+scr_hud_draw_health();
+scr_hud_draw_items();
 
 /**
  * Draw Player Health
  */
 
-/**/
+/** /
 // positioning variables
 var i = 0;
 var gutter_x = 4;
@@ -48,10 +51,6 @@ draw_set_valign(fa_top);
 draw_set_font(fnt_04b03_gui);
 draw_text(5, 24, txt);
 /**/
-
-
-// draw HUD items
-scr_hud_draw_items();
 
 
 /*

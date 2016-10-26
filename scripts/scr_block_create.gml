@@ -9,8 +9,6 @@
 scr_entity_movement_vars();
 scr_recovering_flash_overlay('create');
 
-gravity_factor = 0.1;
-
 speed_x = 0;
 speed_y = 4;
 max_velocity_x = 0;

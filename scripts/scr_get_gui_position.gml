@@ -14,7 +14,7 @@ if (argument0 == 'x')
 {
     if (argument1 == 'left')
     {
-        pos = a[0];
+        pos = 0;//a[0];
     }
     else if (argument1 == 'center')
     {
@@ -29,7 +29,7 @@ else if (argument0 == 'y')
 {
     if (argument1 == 'top')
     {
-        pos = a[1];
+        pos = 0;//a[1];
     }
     else if (argument1 == 'center')
     {
