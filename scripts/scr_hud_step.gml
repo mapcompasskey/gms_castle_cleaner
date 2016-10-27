@@ -24,9 +24,33 @@ if (scale_sprites < 1)
     scale_sprites = scale_factor;
 }
 
-if (obj_player)
+// update the item text
+player_item_text = 'Broken Broom';
+if (PLAYER_BROOM_CURRENT_HEALTH == 1)
 {
-    player_current_health = obj_player.current_health;
-    player_maximum_health = obj_player.maximum_health;
+    player_item_text = 'Broom (1 use)';
 }
+else if (PLAYER_BROOM_CURRENT_HEALTH > 1)
+{
+    player_item_text = 'Broom (' + string(PLAYER_BROOM_CURRENT_HEALTH) + ' uses)';
+}
+
+// if the player instance exists
+if (PLAYER != noone)
+{
+    with (PLAYER)
+    {
+        // get current health
+        other.player_current_health = current_health;
+        other.player_maximum_health = maximum_health;
+        
+        // if player is carrying an item
+        if (is_carrying_item != noone)
+        {
+            other.player_item_text = is_carrying_item.item_name;
+        }
+        
+    }
+}
+
 

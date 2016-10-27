@@ -54,11 +54,11 @@ draw_text_transformed(pos_x2, pos_y2, txt, scale_text, scale_text, 0);
 
 
 /**
- * Draw the Name of the Item being Carried by the Player
+ * Draw the Player's Current Item
  */
 
 // position text next to the image
-var txt = string(PLAYER_IS_CARRYING);
+var txt = string(player_item_text);
 var pos_x3 = (pos_x - padding);
 var pos_y3 = (pos_y);
 

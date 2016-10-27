@@ -17,6 +17,7 @@ if ( ! persistent)
 }
 
 /*
+    PLAYER - the instance id of the player
     RIGHT - used when calculating the x speed of entities
     LEFT - used when calculating the x speed of entities
     TICK - the amount of time that has passed since the last step
@@ -27,8 +28,10 @@ if ( ! persistent)
     BORDER_COLOR - default border color for sprites
 */
 
-globalvar RIGHT, LEFT, TICK, GRAV, TILE_SIZE, GAME_HAS_FOCUS, DEBUG_MODE, BORDER_COLOR, HIGHLIGHT_BORDER_COLOR;
+globalvar PLAYER, RIGHT, LEFT, TICK, GRAV, TILE_SIZE;
+globalvar GAME_HAS_FOCUS, DEBUG_MODE, BORDER_COLOR, HIGHLIGHT_BORDER_COLOR;
 
+PLAYER = noone;
 RIGHT = 1;
 LEFT = -1;
 TICK = 1;
@@ -126,22 +129,17 @@ while (i)
 
 
 /*
-    PLAYER_FOO - variable to test player cart menu
     DEAD_RAT_ITEMS_COLLECTED - variable to track item destruction
+    PLAYER_BROOM_IS_BROKEN - variable to track whether broom is broken
+    PLAYER_BROOM_CURRENT_HEALTH - variable to track broom health
+    PLAYER_BROOM_MAXIMUM_HEALTH - veraible to reset broom health
 */
 
-globalvar PLAYER_FOO, DEAD_RAT_ITEMS_COLLECTED;
-
-PLAYER_FOO = 'bar';
-DEAD_RAT_ITEMS_COLLECTED = 0;
-
+globalvar DEAD_RAT_ITEMS_COLLECTED;
 globalvar PLAYER_BROOM_IS_BROKEN, PLAYER_BROOM_CURRENT_HEALTH, PLAYER_BROOM_MAXIMUM_HEALTH;
 
+DEAD_RAT_ITEMS_COLLECTED = 0;
 PLAYER_BROOM_IS_BROKEN = false;
 PLAYER_BROOM_CURRENT_HEALTH = 10;
 PLAYER_BROOM_MAXIMUM_HEALTH = 10;
-
-globalvar PLAYER_IS_CARRYING;
-
-PLAYER_IS_CARRYING = '';
 

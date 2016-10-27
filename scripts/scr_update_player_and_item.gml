@@ -23,9 +23,6 @@ if (action == 'pickup')
     // update the player
     player.carrying = true;
     player.is_carrying_item = item;
-    
-    // update globals
-    PLAYER_IS_CARRYING = item.item_name;
 }
 
 // else, if the action is 'drop', 'throw', 'destroy'
@@ -53,8 +50,5 @@ else if (action == 'drop' || action == 'throw' || action == 'destroy')
     // update the player
     player.carrying = false;
     player.is_carrying_item = noone;
-    
-    // update globals
-    PLAYER_IS_CARRYING = '';
 }
 

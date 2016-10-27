@@ -1,7 +1,7 @@
 ///scr_hud_draw_health()
 
 /**
- * HUD: Draw Player Healt
+ * HUD: Draw Player Health
  *
  */
 

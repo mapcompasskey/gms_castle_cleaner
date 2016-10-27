@@ -50,10 +50,6 @@ var i, name;
 for (i = 0; i < array_height_2d(object_array); i++)
 {
     name = object_array[i, 2];
-    if (PLAYER_FOO == name)
-    {
-        object_array_position = i;
-    }
 }
 
 // create a snapshot of the scene from the current application surface

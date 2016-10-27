@@ -85,8 +85,6 @@ if (carrying && is_carrying_item != noone)
         }
     }
     
-    /** /
-    // * the name of the mouse doesn't update from "unbaited" to "baited"
     // else, if carrying the mouse trap item
     else if (object_get_name(is_carrying_item.object_index) == 'obj_mouse_trap')
     {
@@ -120,7 +118,6 @@ if (carrying && is_carrying_item != noone)
             }
         }
     }
-    /**/
 }
 
 

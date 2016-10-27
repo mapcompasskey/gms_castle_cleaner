@@ -6,6 +6,10 @@
  * Called during this object's Create event.
  */
 
+// update global
+PLAYER = id;
+
+// add default variables
 scr_entity_movement_vars();
 scr_recovering_flash_overlay('create');
 

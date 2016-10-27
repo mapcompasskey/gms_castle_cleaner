@@ -46,6 +46,7 @@ if ( ! dying && ! hurting && ! recovering)
             if (current_health <= 0)
             {
                 current_health = maximum_health;
+                //PLAYER = noone;
                 //instance_destroy();
             }
         }

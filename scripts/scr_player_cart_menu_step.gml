@@ -57,7 +57,6 @@ if (on_object_selected == 1)
     }
     
     var object_text = object_array[object_array_position, 2];
-    PLAYER_FOO = object_text;
     
     on_exit_menu = true;
 }
