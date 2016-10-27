@@ -12,10 +12,10 @@
 // get the size of the sprite
 var padding = 2;
 var gutter = 2;
-var xoffset = sprite_get_xoffset(spr_player_health_marker);
-var yoffset = sprite_get_yoffset(spr_player_health_marker);
-var width = sprite_get_width(spr_player_health_marker);
-var height = sprite_get_height(spr_player_health_marker);
+var xoffset = sprite_get_xoffset(spr_hud_player_health_marker);
+var yoffset = sprite_get_yoffset(spr_hud_player_health_marker);
+var width = sprite_get_width(spr_hud_player_health_marker);
+var height = sprite_get_height(spr_hud_player_health_marker);
 
 padding = (padding * scale_sprites);
 gutter = (gutter * scale_sprites);
@@ -44,12 +44,12 @@ for (var i = 0; i < player_health_markers; i++)
     if (player_health_percentage <= (player_health_marker_size * i))
     {
         // draw empty marker
-        draw_sprite_ext(spr_player_health_marker, 1, pos_x, pos_y, scale_sprites, scale_sprites, 0, c_white, 1);
+        draw_sprite_ext(spr_hud_player_health_marker, 1, pos_x, pos_y, scale_sprites, scale_sprites, 0, c_white, 1);
     }
     else
     {
         // draw filled marker
-        draw_sprite_ext(spr_player_health_marker, 0, pos_x, pos_y, scale_sprites, scale_sprites, 0, c_white, 1);
+        draw_sprite_ext(spr_hud_player_health_marker, 0, pos_x, pos_y, scale_sprites, scale_sprites, 0, c_white, 1);
     }
     
     pos_x = (pos_x + width + gutter);

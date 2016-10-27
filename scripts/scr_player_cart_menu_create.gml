@@ -11,46 +11,29 @@ object_array_position = 0;
 
 // object array
 /*
-    [i, 0] = Name
+    [i, 0] = ID
     [i, 1] = Sprite
-    [i, 2] = ID
+    [i, 2] = Name
 */
 var i = 0;
-object_array[i, 0] = 'item1';
-object_array[i, 1] = spr_player_cart_item1;
-object_array[i, 2] = 'Item 1';
-
-var i = 1;
-object_array[i, 0] = 'item2';
-object_array[i, 1] = spr_player_cart_item2;
-object_array[i, 2] = 'Item 2';
-
-var i = 2;
-object_array[i, 0] = 'item3';
-object_array[i, 1] = spr_player_cart_item3;
-object_array[i, 2] = 'Item 3';
-
-var i = 3;
 object_array[i, 0] = 'broom';
 object_array[i, 1] = spr_player_cart_broom;
 object_array[i, 2] = 'Grab A New Broom';
 
-var i = 4;
+var i = 1;
 object_array[i, 0] = 'mousetrap';
-object_array[i, 1] = spr_player_cart_broom;
+object_array[i, 1] = spr_player_cart_mouse_trap;
 object_array[i, 2] = 'Mouse Trap';
 
-var i = 5;
+var i = 2;
 object_array[i, 0] = 'cheese';
-object_array[i, 1] = spr_player_cart_broom;
+object_array[i, 1] = spr_player_cart_cheese;
 object_array[i, 2] = 'Cheese';
 
-// highlight the selected item
-var i, name;
-for (i = 0; i < array_height_2d(object_array); i++)
-{
-    name = object_array[i, 2];
-}
+var i = 3;
+object_array[i, 0] = 'close';
+object_array[i, 1] = spr_player_cart_close;
+object_array[i, 2] = 'Close Cart';
 
 // create a snapshot of the scene from the current application surface
 var width = surface_get_width(application_surface);
