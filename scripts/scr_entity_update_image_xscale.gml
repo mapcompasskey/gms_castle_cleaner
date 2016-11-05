@@ -6,11 +6,11 @@
  * Include in an object's Step event.
  */
 
-if (facing == RIGHT)
+if (facing == global.RIGHT)
 {
     image_xscale = 1;
 }
-else if (facing == LEFT)
+else if (facing == global.LEFT)
 {
     image_xscale = -1;
 }

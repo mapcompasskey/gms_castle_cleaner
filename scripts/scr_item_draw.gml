@@ -7,12 +7,12 @@
  * Called during this object's Draw event.
  */
 
-border_color = BORDER_COLOR;
+border_color = global.BORDER_COLOR;
 if (can_be_carried)
 {
     if (is_colliding_with != noone)
     {
-        border_color = HIGHLIGHT_BORDER_COLOR;
+        border_color = global.HIGHLIGHT_BORDER_COLOR;
         is_colliding_with = noone;
     }
 }

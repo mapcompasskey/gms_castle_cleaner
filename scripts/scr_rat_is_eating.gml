@@ -9,7 +9,7 @@
 
 if (eating)
 {
-    eating_timer += TICK;
+    eating_timer += global.TICK;
     
     if (eating_timer > eating_time)
     {

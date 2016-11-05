@@ -29,7 +29,7 @@ if (image_index >= 1 && (image_number - image_index) >= 1)
             if (place_meeting(x, y, other.id))
             {
                 // if the player broom is not broken
-                if ( ! PLAYER_BROOM_IS_BROKEN)
+                if ( ! global.PLAYER_BROOM_IS_BROKEN)
                 {
                     is_colliding_with = other.id;
                     
@@ -37,11 +37,11 @@ if (image_index >= 1 && (image_number - image_index) >= 1)
                     if ( ! hurting && ! recovering)
                     {
                         // decrease player broom health and check if its broken
-                        PLAYER_BROOM_CURRENT_HEALTH--;
-                        if (PLAYER_BROOM_CURRENT_HEALTH < 1)
+                        global.PLAYER_BROOM_CURRENT_HEALTH--;
+                        if (global.PLAYER_BROOM_CURRENT_HEALTH < 1)
                         {
-                            PLAYER_BROOM_IS_BROKEN = true;
-                            PLAYER_BROOM_CURRENT_HEALTH = 0;
+                            global.PLAYER_BROOM_IS_BROKEN = true;
+                            global.PLAYER_BROOM_CURRENT_HEALTH = 0;
                         }
                     }
                 }

@@ -34,7 +34,7 @@ if (event == 'create')
 else if (event == 'draw')
 {
     // when the timer ends
-    recovering_flash_timer += TICK;
+    recovering_flash_timer += global.TICK;
     if (recovering_flash_timer >= recovering_flash_time)
     {
         recovering_flash_timer = 0;

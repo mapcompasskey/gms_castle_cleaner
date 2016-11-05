@@ -7,15 +7,15 @@
 
 if ( ! dying && ! hurting && ! crouching)
 {    
-    if (PLAYER_KEY_LEFT)
+    if (global.PLAYER_KEY_LEFT)
     {
-        facing = LEFT;
+        facing = global.LEFT;
         walking = true;
         velocity_x = speed_x * facing;
     }
-    else if (PLAYER_KEY_RIGHT)
+    else if (global.PLAYER_KEY_RIGHT)
     {
-        facing = RIGHT;
+        facing = global.RIGHT;
         walking = true;
         velocity_x = speed_x * facing;
     }

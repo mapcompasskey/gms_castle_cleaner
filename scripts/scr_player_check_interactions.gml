@@ -31,10 +31,10 @@ if ( ! carrying)
                     is_colliding_with = other.id;
                     
                     // if the Action key was pressed
-                    if (PLAYER_KEY_ACTION)
+                    if (global.PLAYER_KEY_ACTION)
                     {
                         // clear input
-                        PLAYER_KEY_ACTION = false;
+                        global.PLAYER_KEY_ACTION = false;
                         
                         // update the player and item
                         scr_update_player_and_item(other.id, id, 'pickup');
@@ -68,10 +68,10 @@ if (carrying && is_carrying_item != noone)
                 }
                 
                 // if the Action key was pressed
-                if (PLAYER_KEY_ACTION)
+                if (global.PLAYER_KEY_ACTION)
                 {
                     // clear input
-                    PLAYER_KEY_ACTION = false;
+                    global.PLAYER_KEY_ACTION = false;
                     
                     // update the mouse trap item
                     mouse_trap_item.has_cheese = true;
@@ -99,10 +99,10 @@ if (carrying && is_carrying_item != noone)
                 cheese_item.is_colliding_with = id;
                 
                 // if the Action key was pressed
-                if (PLAYER_KEY_ACTION)
+                if (global.PLAYER_KEY_ACTION)
                 {
                     // clear input
-                    PLAYER_KEY_ACTION = false;
+                    global.PLAYER_KEY_ACTION = false;
                     
                     // destory the cheese item
                     with (cheese_item)
@@ -143,10 +143,10 @@ if (place_meeting(x, y, obj_player_cart))
             player_cart.is_colliding_with = other.id;
             
             // if the Action key was pressed
-            if (PLAYER_KEY_ACTION)
+            if (global.PLAYER_KEY_ACTION)
             {
                 // clear input
-                PLAYER_KEY_ACTION = false;
+                global.PLAYER_KEY_ACTION = false;
                 
                 // add the Player Cart Menu object
                 instance_create(0, 0, obj_player_cart_menu);
@@ -168,13 +168,13 @@ if (place_meeting(x, y, obj_player_cart))
                 player_cart.is_colliding_with = id;
                 
                 // if the Action key was pressed
-                if (PLAYER_KEY_ACTION)
+                if (global.PLAYER_KEY_ACTION)
                 {
                     // clear input
-                    PLAYER_KEY_ACTION = false;
+                    global.PLAYER_KEY_ACTION = false;
                     
                     // increment the global counter
-                    DEAD_RAT_ITEMS_COLLECTED++;
+                    global.DEAD_RAT_ITEMS_COLLECTED++;
                     
                     // update the player and item
                     scr_update_player_and_item(id, is_carrying_item, 'destroy');
@@ -206,20 +206,20 @@ if (place_meeting(x, y, obj_door))
                 is_colliding_with = other.id
                 
                 // if the Action key was pressed
-                if (PLAYER_KEY_ACTION)
+                if (global.PLAYER_KEY_ACTION)
                 {
                     // clear all inputs
-                    PLAYER_KEY_ACTION = false;
+                    global.PLAYER_KEY_ACTION = false;
                     io_clear();
                     
                     // check if the room exist
                     if (room_exists(exit_room_id))
                     {
                         // update globals
-                        PREVIOUS_DOOR_CODE = CURRENT_DOOR_CODE;
-                        PREVIOUS_ROOM_ID = CURRENT_ROOM_ID;
-                        CURRENT_DOOR_CODE = exit_door_code;
-                        CURRENT_ROOM_ID = exit_room_id;
+                        global.PREVIOUS_DOOR_CODE = global.CURRENT_DOOR_CODE;
+                        global.PREVIOUS_ROOM_ID = global.CURRENT_ROOM_ID;
+                        global.CURRENT_DOOR_CODE = exit_door_code;
+                        global.CURRENT_ROOM_ID = exit_room_id;
                         
                         // switch rooms
                         room_goto(exit_room_id);

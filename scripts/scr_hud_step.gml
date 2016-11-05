@@ -26,19 +26,19 @@ if (scale_sprites < 1)
 
 // update the item text
 player_item_text = 'Broken Broom';
-if (PLAYER_BROOM_CURRENT_HEALTH == 1)
+if (global.PLAYER_BROOM_CURRENT_HEALTH == 1)
 {
     player_item_text = 'Broom (1 use)';
 }
-else if (PLAYER_BROOM_CURRENT_HEALTH > 1)
+else if (global.PLAYER_BROOM_CURRENT_HEALTH > 1)
 {
-    player_item_text = 'Broom (' + string(PLAYER_BROOM_CURRENT_HEALTH) + ' uses)';
+    player_item_text = 'Broom (' + string(global.PLAYER_BROOM_CURRENT_HEALTH) + ' uses)';
 }
 
 // if the player instance exists
-if (PLAYER != noone)
+if (global.PLAYER != noone)
 {
-    with (PLAYER)
+    with (global.PLAYER)
     {
         // get current health
         other.player_current_health = current_health;

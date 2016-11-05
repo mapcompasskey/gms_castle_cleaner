@@ -42,7 +42,7 @@ draw_sprite_ext(spr_hud_broom, 0, pos_x, pos_y, scale_sprites, scale_sprites, 0,
  */
  
 // position text to the bottom/right of the image
-var txt = string(PLAYER_BROOM_CURRENT_HEALTH);
+var txt = string(global.PLAYER_BROOM_CURRENT_HEALTH);
 var pos_x2 = (pos_x + width);
 var pos_y2 = (pos_y + height);
 

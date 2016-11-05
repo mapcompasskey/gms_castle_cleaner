@@ -7,12 +7,12 @@
  */
 
 // draw a border around sprite
-border_color = BORDER_COLOR;
+border_color = global.BORDER_COLOR;
 if (can_use_door)
 {
     if (is_colliding_with != noone)
     {
-        border_color = HIGHLIGHT_BORDER_COLOR;
+        border_color = global.HIGHLIGHT_BORDER_COLOR;
     }
 }
 scr_draw_border(border_color);
@@ -26,10 +26,10 @@ if (can_use_door)
     if (is_colliding_with != noone)
     {
         // draw text above the door
-        text = 'PRESS ' + string(ACTION_KEY_TEXT);
+        text = 'PRESS ' + string(global.ACTION_KEY_TEXT);
         var pos_x = round(x);
         var pos_y = round(y - sprite_height);
-        
+            
         draw_set_color(c_white);
         draw_set_halign(fa_center);
         draw_set_valign(fa_bottom);

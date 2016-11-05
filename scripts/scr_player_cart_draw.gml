@@ -7,10 +7,10 @@
  */
 
 // draw a border around sprite
-border_color = BORDER_COLOR;
+border_color = global.BORDER_COLOR;
 if (is_colliding_with != noone)
 {
-    border_color = HIGHLIGHT_BORDER_COLOR;
+    border_color = global.HIGHLIGHT_BORDER_COLOR;
 }
 scr_draw_border(border_color);
 
@@ -20,7 +20,7 @@ draw_self();
 if (is_colliding_with != noone)
 {
     // draw text above the cart
-    var text = 'PRESS ' + string(ACTION_KEY_TEXT);
+    var text = 'PRESS ' + string(global.ACTION_KEY_TEXT);
     var pos_x = round(x);
     var pos_y = round(y - sprite_height);
     

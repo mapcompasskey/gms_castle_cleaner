@@ -7,7 +7,7 @@
 
 if ( ! dying && ! hurting && ! jumping && ! falling && ! eating)
 {
-    action_timer += TICK;
+    action_timer += global.TICK;
     
     if (action_timer > action_time)
     {

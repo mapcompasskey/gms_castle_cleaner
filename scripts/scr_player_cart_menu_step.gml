@@ -12,8 +12,8 @@ var exit_with_cheese = false;
 
 // on object selection move
 var on_object_navigation = 0;
-on_object_navigation -= max(keyboard_check_pressed(KEY_LEFT), 0);
-on_object_navigation += max(keyboard_check_pressed(KEY_RIGHT), 0);
+on_object_navigation -= max(keyboard_check_pressed(global.KEY_LEFT), 0);
+on_object_navigation += max(keyboard_check_pressed(global.KEY_RIGHT), 0);
 
 // move to the next item, wrap around if reached an end
 if (on_object_navigation != 0)
@@ -31,7 +31,7 @@ if (on_object_navigation != 0)
 
 // on object selected
 var on_object_selected = 0;
-on_object_selected = max(keyboard_check_pressed(KEY_ENTER), keyboard_check_pressed(KEY_ATTACK_1));
+on_object_selected = max(keyboard_check_pressed(global.KEY_ENTER), keyboard_check_pressed(global.KEY_ATTACK_1));
 if (on_object_selected == 1)
 {
     var object_id = object_array[object_array_position, 0];
@@ -40,8 +40,8 @@ if (on_object_selected == 1)
     if (object_id == 'broom')
     {
         // refill broom uses
-        PLAYER_BROOM_IS_BROKEN = false;
-        PLAYER_BROOM_CURRENT_HEALTH = PLAYER_BROOM_MAXIMUM_HEALTH;
+        global.PLAYER_BROOM_IS_BROKEN = false;
+        global.PLAYER_BROOM_CURRENT_HEALTH = global.PLAYER_BROOM_MAXIMUM_HEALTH;
     }
     
     // else, if selecting the mouse trap item
@@ -62,7 +62,7 @@ if (on_object_selected == 1)
 }
 
 // if ESC key is pressed
-if (keyboard_check_pressed(KEY_ESCAPE))
+if (keyboard_check_pressed(global.KEY_ESCAPE))
 {
     on_exit_menu = true;
 }

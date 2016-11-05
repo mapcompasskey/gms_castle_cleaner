@@ -19,7 +19,7 @@ if (hurting)
 if (recovering)
 {
     //image_alpha = 0.5;
-    recovering_cooldown_timer += TICK;
+    recovering_cooldown_timer += global.TICK;
     
     // if the timer has ended
     if (recovering_cooldown_timer >= recovering_cooldown_time)
@@ -46,7 +46,7 @@ if ( ! dying && ! hurting && ! recovering)
             if (current_health <= 0)
             {
                 current_health = maximum_health;
-                //PLAYER = noone;
+                //global.PLAYER = noone;
                 //instance_destroy();
             }
         }

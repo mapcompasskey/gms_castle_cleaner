@@ -7,7 +7,7 @@
  */
 
 // apply gravity
-velocity_y += GRAV * TICK * gravity_factor;
+velocity_y += global.GRAV * global.TICK * gravity_factor;
 
 // apply movement friction
 if (grounded && move_friction > 0)
@@ -42,8 +42,8 @@ if (max_velocity_y != 0)
 }
 
 // new x/y positions
-mx = velocity_x * TICK;
-my = velocity_y * TICK;
+mx = velocity_x * global.TICK;
+my = velocity_y * global.TICK;
 
 // store velocities
 last_velocity_x = mx;

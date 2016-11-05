@@ -9,7 +9,7 @@
 if ( ! can_use_door)
 {
     sprite_index = closed_sprite;
-    disabled_timer += TICK;
+    disabled_timer += global.TICK;
     
     // if the timer has ended
     if (disabled_timer >= disabled_time)

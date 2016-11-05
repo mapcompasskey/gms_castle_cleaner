@@ -7,7 +7,7 @@
 
 if (recovering)
 {
-    recovering_cooldown_timer += TICK;
+    recovering_cooldown_timer += global.TICK;
     
     // if the timer has ended
     if (recovering_cooldown_timer >= recovering_cooldown_time)

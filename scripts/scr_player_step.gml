@@ -37,7 +37,7 @@ else if (attacking)
 {
     if (attack_1)
     {
-        if (PLAYER_BROOM_IS_BROKEN)
+        if (global.PLAYER_BROOM_IS_BROKEN)
         {
             if (sprite_index != attacking_broken_sprite)
             {
@@ -65,7 +65,7 @@ else if (attacking)
     }
     else if (attack_2)
     {
-        if (PLAYER_BROOM_IS_BROKEN)
+        if (global.PLAYER_BROOM_IS_BROKEN)
         {
             if (sprite_index != attacking2_broken_sprite)
             {

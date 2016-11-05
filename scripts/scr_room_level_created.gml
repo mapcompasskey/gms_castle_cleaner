@@ -9,9 +9,6 @@
 // make the Room persistent
 room_persistent = true;
 
-// set the Room's background color
-background_color = BG_COLOR;
-
 // add the HUD if it doesn't exist
 if ( ! instance_exists(obj_hud))
 {
@@ -19,7 +16,7 @@ if ( ! instance_exists(obj_hud))
 }
 
 // add the debug layer
-if (DEBUG_MODE)
+if (global.DEBUG_MODE)
 {
     if ( ! instance_exists(obj_debug_mode))
     {

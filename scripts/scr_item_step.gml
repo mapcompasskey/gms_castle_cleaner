@@ -10,7 +10,7 @@
 // if the object has been disabled
 if ( ! can_be_carried)
 {
-    disable_timer += TICK;
+    disable_timer += global.TICK;
     
     // if the timer has ended
     if (disable_timer >= disable_time)

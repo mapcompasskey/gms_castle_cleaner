@@ -55,7 +55,7 @@ if (hurting && grounded)
 
 if (recovering)
 {
-    recovering_cooldown_timer += TICK;
+    recovering_cooldown_timer += global.TICK;
     
     // if the timer has ended
     if (recovering_cooldown_timer >= recovering_cooldown_time)
@@ -69,7 +69,7 @@ if (recovering)
 
 if (recovering)
 {
-    flashing_timer += TICK;
+    flashing_timer += global.TICK;
     
     if (flashing_timer > flashing_time)
     {

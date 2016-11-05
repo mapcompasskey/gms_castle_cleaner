@@ -12,15 +12,15 @@
  * timers to abruptly end.
  */
 
-GAME_HAS_FOCUS = !os_is_paused();
+global.GAME_HAS_FOCUS = !os_is_paused();
 
 // track the amount of time that has passed since the last frame
 var dt = room_speed / 1000000 * delta_time;
-if ( ! GAME_HAS_FOCUS)
+if ( ! global.GAME_HAS_FOCUS)
 {
     dt = 0;
 }
-TICK = min(2, dt);
+global.TICK = min(2, dt);
 
 // if ESC key is pressed
 if (keyboard_check_pressed(vk_escape))
@@ -32,33 +32,11 @@ if (keyboard_check_pressed(vk_escape))
 }
 
 // pause the game if the window loses focus (requires a left mouse click to unpause)
-if ( ! GAME_HAS_FOCUS)
+if ( ! global.GAME_HAS_FOCUS)
 {
     if ( ! instance_exists(obj_game_focus))
     {
         instance_create(0, 0, obj_game_focus);
     }
 }
-
-/** /
-THIS IS ONLY NEEDED IF I WANT TO FORCE THE WINDOW'S SIZE WHEN THE GAME STARTS
-WHICH I CAN CONTROL WITH THE WIDTH/HEIGHT OF THE FIRST ROOM'S PORT
-THEN THE VIEW WILL SCALE TO FIT IT
-
-// if the application surface needs resized
-// *this doesn't update immediately so it needs to be checked over several steps
-if (RESIZE_SURFACE)
-{
-    var width = VIEW_WIDTH * VIEW_SCALE;
-    var height = VIEW_HEIGHT * VIEW_SCALE;
-    
-    surface_resize(application_surface, width, height);
-    //display_reset(0, false);
-    
-    if (window_get_width() == width && window_get_height() == height)
-    {
-        RESIZE_SURFACE = false;
-    }
-}
-/**/
 

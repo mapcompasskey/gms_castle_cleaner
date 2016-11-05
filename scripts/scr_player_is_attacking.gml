@@ -9,14 +9,14 @@
 if ( ! dying && ! hurting && ! crouching && ! attacking && ! carrying)
 {
     // if the Attack 1 key was pressed
-    if (PLAYER_KEY_ATTACK_1 && player_attack == noone)
+    if (global.PLAYER_KEY_ATTACK_1 && player_attack == noone)
     {
         attack_1 = true;
         attack_2 = false;
         
         attacking = true;
         
-        if ( ! PLAYER_BROOM_IS_BROKEN)
+        if ( ! global.PLAYER_BROOM_IS_BROKEN)
         {
             // create the player attack instance
             player_attack = instance_create(0, 0, obj_player_attack);
@@ -28,14 +28,14 @@ if ( ! dying && ! hurting && ! crouching && ! attacking && ! carrying)
     }
         
     // if the Attack 2 key was pressed
-    else if (PLAYER_KEY_ATTACK_2 && player_attack == noone)
+    else if (global.PLAYER_KEY_ATTACK_2 && player_attack == noone)
     {
         attack_1 = false;
         attack_2 = true;
         
         attacking = true;
         
-        if ( ! PLAYER_BROOM_IS_BROKEN)
+        if ( ! global.PLAYER_BROOM_IS_BROKEN)
         {
             // create the player attack instance
             player_attack = instance_create(0, 0, obj_player_attack);

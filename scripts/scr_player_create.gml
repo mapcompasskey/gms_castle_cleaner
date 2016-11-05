@@ -7,7 +7,7 @@
  */
 
 // update global
-PLAYER = id;
+global.PLAYER = id;
 
 // add default variables
 scr_entity_movement_vars();

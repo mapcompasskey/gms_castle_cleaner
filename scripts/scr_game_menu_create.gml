@@ -6,8 +6,6 @@
  * Added to the game menu object's Create event.
  */
 
-menu_position = 0;
-
 // menu options
 /*
     [i, 0] = ID
@@ -20,4 +18,7 @@ menu_options[i, 1] = "Quit";
 var i = 1;
 menu_options[i, 0] = "start";
 menu_options[i, 1] = "Start";
+
+// starting menu position
+menu_position = 1;
 
