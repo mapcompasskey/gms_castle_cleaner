@@ -88,7 +88,6 @@
         <scripts name="GameMenu">
           <script>scripts\scr_game_menu_create.gml</script>
           <script>scripts\scr_game_menu_step.gml</script>
-          <script>scripts\scr_game_menu_draw.gml</script>
           <script>scripts\scr_game_menu_draw_gui.gml</script>
         </scripts>
         <scripts name="PauseScreen">

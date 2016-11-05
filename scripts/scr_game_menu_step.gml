@@ -25,17 +25,19 @@ if (on_menu_move != 0)
 }
 
 // on menu select
+var menu_option_id = 0;
 var on_menu_select;
 on_menu_select = max(keyboard_check_released(vk_enter), keyboard_check_released(vk_shift), keyboard_check_released(vk_space), 0);
 if (on_menu_select == 1)
 {
-    switch (menu_options[menu_position, 0])
+    menu_option_id = menu_options[menu_position, 0];
+    switch (menu_option_id)
     {
-        case "Start":
+        case "start":
             room_goto_next();
             break;
         
-        case "Quit":
+        case "quit":
             game_end();
             break;
     }
