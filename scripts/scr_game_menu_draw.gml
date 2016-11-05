@@ -7,8 +7,9 @@
  */
 
 // draw logo
-draw_sprite_ext(spr_game_logo, 0, logo_x, logo_y, 1, 1, 0, c_white, 1);
+//draw_sprite_ext(spr_game_logo, 0, logo_x, logo_y, 1, 1, 0, c_white, 1);
 
+/*
 // draw menu options
 draw_set_font(fnt_04b03_menu);
 draw_set_color(c_white);
@@ -74,4 +75,5 @@ for (i = 0; i < array_height_2d(menu_options); i++)
     pos_y += offset_y;
     draw_text(pos_x, pos_y, text);
 }
+*/
 

@@ -7,7 +7,7 @@
  */
 
 // skip the menu during testing
-room_goto_next();
+//room_goto_next();
 
 // set the Room's background color
 background_color = BG_COLOR;

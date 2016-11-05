@@ -243,7 +243,7 @@
     <option_html5_allow_fullscreen>True</option_html5_allow_fullscreen>
     <option_html5_alwaysreload>False</option_html5_alwaysreload>
     <option_html5_browser_title>Created with GameMaker: Studio</option_html5_browser_title>
-    <option_html5_centergame>False</option_html5_centergame>
+    <option_html5_centergame>True</option_html5_centergame>
     <option_html5_facebook_app_display_name></option_html5_facebook_app_display_name>
     <option_html5_facebook_appid></option_html5_facebook_appid>
     <option_html5_facebook_enable>0</option_html5_facebook_enable>
@@ -266,7 +266,7 @@
     <option_html5_splash_png>Configs\Default\html5\splash.png</option_html5_splash_png>
     <option_html5_texture_page>2048</option_html5_texture_page>
     <option_html5_use_test_ads>0</option_html5_use_test_ads>
-    <option_html5_usebuiltinparticles>True</option_html5_usebuiltinparticles>
+    <option_html5_usebuiltinparticles>False</option_html5_usebuiltinparticles>
     <option_html5_usesplash>False</option_html5_usesplash>
     <option_icon>nil</option_icon>
     <option_in_app_purchase_enable>false</option_in_app_purchase_enable>

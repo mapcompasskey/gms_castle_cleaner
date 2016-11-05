@@ -7,8 +7,8 @@
  */
 
 // logo options
-logo_x = view_wview[0] / 2;
-logo_y = TILE_SIZE * 2;
+//logo_x = view_wview[0] / 2;
+//logo_y = TILE_SIZE * 2;
 
 menu_position = 0;
 
