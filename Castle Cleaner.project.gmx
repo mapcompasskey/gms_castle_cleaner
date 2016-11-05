@@ -204,6 +204,12 @@
           <script>scripts\scr_door_step.gml</script>
           <script>scripts\scr_door_draw.gml</script>
         </scripts>
+        <scripts name="ExitDoor">
+          <script>scripts\scr_exit_door_events.gml</script>
+          <script>scripts\scr_exit_door_create.gml</script>
+          <script>scripts\scr_exit_door_step.gml</script>
+          <script>scripts\scr_exit_door_draw.gml</script>
+        </scripts>
         <scripts name="PlayerCart">
           <script>scripts\scr_player_cart_events.gml</script>
           <script>scripts\scr_player_cart_create.gml</script>
@@ -282,6 +288,7 @@
       <object>objects\obj_wall</object>
       <object>objects\obj_hud</object>
       <object>objects\obj_door</object>
+      <object>objects\obj_exit_door</object>
       <object>objects\obj_ladder</object>
       <object>objects\obj_player_cart</object>
     </objects>

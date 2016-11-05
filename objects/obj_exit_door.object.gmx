@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>1000</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_door_events('create');
+            <string>scr_exit_door_events('create');
 </string>
           </argument>
         </arguments>
@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_door_events('step');
+            <string>scr_exit_door_events('step');
 </string>
           </argument>
         </arguments>
@@ -71,7 +71,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_door_events('draw');
+            <string>scr_exit_door_events('draw');
 </string>
           </argument>
         </arguments>
