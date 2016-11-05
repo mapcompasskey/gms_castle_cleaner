@@ -14,7 +14,7 @@ scr_entity_movement_vars();
 scr_recovering_flash_overlay('create');
 
 speed_x = 3;
-speed_y = 4;
+speed_y = 4.6;
 max_velocity_x = speed_x * 2;
 max_velocity_y = speed_y * 2;
 
@@ -32,7 +32,7 @@ dying = false;
 carrying = false;
 
 jumps = 0;
-jumpsmax = 2;
+jumpsmax = 10; // 0 = a sinlge jump
 
 recovering_cooldown_time = 15; // 1/4 a second
 recovering_cooldown_timer = 0;

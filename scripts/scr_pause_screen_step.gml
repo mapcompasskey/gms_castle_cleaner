@@ -7,7 +7,7 @@
  */
 
 // if ESC key is pressed
-if (keyboard_check_pressed(vk_escape))
+if (keyboard_check_pressed(vk_escape) || keyboard_check_pressed(vk_enter))
 {
     // destory the surface, freeing it from memory
     if (surface_exists(snapshot_surface))

@@ -7,7 +7,7 @@
  */
 
 // skip the menu during testing
-//room_goto_next();
+room_goto_next();
 
 // add the Game Menu object
 instance_create(0, 0, obj_game_menu);

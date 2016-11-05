@@ -14,5 +14,5 @@ draw_set_color(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_04b03_gui);
-draw_text(pos_x, pos_y, "PAUSED#Press ESC to continue");
+draw_text(pos_x, pos_y, "PAUSED#Press ESC or ENTER to continue");
 

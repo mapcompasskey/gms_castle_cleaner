@@ -38,7 +38,7 @@ var pos_x = scr_get_gui_position('x', 'center');
 var pos_y = scr_get_gui_position('y', 'top');
 
 pos_x = (pos_x - ((logo_width / 2) * logo_scale));
-pos_y = (pos_y + 10);
+pos_y = (pos_y + 40);
 
 draw_sprite_ext(spr_game_logo, 0, pos_x, pos_y, logo_scale, logo_scale, 0, c_white, 1);
 
