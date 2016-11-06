@@ -63,6 +63,7 @@
         <sprite>sprites\spr_bookcase</sprite>
       </sprites>
       <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_platform</sprite>
       <sprite>sprites\spr_ladder</sprite>
       <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_door_closed</sprite>
@@ -119,6 +120,7 @@
           <script>scripts\scr_entity_movement_update.gml</script>
           <script>scripts\scr_entity_check_edge_of_solids.gml</script>
           <script>scripts\scr_entity_check_collision_with_solids.gml</script>
+          <script>scripts\scr_entity_check_collision_with_platforms.gml</script>
           <script>scripts\scr_entity_check_collision_with_walls.gml</script>
           <script>scripts\scr_entity_check_collision_with_blocks.gml</script>
           <script>scripts\scr_entity_keep_in_room.gml</script>
@@ -291,6 +293,8 @@
       <object>objects\obj_exit_door</object>
       <object>objects\obj_ladder</object>
       <object>objects\obj_player_cart</object>
+      <object>objects\obj_platform</object>
+      <object>objects\obj_platform_2</object>
     </objects>
   </objects>
   <rooms name="rooms">

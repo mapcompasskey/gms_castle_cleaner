@@ -18,6 +18,7 @@ if (on_ladder && my > 0 && ! crouching)
 }
 
 // test collisions
+scr_entity_check_collision_with_platforms();
 scr_entity_check_collision_with_solids();
 
 // update position

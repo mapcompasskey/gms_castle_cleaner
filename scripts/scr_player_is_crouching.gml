@@ -8,7 +8,8 @@
 if ( ! hurting && ! dying && ! jumping && ! attacking && ! carrying)
 {
     // if grounded and pressing the DOWN button
-    if ((grounded || on_ladder) && global.PLAYER_KEY_DOWN)
+    //if ((grounded || on_ladder) && global.PLAYER_KEY_DOWN)
+    if (grounded && global.PLAYER_KEY_DOWN)
     {
         crouching = true;
         velocity_x = 0;
