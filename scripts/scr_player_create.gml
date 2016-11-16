@@ -15,6 +15,11 @@ scr_recovering_flash_overlay('create');
 
 speed_x = 3;
 speed_y = 4.6;
+
+//gravity_factor = 0.1;
+//speed_x = 0.5;
+//speed_y = 0.8;
+
 max_velocity_x = speed_x * 2;
 max_velocity_y = speed_y * 2;
 

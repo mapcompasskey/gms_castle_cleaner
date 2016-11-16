@@ -20,6 +20,7 @@ last_velocity_y = 0;
 
 facing = global.RIGHT;
 grounded = false;
+was_grounded = false;
 
 move_friction = 0;     // 0.9 - reduce by 10% every step
 move_friction_min = 0; // 1   - if less than 1

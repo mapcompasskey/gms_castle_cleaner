@@ -7,33 +7,10 @@
  */
 
 // is this instance standing on a solid object
-grounded = place_meeting(x, y + 1, obj_solid);
+// *its possible to jump so slowly that the player is not one pixel above the ground by the next step
+//grounded = place_meeting(x, y + 1, obj_solid);
 
-// if not grounded
-if ( ! grounded)
-{
-    // is this instance standing on a platform but not inside one
-    if ( ! place_meeting(x, y, obj_platform))
-    {
-        grounded = place_meeting(x, y + 1, obj_platform);
-    }
-}
-
-if ( ! grounded)
-{
-    // is this instance standing on a platform but not inside one
-    if ( ! place_meeting(x, y, obj_platform_2))
-    {
-        grounded = place_meeting(x, y + 1, obj_platform_2);
-    }
-}
-
-// is this instance standing in a ladder
-on_ladder = place_meeting(x, y, obj_ladder);
-if (on_ladder)
-{
-    grounded = true;
-}
+grounded = was_grounded;
 
 // check instance state
 scr_player_check_interactions();

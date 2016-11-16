@@ -49,3 +49,5 @@ my = velocity_y * global.TICK;
 last_velocity_x = mx;
 last_velocity_y = my;
 
+was_grounded = false;
+
