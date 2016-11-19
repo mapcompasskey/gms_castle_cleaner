@@ -11,6 +11,7 @@ if ( ! hurting && ! dying && ! crouching && ! attacking)
     if (jumping && jumps < jumpsmax && global.PLAYER_KEY_JUMP_PRESSED)
     {
         jumps++;
+        falling = false;
         velocity_y = -speed_y;
     }
     

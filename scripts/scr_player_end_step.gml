@@ -10,13 +10,13 @@
 scr_entity_movement_update();
 
 // test collisions
-//scr_entity_check_collision_with_platforms();
+scr_entity_check_collision_with_platforms();
 scr_entity_check_collision_with_solids();
 
 // if was falling
 if (last_velocity_y > 0)
 {
-    if (entity_hit_solid_y)
+    if (entity_hit_solid_y || entity_hit_platform_y)
     {
         was_grounded = true;
     }

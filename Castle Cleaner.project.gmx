@@ -120,9 +120,7 @@
           <script>scripts\scr_entity_movement_update.gml</script>
           <script>scripts\scr_entity_check_edge_of_solids.gml</script>
           <script>scripts\scr_entity_check_collision_with_solids.gml</script>
-          <script>scripts\scr_entity_check_collision_with_solids2.gml</script>
           <script>scripts\scr_entity_check_collision_with_platforms.gml</script>
-          <script>scripts\scr_entity_check_collision_with_platforms2.gml</script>
           <script>scripts\scr_entity_check_collision_with_walls.gml</script>
           <script>scripts\scr_entity_check_collision_with_blocks.gml</script>
           <script>scripts\scr_entity_keep_in_room.gml</script>
