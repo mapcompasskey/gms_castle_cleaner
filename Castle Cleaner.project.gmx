@@ -43,6 +43,13 @@
           <sprite>sprites\spr_rat_hurting</sprite>
           <sprite>sprites\spr_rat_mask</sprite>
         </sprites>
+        <sprites name="Spider">
+          <sprite>sprites\spr_spider_idle</sprite>
+          <sprite>sprites\spr_spider_walking</sprite>
+          <sprite>sprites\spr_spider_jumping</sprite>
+          <sprite>sprites\spr_spider_falling</sprite>
+          <sprite>sprites\spr_spider_mask</sprite>
+        </sprites>
       </sprites>
       <sprites name="Items">
         <sprite>sprites\spr_dead_rat</sprite>
@@ -171,6 +178,17 @@
             <script>scripts\scr_rat_end_step.gml</script>
             <script>scripts\scr_rat_draw.gml</script>
           </scripts>
+          <scripts name="Spider">
+            <script>scripts\scr_spider_create.gml</script>
+            <script>scripts\scr_spider_step.gml</script>
+            <script>scripts\scr_spider_update_action.gml</script>
+            <script>scripts\scr_spider_is_hurting.gml</script>
+            <script>scripts\scr_spider_is_jumping.gml</script>
+            <script>scripts\scr_spider_is_walking.gml</script>
+            <script>scripts\scr_spider_is_attacking.gml</script>
+            <script>scripts\scr_spider_end_step.gml</script>
+            <script>scripts\scr_spider_draw.gml</script>
+          </scripts>
         </scripts>
         <scripts name="Items">
           <scripts name="Item">
@@ -274,6 +292,7 @@
       <objects name="Enemies">
         <object>objects\obj_enemy</object>
         <object>objects\obj_rat</object>
+        <object>objects\obj_spider</object>
       </objects>
       <objects name="Items">
         <object>objects\obj_item</object>
