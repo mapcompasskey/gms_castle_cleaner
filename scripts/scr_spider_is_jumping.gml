@@ -5,7 +5,7 @@
  *
  */
 
-if ( ! hurting && ! dying)
+if ( ! dying && ! hurting)
 {
     // if grounded and not jumping
     if (grounded && ! jumping)

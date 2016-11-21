@@ -13,8 +13,8 @@ speed_x = random_range(1.5, 2.5);
 speed_y = random_range(3, 4);
 
 damage = 1;
-current_health = 1;//2;
-maximum_health = 2;
+current_health = 1;
+maximum_health = 1;
 
 walking = false;
 jumping = false;
@@ -61,6 +61,9 @@ falling_sprite = spr_spider_falling;
 
 walking_speed = 0.3;
 walking_sprite = spr_spider_walking;
+
+dying_speed = 0.3;
+dying_sprite = spr_spider_dying;
 
 sprite_index = idle_sprite;
 image_index = 0;

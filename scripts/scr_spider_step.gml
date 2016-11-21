@@ -19,7 +19,16 @@ scr_spider_is_attacking();
 // update the sprite and animation speed
 scr_entity_update_image_xscale();
 
-if (hurting)
+if (dying)
+{
+    if (sprite_index != dying_sprite)
+    {
+        sprite_index = dying_sprite;
+        image_index = 0;
+        image_speed = dying_speed;
+    }
+}
+else if (hurting)
 {
     if (sprite_index != hurting_sprite)
     {

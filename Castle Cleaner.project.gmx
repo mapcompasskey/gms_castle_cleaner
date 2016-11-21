@@ -48,6 +48,7 @@
           <sprite>sprites\spr_spider_walking</sprite>
           <sprite>sprites\spr_spider_jumping</sprite>
           <sprite>sprites\spr_spider_falling</sprite>
+          <sprite>sprites\spr_spider_dying</sprite>
           <sprite>sprites\spr_spider_mask</sprite>
         </sprites>
       </sprites>
@@ -187,6 +188,7 @@
             <script>scripts\scr_spider_is_walking.gml</script>
             <script>scripts\scr_spider_is_attacking.gml</script>
             <script>scripts\scr_spider_end_step.gml</script>
+            <script>scripts\scr_spider_animation_end.gml</script>
             <script>scripts\scr_spider_draw.gml</script>
           </scripts>
         </scripts>
