@@ -33,7 +33,7 @@ global.LEFT = -1;
 global.TICK = 1;
 global.GRAV = 0.3;
 global.GAME_HAS_FOCUS = false;
-global.DEBUG_MODE = true;
+global.DEBUG_MODE = false;
 global.BORDER_COLOR = c_black;
 global.HIGHLIGHT_BORDER_COLOR = c_white;
 

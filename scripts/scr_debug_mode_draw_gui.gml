@@ -30,3 +30,15 @@ with (obj_item)
     scr_debug_mode_draw_bouding_box(bbox_left, bbox_top, bbox_right, bbox_bottom);
 }
 
+/*with (obj_block)
+{
+    // draw block objects bounding box
+    scr_debug_mode_draw_bouding_box(bbox_left, bbox_top, bbox_right, bbox_bottom);
+}*/
+
+with (obj_placeholder_block)
+{
+    // draw placeholder block objects bounding box
+    scr_debug_mode_draw_bouding_box(bbox_left, bbox_top, bbox_right, bbox_bottom);
+}
+

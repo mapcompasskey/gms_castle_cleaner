@@ -15,33 +15,25 @@ if (mx != 0 || my != 0)
     // if not already inside an object
     if ( ! place_meeting(x, y, obj_solid))
     {
-    
+        var i, step_x, step_y, temp_mx, temp_my, arr;
+        arr[2] = 1;
+        arr[1] = 0.1;
+        arr[0] = 0.01;
+        
         // if this instance will collide with an object on the x-axis
         if (place_meeting((x + mx), y, obj_solid))
         {
+            step_x = 0;
+            temp_mx = 0;
+            
             // find how far the instance can move horizontally before colliding
-            var step_x = 0;
-            var temp_mx = 0;
-            
-            // step in increments of 1
-            step_x = sign(mx);
-            while ( ! place_meeting((x + temp_mx + step_x), y, obj_solid) && abs(temp_mx) < abs(mx))
+            for (i = 0; i < array_length_1d(arr); i++)
             {
-                temp_mx += step_x;
-            }
-            
-            // step in increments of 0.1
-            step_x = (sign(mx) * 0.1);
-            while ( ! place_meeting((x + temp_mx + step_x), y, obj_solid) && abs(temp_mx) < abs(mx))
-            {
-                temp_mx += step_x;
-            }
-            
-            // step in increments of 0.01
-            step_x = (sign(mx) * 0.01);
-            while ( ! place_meeting((x + temp_mx + step_x), y, obj_solid) && abs(temp_mx) < abs(mx))
-            {
-                temp_mx += step_x;
+                step_x = (sign(mx) * arr[i]);
+                while ( ! place_meeting((x + temp_mx + step_x), y, obj_solid) && abs(temp_mx) < abs(mx))
+                {
+                    temp_mx += step_x;
+                }
             }
             
             // if somehow overshot the original movement distance
@@ -60,29 +52,17 @@ if (mx != 0 || my != 0)
         // if this instance will collide with an object on the y-axis
         if (place_meeting((x + mx), (y + my), obj_solid))
         {
+            step_y = 0;
+            temp_my = 0;
+            
             // find how far the instance can move vertically before colliding
-            var step_y = 0;
-            var temp_my = 0;
-            
-            // step in increments of 1
-            step_y = sign(my);
-            while ( ! place_meeting((x + mx), (y + temp_my + step_y), obj_solid) && abs(temp_my) < abs(my))
+            for (i = 0; i < array_length_1d(arr); i++)
             {
-                temp_my += step_y;
-            }
-            
-            // step in increments of 0.1
-            step_y = (sign(my) * 0.1);
-            while ( ! place_meeting((x + mx), (y + temp_my + step_y), obj_solid) && abs(temp_my) < abs(my))
-            {
-                temp_my += step_y;
-            }
-            
-            // step in increments of 0.01
-            step_y = (sign(my) * 0.01);
-            while ( ! place_meeting((x + mx), (y + temp_my + step_y), obj_solid) && abs(temp_my) < abs(my))
-            {
-                temp_my += step_y;
+                step_y = (sign(my) * arr[i]);
+                while ( ! place_meeting((x + mx), (y + temp_my + step_y), obj_solid) && abs(temp_my) < abs(my))
+                {
+                    temp_my += step_y;
+                }
             }
             
             // if somehow overshot the original movement distance
@@ -98,6 +78,8 @@ if (mx != 0 || my != 0)
             entity_hit_solid_y = true;
         }
         
+        // free up array
+        arr = 0;
     }
 }
 
