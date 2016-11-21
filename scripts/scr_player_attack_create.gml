@@ -11,7 +11,7 @@ damage = 1;
 
 // sprite animations
 visible = false;
-sprite_index = spr_player_attack_box;
+sprite_index = noone;
 image_index = 0;
 image_speed = 0;
 

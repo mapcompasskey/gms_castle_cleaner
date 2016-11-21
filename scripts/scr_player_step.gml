@@ -35,61 +35,30 @@ if (crouching)
 }
 else if (attacking)
 {
-    if (attack_1)
+    if (global.PLAYER_BROOM_IS_BROKEN)
     {
-        if (global.PLAYER_BROOM_IS_BROKEN)
+        if (sprite_index != attacking_broken_sprite)
         {
-            if (sprite_index != attacking_broken_sprite)
+            if (sprite_index == attacking_sprite)
             {
-                if (sprite_index == attacking_sprite)
-                {
-                    sprite_index = attacking_broken_sprite;
-                }
-                else
-                {
-                    sprite_index = attacking_broken_sprite;
-                    image_index = 0;
-                    image_speed = attacking_speed;
-                }
+                sprite_index = attacking_broken_sprite;
             }
-        }
-        else
-        {
-            if (sprite_index != attacking_sprite)
+            else
             {
-                sprite_index = attacking_sprite;
+                sprite_index = attacking_broken_sprite;
                 image_index = 0;
                 image_speed = attacking_speed;
             }
         }
     }
-    else if (attack_2)
+    else
     {
-        if (global.PLAYER_BROOM_IS_BROKEN)
+        if (sprite_index != attacking_sprite)
         {
-            if (sprite_index != attacking2_broken_sprite)
-            {
-                if (sprite_index == attacking2_sprite)
-                {
-                    sprite_index = attacking2_broken_sprite;
-                }
-                else
-                {
-                    sprite_index = attacking2_broken_sprite;
-                    image_index = 0;
-                    image_speed = attacking2_speed;
-                }
-            }
+            sprite_index = attacking_sprite;
+            image_index = 0;
+            image_speed = attacking_speed;
         }
-        else
-        {
-            if (sprite_index != attacking2_sprite)
-            {
-                sprite_index = attacking2_sprite;
-                image_index = 0;
-                image_speed = attacking2_speed;
-            }
-        }   
     }
 }
 else if (falling)

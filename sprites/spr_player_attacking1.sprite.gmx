@@ -20,8 +20,8 @@
   <width>44</width>
   <height>40</height>
   <frames>
-    <frame index="0">images\spr_player_attacking_0.png</frame>
-    <frame index="1">images\spr_player_attacking_1.png</frame>
-    <frame index="2">images\spr_player_attacking_2.png</frame>
+    <frame index="0">images\spr_player_attacking1_0.png</frame>
+    <frame index="1">images\spr_player_attacking1_1.png</frame>
+    <frame index="2">images\spr_player_attacking1_2.png</frame>
   </frames>
 </sprite>

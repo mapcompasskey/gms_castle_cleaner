@@ -33,7 +33,7 @@ global.LEFT = -1;
 global.TICK = 1;
 global.GRAV = 0.3;
 global.GAME_HAS_FOCUS = false;
-global.DEBUG_MODE = false;
+global.DEBUG_MODE = true;
 global.BORDER_COLOR = c_black;
 global.HIGHLIGHT_BORDER_COLOR = c_white;
 
@@ -47,9 +47,8 @@ global.KEY_LEFT = vk_left;
 global.KEY_RIGHT = vk_right;
 global.KEY_UP = vk_up;
 global.KEY_DOWN = vk_down;
-global.KEY_JUMP = ord("C");
+global.KEY_JUMP = ord("X");
 global.KEY_ATTACK_1 = ord("Z");
-global.KEY_ATTACK_2 = ord("X");
 global.KEY_ESCAPE = vk_escape;
 global.KEY_ENTER = vk_enter;
 
@@ -62,7 +61,6 @@ global.PLAYER_KEY_JUMP_PRESSED = false;
 global.PLAYER_KEY_JUMP_RELEASED = false;
 global.PLAYER_KEY_ACTION = false;
 global.PLAYER_KEY_ATTACK_1 = false;
-global.PLAYER_KEY_ATTACK_2 = false;
 
 
 // CURRENT_DOOR_CODE - The code of the door being exited from. Used to place the player during their "Room Start" event.

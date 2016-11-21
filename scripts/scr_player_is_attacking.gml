@@ -11,39 +11,52 @@ if ( ! dying && ! hurting && ! crouching && ! attacking && ! carrying)
     // if the Attack 1 key was pressed
     if (global.PLAYER_KEY_ATTACK_1 && player_attack == noone)
     {
-        attack_1 = true;
-        attack_2 = false;
-        
-        attacking = true;
-        
-        if ( ! global.PLAYER_BROOM_IS_BROKEN)
+        // if walking and not jumping or falling
+        // forward attack
+        if (walking && ! jumping && ! falling)
         {
-            // create the player attack instance
-            player_attack = instance_create(0, 0, obj_player_attack);
-            player_attack.belongs_to = object_index;
-            player_attack.sprite_index = attacking_box_sprite;
-            player_attack.image_index = 0;
-            player_attack.image_speed = attacking_speed;
+            attacking = true;
+            
+            // update attack animation settings
+            attacking_speed = attacking1_speed
+            attacking_sprite = attacking1_sprite;
+            attacking_broken_sprite = attacking1_broken_sprite;
+            attacking_mask = attacking1_mask;
+            
+            if ( ! global.PLAYER_BROOM_IS_BROKEN)
+            {
+                // create the player attack instance
+                player_attack = instance_create(0, 0, obj_player_attack);
+                player_attack.belongs_to = object_index;
+                player_attack.sprite_index = attacking_mask;
+                player_attack.image_index = 0;
+                player_attack.image_speed = attacking_speed;
+            }
         }
-    }
         
-    // if the Attack 2 key was pressed
-    else if (global.PLAYER_KEY_ATTACK_2 && player_attack == noone)
-    {
-        attack_1 = false;
-        attack_2 = true;
-        
-        attacking = true;
-        
-        if ( ! global.PLAYER_BROOM_IS_BROKEN)
+        // if standing still, jumping or falling
+        // overhead attack
+        else if ( ! walking || jumping || falling)
         {
-            // create the player attack instance
-            player_attack = instance_create(0, 0, obj_player_attack);
-            player_attack.belongs_to = object_index;
-            player_attack.sprite_index = attacking2_box_sprite;
-            player_attack.image_index = 0;
-            player_attack.image_speed = attacking2_speed;
+            attacking = true;
+            
+            // update attack animation settings
+            attacking_speed = attacking2_speed
+            attacking_sprite = attacking2_sprite;
+            attacking_broken_sprite = attacking2_broken_sprite;
+            attacking_mask = attacking2_mask;
+            
+            if ( ! global.PLAYER_BROOM_IS_BROKEN)
+            {
+                // create the player attack instance
+                player_attack = instance_create(0, 0, obj_player_attack);
+                player_attack.belongs_to = object_index;
+                player_attack.sprite_index = attacking_mask;
+                player_attack.image_index = 0;
+                player_attack.image_speed = attacking_speed;
+            }
         }
+        
     }
 }
 

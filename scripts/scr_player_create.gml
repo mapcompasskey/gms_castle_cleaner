@@ -42,8 +42,6 @@ jumpsmax = 10; // 0 = a sinlge jump
 recovering_cooldown_time = 15; // 1/4 a second
 recovering_cooldown_timer = 0;
 
-attack_1 = false;
-attack_2 = false;
 can_attack = true;
 player_attack = noone;
 attack_cooldown_time = 240;
@@ -77,15 +75,20 @@ falling_sprite = spr_player_falling;
 walking_speed = 0.15;
 walking_sprite = spr_player_walking;
 
-attacking_speed = 0.25;
-attacking_sprite = spr_player_attacking;
-attacking_broken_sprite = spr_player_attacking_broken;
-attacking_box_sprite = spr_player_attack_box;
+attacking1_speed = 0.25;
+attacking1_sprite = spr_player_attacking1;
+attacking1_broken_sprite = spr_player_attacking1_broken;
+attacking1_mask = spr_player_attacking1_mask;
 
 attacking2_speed = 0.25;
 attacking2_sprite = spr_player_attacking2;
 attacking2_broken_sprite = spr_player_attacking2_broken;
-attacking2_box_sprite = spr_player_attack2_box;
+attacking2_mask = spr_player_attacking2_mask;
+
+attacking_speed = attacking1_speed
+attacking_sprite = attacking1_sprite;
+attacking_broken_sprite = attacking1_broken_sprite;
+attacking_mask = attacking1_mask;
 
 //hurting_speed = 0;
 //hurting_sprite = spr_player_jumping;
