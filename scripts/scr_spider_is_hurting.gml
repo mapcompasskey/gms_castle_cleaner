@@ -41,7 +41,7 @@ if ( ! dying && ! hurting && ! recovering)
             {
                 dying = true;
                 //hurting = false;
-                //recovering = false;
+                recovering = false;
             }
         }
     }

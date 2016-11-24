@@ -1,15 +1,12 @@
 ///scr_hud_draw_health()
 
 /**
- * HUD: Draw Player Health
+ * Draw Player Health
  *
+ * Draw markers representing the amount of health the player has.
  */
 
-/**
- * Draw Health Markers
- */
-
-// get the size of the sprite
+// get the size of the health marker sprite
 var padding = 2;
 var gutter = 2;
 var xoffset = sprite_get_xoffset(spr_hud_player_health_marker);
@@ -24,6 +21,16 @@ yoffset = (yoffset * scale_sprites);
 width = (width * scale_sprites);
 height = (height * scale_sprites);
 
+// draw black background
+var x1 = scr_get_gui_position('x', 'left');
+var y1 = scr_get_gui_position('y', 'top');
+var x2 = scr_get_gui_position('x', 'right');
+var y2 = (y1 + height + (padding * 2));
+draw_set_colour(c_black);
+draw_set_alpha(0.75);
+draw_rectangle(x1, y1, x2, y2, false);
+draw_set_alpha(1.0);
+
 // left align sprite to GUI
 var pos_x = scr_get_gui_position('x', 'left');
 pos_x = (pos_x + padding + xoffset);
@@ -37,6 +44,7 @@ var player_health_percentage = (player_current_health * 100 / player_maximum_hea
 
 // percentage of a single unit of health on the screen
 var player_health_marker_size = (100 / player_health_markers);
+
 
 for (var i = 0; i < player_health_markers; i++)
 {
@@ -56,10 +64,8 @@ for (var i = 0; i < player_health_markers; i++)
 }
 
 
-/**
- * Draw Health Text
- */
-
+/*
+// draw health text
 var pos_x2 = scr_get_gui_position('x', 'left');
 pos_x2 = (pos_x2 + padding);
 var pos_y2 = (pos_y + height + gutter);
@@ -70,5 +76,5 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_font(fnt_04b03_gui);
 draw_text_transformed(pos_x2, pos_y2, txt, scale_text, scale_text, 0);
-
+*/
 

@@ -11,33 +11,29 @@ var a = application_get_position();
 scale_factor = ((a[2] - a[0]) / view_wview[0]);
 
 // scale text at a lower rate
-scale_text = (scale_factor * 0.4);
-if (scale_text < 1)
-{
-    scale_text = 1;
-}
+scale_text = max(1, floor(scale_factor * 0.4));
 
 // scale sprites at a lower rate
-scale_sprites = (scale_factor * 0.75);
-if (scale_sprites < 1)
-{
-    scale_sprites = scale_factor;
-}
+scale_sprites = max(1, floor(scale_factor * 0.75));
 
 // update the item text
-player_item_text = 'Broken Broom';
-if (global.PLAYER_BROOM_CURRENT_HEALTH == 1)
-{
-    player_item_text = 'Broom (1 use)';
-}
-else if (global.PLAYER_BROOM_CURRENT_HEALTH > 1)
-{
-    player_item_text = 'Broom (' + string(global.PLAYER_BROOM_CURRENT_HEALTH) + ' uses)';
-}
+player_item_text = '';
 
 // if the player instance exists
 if (global.PLAYER != noone)
 {
+    // set default item text
+    player_item_text = 'Broken Broom';
+    if (global.PLAYER_BROOM_CURRENT_HEALTH == 1)
+    {
+        player_item_text = 'Broom (1 use)';
+    }
+    else if (global.PLAYER_BROOM_CURRENT_HEALTH > 1)
+    {
+        player_item_text = 'Broom (' + string(global.PLAYER_BROOM_CURRENT_HEALTH) + ' uses)';
+    }
+    
+    // check if the player is carrying an item
     with (global.PLAYER)
     {
         // get current health

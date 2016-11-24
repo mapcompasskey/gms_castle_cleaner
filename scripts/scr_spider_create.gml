@@ -13,8 +13,8 @@ speed_x = random_range(1.5, 2.5);
 speed_y = random_range(3, 4);
 
 damage = 1;
-current_health = 1;
-maximum_health = 1;
+current_health = 2;
+maximum_health = 2;
 
 walking = false;
 jumping = false;
