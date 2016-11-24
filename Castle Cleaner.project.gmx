@@ -217,8 +217,6 @@
           <script>scripts\scr_hud_create.gml</script>
           <script>scripts\scr_hud_step.gml</script>
           <script>scripts\scr_hud_draw_gui.gml</script>
-          <script>scripts\scr_hud_draw_health.gml</script>
-          <script>scripts\scr_hud_draw_items.gml</script>
         </scripts>
         <scripts name="Door">
           <script>scripts\scr_door_events.gml</script>

@@ -40,6 +40,7 @@ global.HIGHLIGHT_BORDER_COLOR = c_white;
 
 // input key display text
 global.ACTION_KEY_TEXT = 'UP';
+global.ATTACK_KEY_TEXT = 'Z';
 
 // input keys to listen for
 // *set as globals so they can be remapped
