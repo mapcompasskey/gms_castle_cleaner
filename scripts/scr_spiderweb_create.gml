@@ -35,7 +35,7 @@ idle_speed = 0;
 idle_sprite = spr_spiderweb_idle;
 
 dying_speed = 0.3;
-dying_sprite = spr_spider_dying;
+dying_sprite = spr_spiderweb_dying;
 
 sprite_index = idle_sprite;
 image_index = 0;

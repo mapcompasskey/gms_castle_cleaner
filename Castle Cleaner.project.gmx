@@ -70,13 +70,16 @@
       <sprites name="Furniture">
         <sprite>sprites\spr_bookcase</sprite>
       </sprites>
+      <sprites name="SpiderWeb">
+        <sprite>sprites\spr_spiderweb_idle</sprite>
+        <sprite>sprites\spr_spiderweb_dying</sprite>
+      </sprites>
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_platform</sprite>
       <sprite>sprites\spr_ladder</sprite>
       <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_door_closed</sprite>
       <sprite>sprites\spr_player_cart</sprite>
-      <sprite>sprites\spr_spiderweb_idle</sprite>
     </sprites>
     <sprites name="PlayerCartMenu">
       <sprite>sprites\spr_player_cart_broom</sprite>
