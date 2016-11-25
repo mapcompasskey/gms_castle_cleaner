@@ -13,7 +13,7 @@ speed_x = random_range(1.5, 2.5);
 speed_y = random_range(3, 4);
 
 damage = 1;
-current_health = 2;
+current_health = 1;
 maximum_health = 2;
 
 walking = false;
@@ -37,6 +37,8 @@ flashing_timer = 0;
 //flashing_color = c_white;
 is_flashing = false;
 
+// the spider web spawner instance
+spiderweb_id = noone;
 
 // faux inputs
 key_left = false;

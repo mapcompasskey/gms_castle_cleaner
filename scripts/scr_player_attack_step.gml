@@ -50,20 +50,6 @@ if (image_index >= 1 && (image_number - image_index) >= 1)
         }
     }
     
-    /*
-    // if colliding with block objects
-    if (place_meeting(x, y, obj_block))
-    {
-        with (obj_block)
-        {
-            if (place_meeting(x, y, other.id))
-            {
-                is_colliding_with = other.id;
-            }
-        }
-    }
-    */
-    
     // if colliding with bookcases objects
     if (place_meeting(x, y, obj_bookcase))
     {
@@ -75,5 +61,18 @@ if (image_index >= 1 && (image_number - image_index) >= 1)
             }
         }
     }
+    
+    // if colliding with spider web objects
+    if (place_meeting(x, y, obj_spiderweb))
+    {
+        with (obj_spiderweb)
+        {
+            if (place_meeting(x, y, other.id))
+            {
+                is_colliding_with = other.id;
+            }
+        }
+    }
+    
 }
 

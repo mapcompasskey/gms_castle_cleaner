@@ -76,6 +76,7 @@
       <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_door_closed</sprite>
       <sprite>sprites\spr_player_cart</sprite>
+      <sprite>sprites\spr_spiderweb_idle</sprite>
     </sprites>
     <sprites name="PlayerCartMenu">
       <sprite>sprites\spr_player_cart_broom</sprite>
@@ -235,13 +236,21 @@
           <script>scripts\scr_player_cart_create.gml</script>
           <script>scripts\scr_player_cart_draw.gml</script>
         </scripts>
-        <scripts name="Furniture">
+        <scripts name="Bookcases">
           <script>scripts\scr_bookcase_events.gml</script>
           <script>scripts\scr_bookcase_create.gml</script>
           <script>scripts\scr_bookcase_step.gml</script>
           <script>scripts\scr_bookcase_is_hurting.gml</script>
           <script>scripts\scr_bookcase_animation_end.gml</script>
           <script>scripts\scr_bookcase_draw.gml</script>
+        </scripts>
+        <scripts name="SpiderWeb">
+          <script>scripts\scr_spiderweb_create.gml</script>
+          <script>scripts\scr_spiderweb_step.gml</script>
+          <script>scripts\scr_spiderweb_is_hurting.gml</script>
+          <script>scripts\scr_spiderweb_is_spawning.gml</script>
+          <script>scripts\scr_spiderweb_animation_end.gml</script>
+          <script>scripts\scr_spiderweb_draw.gml</script>
         </scripts>
       </scripts>
     </scripts>
@@ -314,6 +323,7 @@
       <object>objects\obj_player_cart</object>
       <object>objects\obj_platform</object>
       <object>objects\obj_platform_2</object>
+      <object>objects\obj_spiderweb</object>
     </objects>
   </objects>
   <rooms name="rooms">

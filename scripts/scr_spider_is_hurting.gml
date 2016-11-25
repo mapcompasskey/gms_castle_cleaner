@@ -42,6 +42,17 @@ if ( ! dying && ! hurting && ! recovering)
                 dying = true;
                 //hurting = false;
                 recovering = false;
+                
+                // update spider web spawner
+                if (spiderweb_id != noone)
+                {
+                    if (instance_exists(spiderweb_id))
+                    {
+                        spiderweb_id.spawn_counter -= 1;
+                        spiderweb_id = noone;
+                    }
+                }
+                
             }
         }
     }
