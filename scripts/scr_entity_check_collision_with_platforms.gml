@@ -19,11 +19,11 @@ entity_hit_platform_y = false;
 // if falling, check vertical collision against platform
 if (my > 0)
 {
-    // if not already inside a platform
-    if ( ! place_meeting(x + mx, y, obj_platform))
+    // if not already inside a platform 1
+    if ( ! place_meeting(x + mx, y, obj_platform_1))
     {
         // check vertical collision against platforms
-        if (place_meeting(x + mx, y + my, obj_platform))
+        if (place_meeting(x + mx, y + my, obj_platform_1))
         {
             var arr;
             arr[2] = 1;
@@ -37,7 +37,7 @@ if (my > 0)
             for (var i = 0; i < array_length_1d(arr); i++)
             {
                 step_y = (sign(my) * arr[i]);
-                while ( ! place_meeting((x + mx), (y + temp_my + step_y), obj_platform) && abs(temp_my) < abs(my))
+                while ( ! place_meeting((x + mx), (y + temp_my + step_y), obj_platform_1) && abs(temp_my) < abs(my))
                 {
                     temp_my += step_y;
                 }

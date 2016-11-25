@@ -18,17 +18,17 @@ object_array_position = 0;
 var i = 0;
 object_array[i, 0] = 'broom';
 object_array[i, 1] = spr_player_cart_broom;
-object_array[i, 2] = 'Grab A New Broom';
+object_array[i, 2] = 'Get A New Broom';
 
 var i = 1;
 object_array[i, 0] = 'mousetrap';
 object_array[i, 1] = spr_player_cart_mouse_trap;
-object_array[i, 2] = 'Mouse Trap';
+object_array[i, 2] = 'Get a Mouse Trap';
 
 var i = 2;
 object_array[i, 0] = 'cheese';
 object_array[i, 1] = spr_player_cart_cheese;
-object_array[i, 2] = 'Cheese';
+object_array[i, 2] = 'Get a Piece of Cheese';
 
 var i = 3;
 object_array[i, 0] = 'close';

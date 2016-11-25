@@ -25,14 +25,18 @@ var menu_x1 = round(view_xview[0] + menu_padding);
 var menu_y1 = round(view_yview[0] + menu_padding);
 var menu_x2 = round(menu_x1 + view_wview[0] - (menu_padding * 2));
 var menu_y2 = round(menu_y1 + view_hview[0] - (menu_padding * 2));
-draw_set_colour(c_blue);
-draw_set_alpha(0.1);
+draw_set_colour(make_color_rgb(107, 62, 51));
+draw_set_alpha(0.9);
 draw_rectangle(menu_x1, menu_y1, menu_x2, menu_y2, false);
 draw_set_alpha(1); // reset alpha
 
 // draw menu background border
-draw_set_colour(c_blue);
-draw_rectangle(menu_x1, menu_y1, menu_x2, menu_y2, true);
+draw_set_colour(make_color_rgb(68, 36, 52));
+//draw_rectangle(menu_x1, menu_y1, menu_x2, menu_y2, true);
+draw_rectangle(menu_x1, menu_y1, menu_x2, (menu_y1 + 2), false);
+draw_rectangle(menu_x1, menu_y1, (menu_x1 + 2), menu_y2, false);
+draw_rectangle(menu_x1, (menu_y2 - 2), menu_x2, menu_y2, false);
+draw_rectangle((menu_x2 - 2), menu_y1, menu_x2, menu_y2, false);
 
 // draw items in object array
 var object_text = '';
