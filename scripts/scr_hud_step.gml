@@ -64,7 +64,10 @@ if (global.PLAYER != noone)
         // if player is carrying an item
         if (is_carrying_item != noone)
         {
-            other.player_item_text = is_carrying_item.item_name;
+            if (instance_exists(is_carrying_item))
+            {
+                other.player_item_text = is_carrying_item.item_name;
+            }
         }
         
     }

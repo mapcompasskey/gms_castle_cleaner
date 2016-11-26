@@ -27,17 +27,20 @@ if ( ! dying && ! hurting && ! recovering && ! eating)
         var cheese = instance_place(x, y, obj_cheese);
         if (cheese != noone)
         {
-            // destory the cheese item
-            with (cheese)
+            if (cheese.is_being_carried_by == noone)
             {
-                instance_destroy();
+                // destory the cheese item
+                with (cheese)
+                {
+                    instance_destroy();
+                }
+                
+                // stop moving
+                key_left = false;
+                key_right = false;
+                
+                eating = true;
             }
-            
-            // stop moving
-            key_left = false;
-            key_right = false;
-            
-            eating = true;
         }
     }
 }

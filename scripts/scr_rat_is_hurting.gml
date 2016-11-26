@@ -86,20 +86,23 @@ if ( ! dying && ! hurting && ! recovering)
     {
         with (obj_mouse_trap)
         {
-            // if the mouse trap is baited and not dying
-            if (has_cheese && ! dying)
+            if (is_being_carried_by == noone)
             {
-                // if the mouse trap is colliding with the rat
-                if (place_meeting(x, y, other.id))
+                // if the mouse trap is baited and not dying
+                if (has_cheese && ! dying)
                 {
-                    // if the rat isn't dying
-                    if ( ! other.dying)
+                    // if the mouse trap is colliding with the rat
+                    if (place_meeting(x, y, other.id))
                     {
-                        // update mouse trap
-                        dying = true;
-                        
-                        // update rat
-                        other.dying = true;
+                        // if the rat isn't dying
+                        if ( ! other.dying)
+                        {
+                            // update mouse trap
+                            dying = true;
+                            
+                            // update rat
+                            other.dying = true;
+                        }
                     }
                 }
             }
