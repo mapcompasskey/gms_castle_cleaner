@@ -10,6 +10,7 @@
 // *its possible to jump so slowly that the player is not one pixel above the ground by the next step
 //grounded = place_meeting(x, y + 1, obj_solid);
 
+// did this instance fall onto a solid object
 grounded = was_grounded;
 
 // check instance state

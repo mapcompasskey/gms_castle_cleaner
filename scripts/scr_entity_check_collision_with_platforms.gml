@@ -16,41 +16,21 @@
 
 entity_hit_platform_y = false;
 
-// if falling, check vertical collision against platform
+// if falling, check vertical collision against platform 1
 if (my > 0)
 {
     // if not already inside a platform 1
     if ( ! place_meeting(x + mx, y, obj_platform_1))
     {
-        // check vertical collision against platforms
-        if (place_meeting(x + mx, y + my, obj_platform_1))
+        // check collision against the y-axis
+        var collision_y = scr_entity_test_movement_collision(id, mx, my, obj_platform_1, 'y');
+        if (collision_y[0])
         {
-            var arr;
-            arr[2] = 1;
-            arr[1] = 0.1;
-            arr[0] = 0.01;
-            
-            var step_y = 0;
-            var temp_my = 0;
-            
-            // find how far the instance can move vertically before colliding
-            for (var i = 0; i < array_length_1d(arr); i++)
-            {
-                step_y = (sign(my) * arr[i]);
-                while ( ! place_meeting((x + mx), (y + temp_my + step_y), obj_platform_1) && abs(temp_my) < abs(my))
-                {
-                    temp_my += step_y;
-                }
-            }
-            
-            // update the 'my' value and reset the y velocity
-            my = temp_my;
+            my = collision_y[2];
             velocity_y = 0;
-            
             entity_hit_platform_y = true;
-            
-            arr = 0;
         }
+        collision_y = 0;
     }
 }
 
@@ -60,35 +40,14 @@ if (my > 0)
     // if not already inside a platform 2
     if ( ! place_meeting(x + mx, y, obj_platform_2))
     {
-        // check vertical collision against platforms
-        if (place_meeting(x + mx, y + my, obj_platform_2))
-        {
-            var arr;
-            arr[2] = 1;
-            arr[1] = 0.1;
-            arr[0] = 0.01;
-            
-            var step_y = 0;
-            var temp_my = 0;
-            
-            // find how far the instance can move vertically before colliding
-            for (var i = 0; i < array_length_1d(arr); i++)
-            {
-                step_y = (sign(my) * arr[i]);
-                while ( ! place_meeting((x + mx), (y + temp_my + step_y), obj_platform_2) && abs(temp_my) < abs(my))
-                {
-                    temp_my += step_y;
-                }
-            }
-            
-            // update the 'my' value and reset the y velocity
-            my = temp_my;
+        var collision_y = scr_entity_test_movement_collision(id, mx, my, obj_platform_2, 'y');
+        if (collision_y[0])
+        {   
+            my = collision_y[2];
             velocity_y = 0;
-            
             entity_hit_platform_y = true;
-            
-            arr = 0;
         }
+        collision_y = 0;
     }
 }
 

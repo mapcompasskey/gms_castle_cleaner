@@ -1,37 +1,37 @@
-///scr_entity_check_collision_with_blocks()
+///scr_entity_check_collision_with_enemy_walls()
 
 /**
- * Check if Colliding with Blocks
+ * Check if Colliding with Enemy Walls
  *
  * Include in an object's End Step event.
  */
 
-entity_hit_block_x = false;
-entity_hit_block_y = false;
+entity_hit_enemy_wall_x = false;
+entity_hit_enemy_wall_y = false;
 
 // if moving on the x or y axis
 if (mx != 0 || my != 0)
 {
     // if not already inside an object
-    if ( ! place_meeting(x, y, obj_block))
+    if ( ! place_meeting(x, y, obj_enemy_wall))
     {
         // check collision against the x-axis
-        var collision_x = scr_entity_test_movement_collision(id, mx, my, obj_block, 'x');
+        var collision_x = scr_entity_test_movement_collision(id, mx, my, obj_enemy_wall, 'x');
         if (collision_x[0])
         {
             mx = collision_x[1];
             velocity_x = 0;
-            entity_hit_block_x = true;
+            entity_hit_enemy_wall_x = true;
         }
         collision_x = 0;
         
         // check collision against the y-axis
-        var collision_y = scr_entity_test_movement_collision(id, mx, my, obj_block, 'y');
+        var collision_y = scr_entity_test_movement_collision(id, mx, my, obj_enemy_wall, 'y');
         if (collision_y[0])
         {
             my = collision_y[2];
             velocity_y = 0;
-            entity_hit_block_y = true;
+            entity_hit_enemy_wall_y = true;
         }
         collision_y = 0;
     }

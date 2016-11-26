@@ -6,8 +6,8 @@
  * Added to this object's Step event.
  */
 
-// is this instance standing on a solid object
-grounded = place_meeting(x, y + 1, obj_solid);
+// did this instance fall onto a solid object
+grounded = was_grounded;
 
 // check instance state
 scr_spider_update_action();

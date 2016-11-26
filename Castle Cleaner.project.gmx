@@ -61,6 +61,15 @@
       <sprite>sprites\spr_dying_tile_4x</sprite>
     </sprites>
     <sprites name="Misc">
+      <sprites name="Barriers">
+        <sprites name="Platform">
+          <sprite>sprites\spr_platform</sprite>
+          <sprite>sprites\spr_platform_1</sprite>
+          <sprite>sprites\spr_platfrom_2</sprite>
+        </sprites>
+        <sprite>sprites\spr_wall</sprite>
+        <sprite>sprites\spr_enemy_wall</sprite>
+      </sprites>
       <sprites name="HUD">
         <sprite>sprites\spr_hud_cheese</sprite>
         <sprite>sprites\spr_hud_mouse_trap</sprite>
@@ -74,12 +83,6 @@
         <sprite>sprites\spr_spiderweb_idle</sprite>
         <sprite>sprites\spr_spiderweb_dying</sprite>
       </sprites>
-      <sprites name="Platform">
-        <sprite>sprites\spr_platform</sprite>
-        <sprite>sprites\spr_platform_1</sprite>
-        <sprite>sprites\spr_platfrom_2</sprite>
-      </sprites>
-      <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_ladder</sprite>
       <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_door_closed</sprite>
@@ -134,12 +137,15 @@
           <script>scripts\scr_entity_movement_vars.gml</script>
           <script>scripts\scr_entity_update_image_xscale.gml</script>
           <script>scripts\scr_entity_movement_update.gml</script>
-          <script>scripts\scr_entity_check_edge_of_solids.gml</script>
-          <script>scripts\scr_entity_check_collision_with_solids.gml</script>
-          <script>scripts\scr_entity_check_collision_with_platforms.gml</script>
-          <script>scripts\scr_entity_check_collision_with_walls.gml</script>
-          <script>scripts\scr_entity_check_collision_with_blocks.gml</script>
           <script>scripts\scr_entity_keep_in_room.gml</script>
+          <scripts name="Collision">
+            <script>scripts\scr_entity_test_movement_collision.gml</script>
+            <script>scripts\scr_entity_check_collision_with_solids.gml</script>
+            <script>scripts\scr_entity_check_collision_with_platforms.gml</script>
+            <script>scripts\scr_entity_check_collision_with_walls.gml</script>
+            <script>scripts\scr_entity_check_collision_with_enemy_walls.gml</script>
+            <script>scripts\scr_entity_check_collision_with_blocks.gml</script>
+          </scripts>
         </scripts>
         <scripts name="Player">
           <script>scripts\scr_player_events.gml</script>
@@ -221,6 +227,11 @@
         </scripts>
       </scripts>
       <scripts name="Misc">
+        <scripts name="Barriers">
+          <scripts name="Platform">
+            <script>scripts\scr_platform_create.gml</script>
+          </scripts>
+        </scripts>
         <scripts name="HUD">
           <script>scripts\scr_hud_create.gml</script>
           <script>scripts\scr_hud_step.gml</script>
@@ -243,7 +254,7 @@
           <script>scripts\scr_player_cart_create.gml</script>
           <script>scripts\scr_player_cart_draw.gml</script>
         </scripts>
-        <scripts name="Bookcases">
+        <scripts name="Bookcase">
           <script>scripts\scr_bookcase_events.gml</script>
           <script>scripts\scr_bookcase_create.gml</script>
           <script>scripts\scr_bookcase_step.gml</script>
@@ -258,9 +269,6 @@
           <script>scripts\scr_spiderweb_is_spawning.gml</script>
           <script>scripts\scr_spiderweb_animation_end.gml</script>
           <script>scripts\scr_spiderweb_draw.gml</script>
-        </scripts>
-        <scripts name="Platform">
-          <script>scripts\scr_platform_create.gml</script>
         </scripts>
       </scripts>
     </scripts>
@@ -321,18 +329,21 @@
       </objects>
     </objects>
     <objects name="Misc">
-      <objects name="Furniture">
+      <objects name="Barriers">
+        <object>objects\obj_solid</object>
+        <object>objects\obj_wall</object>
+        <object>objects\obj_enemy_wall</object>
+        <object>objects\obj_platform_1</object>
+        <object>objects\obj_platform_2</object>
+      </objects>
+      <objects name="Bookcase">
         <object>objects\obj_bookcase</object>
       </objects>
-      <object>objects\obj_solid</object>
-      <object>objects\obj_wall</object>
       <object>objects\obj_hud</object>
       <object>objects\obj_door</object>
       <object>objects\obj_exit_door</object>
       <object>objects\obj_ladder</object>
       <object>objects\obj_player_cart</object>
-      <object>objects\obj_platform_1</object>
-      <object>objects\obj_platform_2</object>
       <object>objects\obj_spiderweb</object>
     </objects>
   </objects>

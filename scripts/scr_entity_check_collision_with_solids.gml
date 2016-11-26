@@ -15,71 +15,25 @@ if (mx != 0 || my != 0)
     // if not already inside an object
     if ( ! place_meeting(x, y, obj_solid))
     {
-        var i, step_x, step_y, temp_mx, temp_my, arr;
-        arr[2] = 1;
-        arr[1] = 0.1;
-        arr[0] = 0.01;
-        
-        // if this instance will collide with an object on the x-axis
-        if (place_meeting((x + mx), y, obj_solid))
+        // check collision against the x-axis
+        var collision_x = scr_entity_test_movement_collision(id, mx, my, obj_solid, 'x');
+        if (collision_x[0])
         {
-            step_x = 0;
-            temp_mx = 0;
-            
-            // find how far the instance can move horizontally before colliding
-            for (i = 0; i < array_length_1d(arr); i++)
-            {
-                step_x = (sign(mx) * arr[i]);
-                while ( ! place_meeting((x + temp_mx + step_x), y, obj_solid) && abs(temp_mx) < abs(mx))
-                {
-                    temp_mx += step_x;
-                }
-            }
-            
-            // if somehow overshot the original movement distance
-            if (abs(temp_mx) > abs(mx))
-            {
-                temp_mx = 0;
-            }
-            
-            // update the 'mx' value and reset the x velocity
-            mx = temp_mx;
+            mx = collision_x[1];
             velocity_x = 0;
-            
             entity_hit_solid_x = true;
         }
+        collision_x = 0;
         
-        // if this instance will collide with an object on the y-axis
-        if (place_meeting((x + mx), (y + my), obj_solid))
+        // check collision against the y-axis
+        var collision_y = scr_entity_test_movement_collision(id, mx, my, obj_solid, 'y');
+        if (collision_y[0])
         {
-            step_y = 0;
-            temp_my = 0;
-            
-            // find how far the instance can move vertically before colliding
-            for (i = 0; i < array_length_1d(arr); i++)
-            {
-                step_y = (sign(my) * arr[i]);
-                while ( ! place_meeting((x + mx), (y + temp_my + step_y), obj_solid) && abs(temp_my) < abs(my))
-                {
-                    temp_my += step_y;
-                }
-            }
-            
-            // if somehow overshot the original movement distance
-            if (abs(temp_my) > abs(my))
-            {
-                temp_my = 0;
-            }
-            
-            // update the 'my' value and reset the y velocity
-            my = temp_my;
+            my = collision_y[2];
             velocity_y = 0;
-            
             entity_hit_solid_y = true;
         }
-        
-        // free up array
-        arr = 0;
+        collision_y = 0;
     }
 }
 
