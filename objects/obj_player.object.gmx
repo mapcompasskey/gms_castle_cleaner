@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_player_events('create');
+            <string>scr_player_create();
 </string>
           </argument>
         </arguments>
@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_player_events('end step');
+            <string>scr_player_end_step();
 </string>
           </argument>
         </arguments>
@@ -71,7 +71,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_player_events('step');
+            <string>scr_player_step();
 </string>
           </argument>
         </arguments>
@@ -94,7 +94,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_player_events('animation end');
+            <string>scr_player_animation_end();
 </string>
           </argument>
         </arguments>
@@ -117,7 +117,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_player_events('room start');
+            <string>scr_player_room_start();
 </string>
           </argument>
         </arguments>
@@ -140,7 +140,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_player_events('draw');
+            <string>scr_player_draw();
 </string>
           </argument>
         </arguments>

@@ -3,7 +3,7 @@
 /**
  * Player: On Animation End
  *
- * Called during this object's Animation End event.
+ * Added to this object's Animation End event.
  */
 
 // stop attacking if animation has ended

@@ -3,7 +3,7 @@
 /**
  * Player: On Draw
  *
- * Called during this object's Draw event.
+ * Added to this object's Draw event.
  */
 
 // draw a border around sprite

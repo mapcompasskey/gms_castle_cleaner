@@ -3,7 +3,7 @@
 /**
  * Player: On End of Update
  *
- * Called during this object's End Step event.
+ * Added to this object's End Step event.
  */
 
 // apply faux physics

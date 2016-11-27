@@ -148,7 +148,6 @@
           </scripts>
         </scripts>
         <scripts name="Player">
-          <script>scripts\scr_player_events.gml</script>
           <script>scripts\scr_player_create.gml</script>
           <script>scripts\scr_player_step.gml</script>
           <script>scripts\scr_player_check_interactions.gml</script>
@@ -158,6 +157,7 @@
           <script>scripts\scr_player_is_carrying.gml</script>
           <script>scripts\scr_player_is_attacking.gml</script>
           <script>scripts\scr_player_is_walking.gml</script>
+          <script>scripts\scr_player_update_sprite.gml</script>
           <script>scripts\scr_player_end_step.gml</script>
           <script>scripts\scr_player_room_start.gml</script>
           <script>scripts\scr_player_animation_end.gml</script>

@@ -3,7 +3,7 @@
 /**
  * Player: Initialize Variables
  *
- * Called during this object's Create event.
+ * Added to this object's Create event.
  */
 
 // update global
@@ -39,7 +39,7 @@ carrying = false;
 jumps = 0;
 jumpsmax = 10; // 0 = a sinlge jump
 
-recovering_cooldown_time = 15; // 1/4 a second
+recovering_cooldown_time = 30; // 1/2 a second
 recovering_cooldown_timer = 0;
 
 can_attack = true;
@@ -62,6 +62,9 @@ key_attack2_pressed = false;
 // object sprites and animations
 idle_speed = 0.05;
 idle_sprite = spr_player_idle;
+
+hurting_speed = 0;
+hurting_sprite = spr_player_falling;
 
 crouching_speed = 0;
 crouching_sprite = spr_player_crouching;

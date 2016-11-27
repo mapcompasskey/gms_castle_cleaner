@@ -18,13 +18,11 @@ if (hurting)
 
 if (recovering)
 {
-    //image_alpha = 0.5;
     recovering_cooldown_timer += global.TICK;
     
     // if the timer has ended
     if (recovering_cooldown_timer >= recovering_cooldown_time)
     {
-        //image_alpha = 1.0;
         hurting = false;
         recovering = false;
         is_colliding_with = noone;
@@ -51,7 +49,6 @@ if ( ! dying && ! hurting && ! recovering)
             }
         }
         
-        /*
         // apply horizontal knockback
         var knockback_x = 2;
         if (x < is_colliding_with.x)
@@ -61,9 +58,8 @@ if ( ! dying && ! hurting && ! recovering)
         velocity_x = knockback_x;
         
         // apply vertical knockback
-        velocity_y = -3;
+        velocity_y = -2;
         grounded = false;
-        */
     }
 }
 
