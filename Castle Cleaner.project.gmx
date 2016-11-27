@@ -162,13 +162,12 @@
           <script>scripts\scr_player_room_start.gml</script>
           <script>scripts\scr_player_animation_end.gml</script>
           <script>scripts\scr_player_draw.gml</script>
-        </scripts>
-        <scripts name="PlayerAttack">
-          <script>scripts\scr_player_attack_events.gml</script>
-          <script>scripts\scr_player_attack_create.gml</script>
-          <script>scripts\scr_player_attack_step.gml</script>
-          <script>scripts\scr_player_attack_end_step.gml</script>
-          <script>scripts\scr_player_attack_animation_end.gml</script>
+          <scripts name="PlayerAttack">
+            <script>scripts\scr_player_attack_create.gml</script>
+            <script>scripts\scr_player_attack_step.gml</script>
+            <script>scripts\scr_player_attack_end_step.gml</script>
+            <script>scripts\scr_player_attack_animation_end.gml</script>
+          </scripts>
         </scripts>
         <scripts name="Blocks">
           <script>scripts\scr_block_events.gml</script>

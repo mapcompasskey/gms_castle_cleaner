@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_player_attack_events('create');
+            <string>scr_player_attack_create();
 </string>
           </argument>
         </arguments>
@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_player_attack_events('end step');
+            <string>scr_player_attack_end_step();
 </string>
           </argument>
         </arguments>
@@ -71,7 +71,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_player_attack_events('step');
+            <string>scr_player_attack_step();
 </string>
           </argument>
         </arguments>
@@ -94,7 +94,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_player_attack_events('animation end');
+            <string>scr_player_attack_animation_end();
 </string>
           </argument>
         </arguments>

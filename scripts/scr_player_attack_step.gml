@@ -3,7 +3,7 @@
 /**
  * Player Attack: On Update
  *
- * Called during this object's Step event.
+ * Added to this object's Step event.
  */
 
 // if not the first or last frame of the animation
