@@ -3,8 +3,7 @@
 /**
  * Item: On Draw
  *
- * Base Draw event call for Item objects.
- * Called during this object's Draw event.
+ * Added to this object's Draw event.
  */
 
 border_color = global.BORDER_COLOR;

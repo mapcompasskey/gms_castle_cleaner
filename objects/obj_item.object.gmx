@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_item_events('create');
+            <string>//scr_item_events('create');
+scr_item_create();
 </string>
           </argument>
         </arguments>
@@ -48,7 +49,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_item_events('end step');
+            <string>//scr_item_events('end step');
+scr_item_end_step();
 </string>
           </argument>
         </arguments>
@@ -71,7 +73,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_item_events('step');
+            <string>//scr_item_events('step');
+scr_item_step();
 </string>
           </argument>
         </arguments>
@@ -94,7 +97,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_item_events('draw');
+            <string>//scr_item_events('draw');
+scr_item_draw();
 </string>
           </argument>
         </arguments>

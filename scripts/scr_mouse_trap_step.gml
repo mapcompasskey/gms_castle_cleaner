@@ -3,10 +3,12 @@
 /**
  * Mouse Trap: On Update
  *
- * Called during this object's Step event.
+ * Added to this object's Step event.
  */
 
-if (has_cheese)
+event_inherited();
+
+if (has_cheese && image_index == 0)
 {
     image_index = 1;
     item_name = 'Baited Mouse Trap';

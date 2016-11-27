@@ -3,8 +3,14 @@
 /**
  * Mouse Trap: Initialize Variables
  *
- * Called during this object's Create event.
+ * Added to this object's Create event.
+ *
+ * If the mouse trap is "dying" it won't be included during collision checks.
+ * This should prevent a single mouse trap from interacting with multiple
+ * instances during a single step event.
  */
+
+event_inherited();
 
 dying = false;
 

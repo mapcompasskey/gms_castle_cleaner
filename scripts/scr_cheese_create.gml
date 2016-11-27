@@ -3,8 +3,10 @@
 /**
  * Cheese: Initialize Variables
  *
- * Called during this object's Create event.
+ * Added to this object's Create event.
  */
+
+event_inherited();
 
 item_name = 'Cheese';
 

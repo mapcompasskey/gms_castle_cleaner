@@ -3,8 +3,7 @@
 /**
  * Item: Initialize Variables
  *
- * Base Create event call for Item objects.
- * Called during this object's Create event.
+ * Added to this object's Create event.
  */
 
 scr_entity_movement_vars();

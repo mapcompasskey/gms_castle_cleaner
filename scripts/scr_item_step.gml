@@ -3,8 +3,7 @@
 /**
  * Item: On Update
  *
- * Base Step event call for Item objects.
- * Called during this object's Step event.
+ * Added to this object's Step event.
  */
 
 // if the object has been disabled

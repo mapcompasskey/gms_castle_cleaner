@@ -82,10 +82,13 @@ if ( ! dying && ! hurting && ! recovering)
 {
     // check if colliding with a mouse trap
     // * need to check with all mouse traps incase an unbaited trap is ontop of a baited one
+    // * check if either the rat or mouse trap is dying to prevent other instances from
+    // running their collision checks against them during the same step event
     if (place_meeting(x, y, obj_mouse_trap))
     {
         with (obj_mouse_trap)
         {
+            // if mouse trap is not being carried
             if (is_being_carried_by == noone)
             {
                 // if the mouse trap is baited and not dying
@@ -106,8 +109,10 @@ if ( ! dying && ! hurting && ! recovering)
                     }
                 }
             }
+            
         }
     }
+    
 }
 
 if (dying)
